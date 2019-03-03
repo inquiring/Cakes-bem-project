@@ -37,7 +37,7 @@
     "gulp-if": "^2.0.2",
     "gulp-one-of": "^1.0.1",
     "gulp-postcss": "^7.0.1",
-    "gulp-uglify": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "merge2": "^1.1.0",
     "postcss-calc": "^6.0.0",
     "postcss-each": "^0.10.0",
