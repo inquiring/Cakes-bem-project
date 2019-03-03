@@ -9,6 +9,9 @@
 
     .pt-form_view_choice {
         padding-bottom: 44px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 }
 
@@ -16,5 +19,8 @@
 
     .pt-form_view_choice {
         padding-bottom: 70px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
     }
 }

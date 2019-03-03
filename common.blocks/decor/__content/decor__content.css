@@ -9,7 +9,7 @@
 @media screen and (min-width: $screen-m) {
 
     .decor__content {
-        max-width: 460px;
+        max-width: 690px;
         margin-left: auto;
     }
 }

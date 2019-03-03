@@ -17,12 +17,11 @@
 
     .pt-card_view_decor:hover {
         box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
-
     }
 
 }
 
-@media screen and (min-width: $screen-l) {
+@media screen and (min-width: $screen-m) {
 
     .pt-card_view_decor {
         height: 431px;

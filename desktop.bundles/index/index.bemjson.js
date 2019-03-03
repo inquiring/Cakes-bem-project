@@ -1631,7 +1631,7 @@ module.exports = {
                                                                                         content: [
                                                                                             {
                                                                                                 tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1200px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
+                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
                                                                                             },
                                                                                             {
                                                                                                 tag: 'source',
@@ -1695,7 +1695,7 @@ module.exports = {
                                                                                         content: [
                                                                                             {
                                                                                                 tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1200px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
+                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
                                                                                             },
                                                                                             {
                                                                                                 tag: 'source',
@@ -1766,7 +1766,7 @@ module.exports = {
                                                                                         content: [
                                                                                             {
                                                                                                 tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1200px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
+                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
                                                                                             },
                                                                                             {
                                                                                                 tag: 'source',
@@ -1830,7 +1830,7 @@ module.exports = {
                                                                                         content: [
                                                                                             {
                                                                                                 tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1200px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
+                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
                                                                                             },
                                                                                             {
                                                                                                 tag: 'source',

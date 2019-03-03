@@ -10,7 +10,7 @@
     .decor {
         background-image: url('../../img/decor/decor-desktop.png');
         background-repeat: no-repeat;
-        background-position: 140px 140px;
+        background-position: 0px 230px;
         background-size: 20%;
     }
 }
