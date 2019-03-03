@@ -1,0 +1,7 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .about__title {
+        text-align: center;
+    }
+
+}

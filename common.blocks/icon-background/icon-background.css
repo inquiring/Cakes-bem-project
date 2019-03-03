@@ -1,0 +1,7 @@
+.icon-background {
+    border-radius: 50%;
+}
+.icon-background:hover {
+    box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+    outline-width: 0;
+}

@@ -1,0 +1,9 @@
+.new-menu__item_view_link {
+    display: block;
+    text-decoration: none;
+    -webkit-transition: color .15s;
+    transition: color .15s;
+}
+.new-menu__item_view_link:hover {
+    color: #f50049;
+}

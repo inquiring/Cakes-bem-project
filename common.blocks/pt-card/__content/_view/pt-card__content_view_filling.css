@@ -1,0 +1,23 @@
+@media screen and (min-width: $screen-xs) {
+
+    .pt-card__content_view_filling {
+        padding-top: 15px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .pt-card__content_view_filling {
+        padding-top: 15px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .pt-card__content_view_filling {
+        padding-top: 55px;
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+}

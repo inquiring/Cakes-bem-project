@@ -1,0 +1,14 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .hero__icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .hero__icon {
+        width: 55px;
+        height: 55px;
+    }
+}

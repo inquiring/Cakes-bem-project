@@ -1,0 +1,19 @@
+@media screen and (min-width: $screen-s) {
+
+    .footer__nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #a09e9e;
+        order: 1;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .footer__nav {
+        width: 85%;
+        border-bottom: none;
+    }
+}

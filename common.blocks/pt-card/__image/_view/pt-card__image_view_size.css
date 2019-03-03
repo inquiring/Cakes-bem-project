@@ -1,0 +1,19 @@
+.pt-card__image_view_size  {
+    position: relative;
+    height: 145px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+@media screen and (min-width: $screen-s) {
+
+    .pt-card__image_view_size  {
+         align-items: flex-end;
+    }
+}
+@media screen and (min-width: $screen-m) {
+    .pt-card__image_view_size {
+        align-items: flex-end;
+        height: 210px;
+    }
+}

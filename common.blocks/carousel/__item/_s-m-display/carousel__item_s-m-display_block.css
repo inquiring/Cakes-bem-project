@@ -1,0 +1,6 @@
+@media screen and (min-width: $screen-s) {
+
+    .carousel__item_s-m-display_block {
+        display: block;
+    }
+}

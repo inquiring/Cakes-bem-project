@@ -1,0 +1,20 @@
+@media screen and (min-width: $screen-xs) {
+
+    .pt-form_view_choice {
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .pt-form_view_choice {
+        padding-bottom: 44px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .pt-form_view_choice {
+        padding-bottom: 70px;
+    }
+}

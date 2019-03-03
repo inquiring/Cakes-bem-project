@@ -1,0 +1,51 @@
+.carousel
+{
+    position: relative;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    line-height: 1;
+}
+
+.carousel__inner
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+}
+
+.carousel__item
+{
+    position: relative;
+
+    display: none;
+}
+
+
+.carousel__item_state_active,
+.carousel__item_type_next,
+.carousel__item_type_prev
+{
+    display: flex;
+}
+
+.carousel__item_type_next,
+.carousel__item_type_prev
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+
+    .carousel__item_state_active,
+    .carousel__item_type_next,
+    .carousel__item_type_prev
+    {
+        flex-direction: column;
+    }
+}

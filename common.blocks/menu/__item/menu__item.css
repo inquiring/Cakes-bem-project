@@ -1,0 +1,5 @@
+.menu__item {
+    position: relative;
+    margin-left: var(--gap);
+    padding: 19px 0 20px;
+}

@@ -1,0 +1,28 @@
+.footer__social {
+    display: flex;
+    opacity: 0.4;
+    align-items: center;
+}
+
+.footer__social > .social-icon > svg {
+    fill: #fff;
+}
+.footer__social > .social-icon > svg:hover {
+    fill: #f50049;
+}
+@media screen and (min-width: $screen-s) {
+    .footer__social {
+        flex-grow: 1;
+        justify-content: flex-start;
+        order: 3;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .footer__social {
+        justify-content: flex-end;
+    }
+    .footer__social > .social-icon > svg {
+        fill: #a09e9e;
+    }
+}

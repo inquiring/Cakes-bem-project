@@ -1,0 +1,24 @@
+.product__title {
+    color: #2d2829;
+    font-family: Circe;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .product__title {
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .product__title {
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .product__title {
+        font-size: 24px;
+    }
+}

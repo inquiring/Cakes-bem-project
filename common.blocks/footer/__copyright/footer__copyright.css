@@ -1,0 +1,26 @@
+@media screen and (min-width: $screen-s) {
+
+    .footer__copyright {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .footer__copyright {
+        justify-content: flex-end;
+        order: 2;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .footer__copyright {
+        order: 3;
+        justify-content: center;
+        flex-grow: 1;
+        border-top: 1px solid #dadada;
+    }
+}

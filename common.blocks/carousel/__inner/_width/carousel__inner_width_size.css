@@ -1,0 +1,16 @@
+
+@media screen and (min-width: $screen-s) {
+
+    .carousel__inner_width_size {
+        width: 586px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .carousel__inner_width_size {
+        width: 839px;
+        margin: auto;
+    }
+}

@@ -1,0 +1,30 @@
+
+.tpl-layout__header {
+    color: #2d2829;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.04px;
+    margin: 0;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .tpl-layout__header {
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .tpl-layout__header {
+        font-size: 28px;
+        letter-spacing: 0.07px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .tpl-layout__header {
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 0.06px;
+    }
+}

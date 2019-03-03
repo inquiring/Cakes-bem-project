@@ -1,0 +1,8 @@
+.pt-card__image_view_product > picture > .image {
+    height: 100%;
+    width: 100%;
+}
+.pt-card__image_view_product {
+    background-color: #fff;
+    height: 100%;
+}

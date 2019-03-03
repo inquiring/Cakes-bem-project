@@ -1,0 +1,72 @@
+.input_theme_cake {
+    font-family: inherit;
+    position: relative;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+.input_theme_cake.input_focused {
+    z-index: 1;
+}
+.input_theme_cake.input_focused .input__control {
+    text-overflow: clip;
+}
+.input_theme_cake.input_focused::before {
+    box-shadow: 0 0 0 1px #ffcc00;
+}
+.input_theme_cake:before {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    content: '';
+    background: #fff;
+    border-radius: 3px;
+}
+.input_theme_cake.input_size_l {
+    font-size: 14px;
+    line-height: 27px;
+}
+.input_theme_cake.input_width_available {
+    width: 100%;
+}
+
+.input_theme_cake .input__box {
+    position: relative;
+    display: block;
+    user-select: none;
+}
+.input_theme_cake .input__control {
+    font: inherit;
+    line-height: inherit;
+    position: relative;
+    display: inline-block;
+
+    box-sizing: border-box;
+    padding: 0;
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: none;
+}
+.input_theme_cake.input_size_l .input__control {
+    height: 50px;
+    padding: 0 10px;
+}
+
+@media screen and (min-width: $screen-m) {
+    .input_theme_cake {
+        background: none;
+        border-bottom: 1px rgba(0, 0, 0, 0.2) solid;
+        border-radius: 0px;
+    }
+    .input_theme_cake:before {
+        background-color: #fbebea;
+        border-radius: 0px;
+    }
+    .input_theme_cake.input_size_l .input__control {
+        height: 14px;
+        padding: 0 10px;
+    }
+}

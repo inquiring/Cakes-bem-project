@@ -1,0 +1,9 @@
+@media screen and (min-width: $screen-s) {
+
+    .footer__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+}

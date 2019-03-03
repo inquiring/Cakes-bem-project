@@ -1,0 +1,36 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-position: center;
+    background-position: 100% 60px;
+    background-repeat: no-repeat;
+    padding: var(--gap);
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .hero {
+        background-image: url('../../img/hero/hero-mobile.png');
+        background-position: -18px -195px;
+        background-size: 391px;
+    }
+}
+@media screen and (min-width: $screen-s)  {
+
+    .hero {
+        background-image: url('../../img/hero/hero-tablet.png');
+        background-position: 344px 0;
+        background-size: 572px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .hero {
+        background-image: url('../../img/hero/hero-desktop.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 60px;
+        background-size: 919px;
+    }
+}

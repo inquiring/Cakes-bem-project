@@ -1,0 +1,40 @@
+.new-menu {
+    height: 60px;
+    border-bottom: 1px solid var(--color-bg-border);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    width: 100%;
+    /* top: 0; */
+    z-index: 100;
+    background-color: inherit;
+}
+
+@media screen and (max-width: $screen-s-max) {
+
+    .new-menu {
+        background-color: #fff;
+        padding: 0 45px;
+    }
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .new-menu {
+        padding: 0 10px 0 20px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .new-menu {
+        background: #fff;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .new-menu {
+        position: fixed;
+        /* background: transparent; */
+        padding: 0 var(--gap);
+    }
+}

@@ -1,0 +1,7 @@
+
+@media screen and (min-width: $screen-m) {
+
+    .new-menu__toogle_m_view {
+        display: none;
+    }
+}

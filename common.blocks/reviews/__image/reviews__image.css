@@ -1,0 +1,25 @@
+.reviews__image {
+    border-radius: 50%;
+}
+
+
+@media screen and (max-width: $screen-xs-max) {
+     .reviews__image {
+         max-width: 59px;
+         height: 59px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+    .reviews__image {
+        max-width: 109px;
+        height: 109px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .reviews__image {
+        max-width: 209px;
+        height: 209px;
+    }
+ }

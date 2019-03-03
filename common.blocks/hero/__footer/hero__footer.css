@@ -1,0 +1,17 @@
+
+@media screen and (max-width: $screen-xs-max) {
+
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .hero__footer {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: $screen-m) {
+
+}
+

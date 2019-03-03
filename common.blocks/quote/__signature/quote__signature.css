@@ -1,0 +1,15 @@
+
+
+@media screen and (max-width: $screen-s-max) {
+
+    .quote__signature {
+        width: 65px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .quote__signature {
+        width: 180px;
+    }
+}

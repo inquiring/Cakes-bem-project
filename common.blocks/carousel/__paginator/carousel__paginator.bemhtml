@@ -1,0 +1,35 @@
+block('carousel')(
+    def()(function() {
+        var _this = this,
+            items = 0;
+
+        function countItems(content) {
+            if (_this.isSimple(content)) return;
+
+            Object.keys(content).forEach(function(key) {
+                key === 'elem' && content[key] === 'item' && items++;
+                countItems(content[key]);
+            });
+
+            return items;
+        }
+
+        return applyNext({ _itemsNumber: countItems(this.ctx.content) });
+    }),
+    elem('paginator')(
+        mode('button')(function() {
+            return { elem: 'paginator-button' };
+        }),
+        content()(function() {
+            var slides = [],
+                items = this._itemsNumber;
+
+            while(items) {
+                slides.push(apply('button'));
+                items--;
+            }
+
+            return slides;
+        })
+    )
+);

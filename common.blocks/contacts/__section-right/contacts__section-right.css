@@ -1,0 +1,7 @@
+@media screen and (min-width: $screen-s) {
+
+    .contacts__section-right {
+        padding-left: 67px;
+        padding-top: 27px;
+    }
+}

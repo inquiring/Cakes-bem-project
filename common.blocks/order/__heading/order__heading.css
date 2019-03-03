@@ -1,0 +1,16 @@
+.order__heading {
+    display: flex;
+    align-items: baseline;
+}
+
+@media screen and (min-width: $screen-xs) {
+
+}
+@media screen and (min-width: $screen-s) {
+
+    .order__heading {
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,5 @@
+@media screen and (min-width: $screen-s) and (max-width: $screen-s-max) {
+    .new-menu__container_s_view {
+        justify-content: left;
+    }
+}

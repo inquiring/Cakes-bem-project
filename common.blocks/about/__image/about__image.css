@@ -1,0 +1,25 @@
+.about__image {
+    border-radius: 50%;
+}
+
+
+ @media screen and (max-width: $screen-xs-max) {
+     .about__image {
+         max-width: 155px;
+    }
+ }
+
+  @media screen and (min-width: $screen-s) {
+     .about__image {
+         max-width: 310px;
+         display: flex;
+         margin-left: 50px;
+    }
+ }
+
+   @media screen and (min-width: $screen-m) {
+     .about__image {
+         max-width: 510px;
+         margin: 0;
+    }
+ }

@@ -1,0 +1,23 @@
+.carousel__control_theme_alert
+{
+    font-size: 60px;
+    font-weight: 100;
+    line-height: 36px;
+
+    color: #fff;
+    text-align: center;
+
+    background: var(--color-bg-alert);
+
+    border: 1px solid #fff;
+    border-radius: 23px;
+
+    opacity: 0.5;
+}
+
+.carousel__control_theme_alert:hover
+{
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.9;
+}

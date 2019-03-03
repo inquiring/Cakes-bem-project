@@ -1,0 +1,6 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .text_xs-align_center {
+        text-align: center;
+    }
+}

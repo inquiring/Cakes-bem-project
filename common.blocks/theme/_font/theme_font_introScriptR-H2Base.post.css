@@ -1,0 +1,20 @@
+@font-face {
+	font-family: 'introScriptR-H2Base';
+	src: url('introScriptR-H2Base/fonts/introScriptR-H2Base/IntroScriptR-H2Base.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-sans: "introScriptR-H2Base", Helvetica, Arial, sans-serif;
+$font-serif: Georgia, serif;
+$font-mono: monospace;
+
+.theme_font_introScriptR-H2Base {
+	--font-sans: "IntroScriptR-H2Base", Helvetica, Arial, sans-serif;
+	--font-serif: Georgia, serif;
+	--font-mono: monospace;
+}
+
+.theme_font_introScriptR-H2Base {
+    font-family: var(--font-sans);
+}

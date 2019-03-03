@@ -1,0 +1,18 @@
+.quote__quotes {
+    color: #fffefe;
+    font-family: "Playfair Display";
+
+    font-weight: 700;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    .quote__quotes {
+        font-size: 60px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+    .quote__quotes {
+        font-size: 77px;
+    }
+}

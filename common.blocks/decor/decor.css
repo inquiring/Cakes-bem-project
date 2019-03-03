@@ -1,0 +1,24 @@
+@media screen and (min-width: $screen-s) {
+
+    .decor {
+        background-image: url('../../img/decor/decor-tablet.png');
+        background-repeat: no-repeat;
+        background-position: 35px 180px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+    .decor {
+        background-image: url('../../img/decor/decor-desktop.png');
+        background-repeat: no-repeat;
+        background-position: 140px 140px;
+        background-size: 20%;
+    }
+}
+@media screen and (min-width: $screen-l) {
+    .decor {
+        background-image: url('../../img/decor/decor-desktop.png');
+        background-repeat: no-repeat;
+        background-position: 35px 190px;
+    }
+}
+

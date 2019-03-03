@@ -1,0 +1,11 @@
+.product__header {
+    padding: var(--space-s);
+}
+
+
+@media screen and (min-width: $screen-m) {
+
+    .product__header {
+        padding: var(--space-l);
+    }
+}

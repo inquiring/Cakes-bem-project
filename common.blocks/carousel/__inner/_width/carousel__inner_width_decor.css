@@ -1,0 +1,7 @@
+@media screen and (min-width: $screen-s) {
+
+    .carousel__inner_width_decor > div.carousel__item {
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+}

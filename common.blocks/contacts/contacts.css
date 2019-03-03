@@ -1,0 +1,23 @@
+
+
+@media screen and (min-width: $screen-s) {
+    .contacts {
+        background-image: url(img/contacts-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        height: 590px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+    .contacts {
+        background-image: url(img/contacts-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position-x: 100%;
+        background-position-y: 100%;
+        height: 850px;
+    }
+}

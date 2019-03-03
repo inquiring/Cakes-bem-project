@@ -1,0 +1,31 @@
+.delivery-list__item {
+    counter-increment: item;
+    position: relative;
+    margin-bottom: 25px;
+    color: #fff;
+    padding-left: 25px;
+}
+
+.delivery-list__item:before {
+    content: counter(item);
+    position: absolute;
+    left: 0px;
+    top: 0;
+    font-family: "Playfair Display",serif;
+    font-size: 64px;
+    line-height: 14px;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+    .delivery-list__item:before {
+        font-size: 35px;
+        /* padding-left: 35px; */
+    }
+
+}
+
+@media screen and (min-width: $screen-s) {
+    .delivery-list__item {
+         padding-left: 45px;
+    }
+}

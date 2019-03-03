@@ -1,0 +1,22 @@
+.textarea_theme_cake {
+    font-family: inherit;
+    min-height: 120px;
+}
+.textarea_theme_cake.textarea_size_l {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 5px 7px;
+}
+@media screen and (min-width: $screen-m) {
+
+    .textarea_theme_cake {
+        background: inherit;
+        min-height: 14px;
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+    .textarea_theme_cake.textarea_size_l {
+        font-size: 14px;
+    }
+}

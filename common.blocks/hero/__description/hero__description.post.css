@@ -1,0 +1,66 @@
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .hero__description {
+        margin: var(--space-xxxl) auto 0;
+        text-align: center;
+    }
+
+    .hero__description h1 {
+        color: #2d2829;
+        font-family: "Playfair Display";
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 36px;
+    }
+    .hero__description div {
+        color: #32313d;
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
+
+@media screen and (min-width: $screen-xs-max) {
+
+    .hero__description {
+        width: 270px;
+        height: 270px;
+    }
+    .hero__description h1 {
+        color: #2e2829;
+        font-family: "Playfair Display";
+        font-size: 60px;
+        font-weight: 700;
+        letter-spacing: 0.34px;
+    }
+    .hero__description div {
+        color: #32313d;
+        /* font-family: "Intro Script R - H 2 Base"; */
+        font-size: 36px;
+        font-weight: 400;
+
+    }
+}
+
+
+@media screen and (min-width: $screen-m) {
+    .hero__description {
+        width: 353px;
+    }
+
+    .hero__description h1 {
+
+        color: #2e2829;
+        font-family: "Playfair Display";
+        font-size: 78px;
+        font-weight: 700;
+        line-height: 70px;
+    }
+    .hero__description div {
+        color: #32313d;
+        /* font-family: "Intro Script R - H 2 Base"; */
+        font-size: 41px;
+        font-weight: 400;
+
+    }
+}

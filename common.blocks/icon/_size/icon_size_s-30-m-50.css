@@ -1,0 +1,21 @@
+@media screen and (max-width: $screen-s) {
+
+    .icon_size_s-30-m-50{
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .icon_size_s-30-m-50 {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .icon_size_s-30-m-50 {
+        width: 50px;
+        height: 50px;
+    }
+}

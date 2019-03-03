@@ -1,0 +1,16 @@
+.product__footer {
+    padding: var(--space-s);
+}
+
+@media screen and (max-width: $screen-s-max) {
+
+    .product__footer .pt-icon-plus {
+        display: none;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .product__footer {
+        padding: var(--space-l);
+    }
+}

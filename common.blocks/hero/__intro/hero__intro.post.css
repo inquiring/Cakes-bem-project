@@ -1,0 +1,34 @@
+.hero__intro {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+@media screen and (max-width: $screen-xs-max) {
+    .hero__intro {
+        margin-top: 140px;
+        align-self: center;
+        height: 370px;
+    }
+    .hero__intro .button {
+        align-self: center;
+    }
+}
+
+
+@media screen and (min-width: $screen-s) {
+   .hero__intro {
+        margin-top: 40px;
+        height: 585px;
+    }
+    .hero__intro .pt-icon-plus {
+        width: 215px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+   .hero__intro {
+        margin-top: 120px;
+        height: 755px;
+    }
+}

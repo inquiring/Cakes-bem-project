@@ -1,0 +1,11 @@
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .image_view_decor {
+        box-shadow: 0 0 20px -10px rgba(0,0,0,.75);
+    }
+
+    .image_view_decor:hover {
+        box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+    }
+}

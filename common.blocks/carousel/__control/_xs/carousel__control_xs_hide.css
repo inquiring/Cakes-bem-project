@@ -1,0 +1,7 @@
+
+@media screen and (max-width: $screen-xs-max)  {
+
+    .carousel__control_xs_hide {
+        display: none;
+    }
+}

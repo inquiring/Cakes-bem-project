@@ -1,0 +1,25 @@
+ .about__social {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .about__social {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+ }
+@media screen and (min-width: $screen-s) {
+
+    .about__social {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 150px;
+    }
+
+}

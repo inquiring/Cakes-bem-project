@@ -1,0 +1,32 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .pt-card_view_decor {
+        width: 185px;
+        height: 351px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .pt-card_view_decor {
+
+        box-shadow: 0 0 20px -10px rgba(0,0,0,.75);
+        margin: var(--col-gap-half);
+        width: 200px;
+        height: 264px;
+    }
+
+    .pt-card_view_decor:hover {
+        box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+
+    }
+
+}
+
+@media screen and (min-width: $screen-l) {
+
+    .pt-card_view_decor {
+        height: 431px;
+        width: 320px;
+    }
+
+}

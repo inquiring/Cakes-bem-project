@@ -1,0 +1,6 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .pt-card_xs-max_hide {
+        display: none;
+    }
+}
