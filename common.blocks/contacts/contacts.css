@@ -1,5 +1,7 @@
 
-
+.contacts {
+    padding-top: 60px;
+}
 @media screen and (min-width: $screen-s) {
     .contacts {
         background-image: url(img/contacts-desktop.jpg);

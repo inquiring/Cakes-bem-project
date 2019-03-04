@@ -1,0 +1,7 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .button_xs-align_center {
+
+        align-self: center;
+    }
+}

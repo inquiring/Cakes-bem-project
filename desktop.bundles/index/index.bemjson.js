@@ -31,7 +31,6 @@ module.exports = {
                     mix: { block: "theme", mods: { color: "" } },
                     content: {
                         elem: "container",
-                        elemMods: { s: 'view' },
                         mix: {
                             block: "tpl-layout",
                             elem: "container",
@@ -50,9 +49,10 @@ module.exports = {
                                     content: 'Cakes'
                                 },
                             },
+                             // new-menu__toogle
                             {
                                 block: 'button',
-                                mix: { block: 'new-menu', elem: 'toogle', elemMods: { m: 'view'} },
+                                mix: { block: 'new-menu', elem: 'toogle' },
                                 elemMods: { state: 'active' },
                                 content: [
                                     {
@@ -64,7 +64,6 @@ module.exports = {
                             // new-menu__nav
                             {
                                 elem: "nav",
-                                elemMods: {'position-fixed': 'top', xs: 'view', s: 'view' },
                                 mix: { block: 'dropdown' },
                                 tag: 'nav',
                                 content: [
@@ -126,8 +125,7 @@ module.exports = {
                             },
                             // new-menu__phone
                             {
-                                elem: "phone",
-                                elemMods: {'position-fixed': 'top', xs: 'view', s: 'view' },
+                                elem: 'phone',
                                 mix: { block: 'decorator', mods: { 'indent-l': 'l' }},
                                 content: {
                                     tag: 'a',

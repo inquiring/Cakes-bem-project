@@ -2,6 +2,7 @@
  .reviews {
     text-align: center;
     background-size: auto;
+    padding-top: 60px;
 }
 
 @media screen and (max-width: $screen-xs-max) {

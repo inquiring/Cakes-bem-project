@@ -1,0 +1,12 @@
+@media screen and (min-width: $screen-s) {
+    .new-menu__toogle {
+        position: absolute;
+        left: 150px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .new-menu__toogle {
+        display: none;
+    }
+}

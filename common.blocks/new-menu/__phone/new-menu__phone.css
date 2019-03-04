@@ -1,0 +1,13 @@
+
+@media screen and (min-width: $screen-xs) {
+
+    .new-menu__phone {
+        display: none;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .new-menu__phone {
+        display: block;
+    }
+}

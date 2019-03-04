@@ -2,6 +2,8 @@
 
     .pt-card__content_view_filling {
         padding-top: 15px;
+        display: flex;
+        flex-direction: column;
     }
 }
 @media screen and (min-width: $screen-s) {

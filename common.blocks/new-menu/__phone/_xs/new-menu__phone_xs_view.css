@@ -1,6 +1,0 @@
-@media screen and (max-width: $screen-xs-max) {
-
-    .new-menu__phone_xs_view {
-        display: none;
-    }
-}

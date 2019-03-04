@@ -7,11 +7,13 @@
 }
 @media screen and (min-width: $screen-s) {
     .pt-card_view_size {
-        width: 241px;
+        width: 160px;
     }
 
 }
 @media screen and (min-width: $screen-m) {
 
-
+    .pt-card_view_size {
+        width: 210px;
+    }
 }

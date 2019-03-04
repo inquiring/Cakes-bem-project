@@ -1,8 +1,0 @@
-@media screen and (max-width: $screen-xs-max) {
-
-    .button_xs-aling_center {
-        left: 50%;
-        transform: translateX(-50%);
-        align-self: center;
-    }
-}

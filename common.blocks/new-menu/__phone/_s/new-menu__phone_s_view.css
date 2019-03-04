@@ -1,8 +1,0 @@
-@media screen and (max-width: $screen-s-max) {
-
-    .new-menu__phone_s_view {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-    }
-}

@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: space-between;
     background-position: center;
-    background-position: 100% 60px;
     background-repeat: no-repeat;
     padding: var(--gap);
 }
@@ -28,7 +27,6 @@
 
     .hero {
         background-image: url('../../img/hero/hero-desktop.png');
-        background-repeat: no-repeat;
         background-position-x: right;
         background-position-y: 60px;
         background-size: 919px;

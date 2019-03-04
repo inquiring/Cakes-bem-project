@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'playfairDisplay';
-	src: url('playfairDisplay/fonts/PlayfairDisplaySC-BalackItalic/PlayfairDisplaySC-BlackItalic.eot');
+	src: url('playfairDisplay/fonts/PlayfairDisplaySC-BlackItalic/PlayfairDisplaySC-BlackItalic.eot');
 	src:
-		url('playfairDisplay/fonts/PlayfairDisplaySC-BalackItalic/PlayfairDisplaySC-BlackItalic.eot?#iefix') format('embedded-opentype'),
-		url('playfairDisplay/fonts/PlayfairDisplaySC-BalackItalic/PlayfairDisplaySC-BlackItalic.woff') format('woff'),
-		url('playfairDisplay/fonts/PlayfairDisplaySC-BalackItalic/PlayfairDisplaySC-BlackItalic.ttf') format('truetype');
+		url('playfairDisplay/fonts/PlayfairDisplaySC-BlackItalic/PlayfairDisplaySC-BlackItalic.eot?#iefix') format('embedded-opentype'),
+		url('playfairDisplay/fonts/PlayfairDisplaySC-BlackItalic/PlayfairDisplaySC-BlackItalic.woff') format('woff'),
+		url('playfairDisplay/fonts/PlayfairDisplaySC-BlackItalic/PlayfairDisplaySC-BlackItalic.ttf') format('truetype');
 	font-weight: 900;
 	font-style: italic;
 }
