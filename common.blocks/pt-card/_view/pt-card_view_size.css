@@ -1,12 +1,14 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .pt-card_view_size {
-        width: 241px;
+        width: 180px;
         padding-bottom: 25px;
     }
 }
 @media screen and (min-width: $screen-s) {
-
+    .pt-card_view_size {
+        width: 241px;
+    }
 
 }
 @media screen and (min-width: $screen-m) {
