@@ -62,7 +62,7 @@
         border-radius: 0px;
     }
     .input_theme_cake:before {
-        background-color: #fbebea;
+        background-color: transparent;
         border-radius: 0px;
     }
     .input_theme_cake.input_size_l .input__control {

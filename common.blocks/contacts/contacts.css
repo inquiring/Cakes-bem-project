@@ -4,7 +4,7 @@
 }
 @media screen and (min-width: $screen-s) {
     .contacts {
-        background-image: url(img/contacts-desktop.jpg);
+        background-image: url(img/contacts-desktop.png);
         background-repeat: no-repeat;
         background-size: 60%;
         background-position-x: 100%;
@@ -15,7 +15,7 @@
 
 @media screen and (min-width: $screen-m) {
     .contacts {
-        background-image: url(img/contacts-desktop.jpg);
+        background-image: url(img/contacts-desktop.png);
         background-repeat: no-repeat;
         background-size: auto;
         background-position-x: 100%;

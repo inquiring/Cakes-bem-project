@@ -1,0 +1,24 @@
+@media screen and (min-width: $screen-xs) {
+
+    .button_width_xs {
+        width: 180px;
+        height: 51px;
+        border-radius: 26px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .button_width_xs {
+        width: 135px;
+        height: 43px;
+        border-radius: 22px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .button_width_xs {
+        width: 180px;
+        height: 51px;
+        border-radius: 26px;
+    }
+}

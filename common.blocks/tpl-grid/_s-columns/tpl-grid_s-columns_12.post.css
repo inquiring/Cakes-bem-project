@@ -1,0 +1,6 @@
+@media screen and (min-width: $screen-s) {
+
+	.tpl-grid_s-columns {
+		&_12 { grid-template-columns: repeat(12, 1fr); }
+	}
+}

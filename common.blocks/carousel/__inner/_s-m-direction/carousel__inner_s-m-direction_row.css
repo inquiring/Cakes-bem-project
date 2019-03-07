@@ -3,7 +3,7 @@
 
     .carousel__inner_s-m-direction_row {
         display: flex;
-        align-items: center;
+        align-items: baseline;
         justify-content: space-between;
     }
 }

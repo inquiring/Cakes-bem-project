@@ -1,18 +1,13 @@
 .footer__logo {
-    color: #fff;
-    font-size: 28px;
-    line-height: 30px;
+    margin-left: var(--gap);
+    padding: 19px 0 20px;
 }
 @media screen and (min-width: $screen-s) {
     .footer__logo {
-        font-size: 18px;
-        line-height: 20px;
     }
 }
 @media screen and (min-width: $screen-m) {
     .footer__logo {
         color: #2d2829;
-        font-size: 28px;
-        line-height: 30px;
     }
 }

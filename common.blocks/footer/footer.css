@@ -1,9 +1,3 @@
 .footer {
     background-color: #898989;
 }
-
-@media screen and (min-width: $screen-m) {
-    .footer {
-        background-color: #e8e8e8;
-    }
-}

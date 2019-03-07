@@ -1,0 +1,7 @@
+@media screen and (min-width: $screen-s) {
+    .filling {
+        display: flex;
+        margin-bottom: var(--gap);
+    }
+
+}

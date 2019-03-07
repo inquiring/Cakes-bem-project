@@ -1,3 +1,17 @@
+@media screen and (max-width: $screen-xs-max) {
+    .footer__nav.new-menu {
+        height: 100%;
+    }
+}
+@media screen and (min-width: $screen-xs) {
+    .footer__nav.new-menu {
+        background-color: #898989;
+        padding: 0;
+    }
+    .footer__nav > .new-menu__item {
+        padding: 10px 0 10px;
+    }
+}
 @media screen and (min-width: $screen-s) {
 
     .footer__nav {
@@ -13,7 +27,11 @@
 
 @media screen and (min-width: $screen-m) {
     .footer__nav {
+
         width: 85%;
         border-bottom: none;
+    }
+    .footer__nav.new-menu {
+        position: static;
     }
 }

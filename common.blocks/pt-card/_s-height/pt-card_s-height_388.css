@@ -1,0 +1,6 @@
+@media screen and (min-width: $screen-s) {
+    .pt-card_s-height_388 {
+        min-height: 388px;
+        height: 388px;
+    }
+}

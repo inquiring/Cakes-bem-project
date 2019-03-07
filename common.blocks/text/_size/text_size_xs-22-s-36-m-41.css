@@ -1,0 +1,22 @@
+@media screen and (min-width: $screen-xs) {
+
+    .text_size_xs-22-s-36-m-41 {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+    .text_size_xs-22-s-36-m-41 {
+        font-size: 36px;
+        line-height: 38px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .text_size_xs-22-s-36-m-41 {
+        font-size: 41px;
+        line-height: 43px;
+    }
+}

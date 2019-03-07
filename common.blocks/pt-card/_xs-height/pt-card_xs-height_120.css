@@ -1,0 +1,8 @@
+.pt-card_xs-height_120 {
+    overflow: hidden;
+}
+@media screen and (max-width: $screen-xs-max) {
+    .pt-card_xs-height_120 {
+        max-height: 120px;
+    }
+}

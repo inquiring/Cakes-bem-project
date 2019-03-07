@@ -2,12 +2,6 @@
      padding: var(--gap);
 }
 
-@media screen and (max-width: $screen-xs-max) {
-
-    .advantages__item:nth-child(2) {
-        background-color: #fff;
-    }
-}
 @media screen and (min-width: $screen-s) {
 
     .advantages__item:nth-child(2) {

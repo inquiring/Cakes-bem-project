@@ -1,9 +1,0 @@
-.text_view_white {
-    color: white;
-}
-
-@media screen and (min-width: $screen-m) {
-    .text_view_white {
-        color: #2d2829;
-    }
-}

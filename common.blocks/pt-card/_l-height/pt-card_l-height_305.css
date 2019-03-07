@@ -1,0 +1,5 @@
+@media screen and (min-width: $screen-l) {
+    .pt-card_l-height_305 {
+        height: 305px;
+    }
+}
