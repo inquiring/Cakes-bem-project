@@ -1,0 +1,23 @@
+@media screen and (min-width: $screen-xs) {
+
+    .avatar__photo_size_a {
+        width: 59px;
+        height: 59px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .avatar__photo_size_a {
+        width: 109px;
+        height: 109px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .avatar__photo_size_a {
+        width: 209px;
+        height: 209px;
+    }
+}

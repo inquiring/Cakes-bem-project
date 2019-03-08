@@ -1,0 +1,12 @@
+@media screen and (min-width: $screen-s) {
+    .text_width_blockquote {
+        width: 350px
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .text_width_blockquote {
+        width: 620px;
+    }
+}

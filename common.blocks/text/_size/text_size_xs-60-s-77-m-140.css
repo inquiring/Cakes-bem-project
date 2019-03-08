@@ -2,14 +2,14 @@
 
     .text_size_xs-60-s-77-m-140  {
         font-size: 60px;
-        line-height: 62px;
+        line-height: 17px;
     }
 }
 
 @media screen and (min-width: $screen-s) {
     .text_size_xs-60-s-77-m-140  {
         font-size: 77px;
-        line-height: 77px;
+        line-height: 22px;
     }
 }
 
@@ -17,6 +17,6 @@
 
     .text_size_xs-60-s-77-m-140  {
         font-size: 140px;
-        line-height: 142px;
+        line-height: 40px;
     }
 }

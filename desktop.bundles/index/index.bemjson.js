@@ -75,7 +75,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "1",
-                                        content: "Наши торты"
+                                        content: 'Наши торты'
                                     },
                                     {
                                         tag: 'a',
@@ -84,7 +84,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "2",
-                                        content: "Индивидуальный заказ"
+                                        content: 'Индивидуальный заказ'
                                     },
                                     {
                                         tag: 'a',
@@ -93,7 +93,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "3",
-                                        content: "Отзывы"
+                                        content: 'Отзывы'
                                     },
                                     {
                                         tag: 'a',
@@ -102,7 +102,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "4",
-                                        content: "О нас"
+                                        content: 'О нас'
                                     },
                                     {
                                         tag: 'a',
@@ -111,7 +111,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "5",
-                                        content: "Как заказать"
+                                        content: 'Как заказать'
                                     },
                                     {
                                         tag: 'a',
@@ -120,7 +120,7 @@ module.exports = {
                                         mods: { size: 'xs-12-s-12-m-13', view: 'primary', transform: 'uppercase' },
                                         mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
                                         val: "6",
-                                        content: "Контакты"
+                                        content: 'Контакты'
                                     }
                                 ]
                             },
@@ -2037,11 +2037,17 @@ module.exports = {
                                                             {
                                                                 elem: 'icon',
                                                                 content: {
-                                                                    block: 'image',
-                                                                    mix: { block: 'reviews', elem: 'image' },
-                                                                    url: '../../img/reviews/reviews-desktop.png',
-                                                                    alt: 'пользователь оставивший отзыв'
-                                                                },
+                                                                    block: 'avatar',
+                                                                    content: [
+                                                                    // здесь может быть блок счетчика или уведомлений,
+                                                                    // которые располагаются поверх аватарки
+                                                                    {
+                                                                        block: 'image',
+                                                                        mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
+                                                                        url: '../../img/reviews/reviews-desktop.png',
+                                                                        alt: 'пользователь оставивший отзыв'
+                                                                    }]
+                                                                }
                                                             },
                                                             {
                                                                 elem: 'block',
@@ -2096,14 +2102,21 @@ module.exports = {
                                                         mods: { 'xs-direction': 'column', 'vertical-align': 'center' },
                                                         mix: { block: 'decorator', mods: {'space-a': 'l' }},
                                                         content: [
+
                                                             {
                                                                 elem: 'icon',
                                                                 content: {
-                                                                    block: 'image',
-                                                                    mix: { block: 'reviews', elem: 'image' },
-                                                                    url: '../../img/reviews/jim.jpg',
-                                                                    alt: 'пользователь оставивший отзыв'
-                                                                },
+                                                                    block: 'avatar',
+                                                                    content: [
+                                                                    // здесь может быть блок счетчика или уведомлений,
+                                                                    // которые располагаются поверх аватарки
+                                                                    {
+                                                                        block: 'image',
+                                                                        mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
+                                                                        url: '../../img/reviews/jim.jpg',
+                                                                        alt: 'пользователь оставивший отзыв'
+                                                                    }]
+                                                                }
                                                             },
                                                             {
                                                                 elem: 'block',
@@ -2161,11 +2174,22 @@ module.exports = {
                                                             {
                                                                 elem: 'icon',
                                                                 content: {
-                                                                    block: 'image',
-                                                                    mix: { block: 'reviews', elem: 'image' },
-                                                                    url: '../../img/reviews/tom.jpg',
-                                                                    alt: 'пользователь оставивший отзыв'
-                                                                },
+                                                                    block: 'avatar',
+                                                                    content: [
+                                                                    // здесь может быть блок счетчика или уведомлений,
+                                                                    // которые располагаются поверх аватарки
+                                                                    {
+                                                                        elem: 'photo',
+                                                                        elemMods: { size: 'a' },
+                                                                        content: [
+                                                                        {
+                                                                            block: 'image',
+                                                                            mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
+                                                                            url: '../../img/reviews/tom.jpg',
+                                                                            alt: 'пользователь оставивший отзыв'
+                                                                        }]
+                                                                    }]
+                                                                }
                                                             },
                                                             {
                                                                 elem: 'block',
@@ -2424,7 +2448,8 @@ module.exports = {
                         elem: 'container',
                         elemMods: { size: 'l', align: 'center' },
                         content: {
-                            elem: 'content',
+                            block: 'pt-icon-plus',
+                            mods: { 'vertical-align': 'center', 'flex-direction': 'column' },
                             content: [
                                 {
                                     elem: 'block',
@@ -2433,7 +2458,7 @@ module.exports = {
                                     content: [
                                         {
                                             block: 'text',
-                                            mods: { size: 'xs-60-s-77-m-140', view: 'desable' },
+                                            mods: { align: 'center', size: 'xs-60-s-77-m-140', view: 'desable', width: 'blockquote' },
                                             mix: [
                                                 { block: 'theme', mods: { color: 'whitepaper-inverse'} },
                                                 { block: 'theme', mods: { font: 'playfairDisplay' } }
@@ -2442,30 +2467,33 @@ module.exports = {
                                         },
                                         {
                                             block: 'text',
-                                            mods: { style: 'italic', align: 'center', view: 'primary', weight: 'bold', style: 'italic' },
+                                            mods: { size: 'xs-13-s-14-m-25', style: 'italic', align: 'center', view: 'primary', weight: 'bold', style: 'italic', width: 'blockquote' },
                                             mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
                                             content: "Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное блюдо."
                                         },
                                     ]
                                 },
                                 {
-                                    tag: 'picture',
-                                    content: [
-                                        {
-                                            tag: 'source',
-                                            attrs: { media: '(min-width:  1020px)', srcset: '../../img/quote/signature-desktop.png' }
-                                        },
-                                        {
-                                            tag: 'source',
-                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/quote/signature-tablet.png' }
-                                        },
-                                        {
-                                            block: 'image',
-                                            mix: { block: '', elem: '', elemMods: { size: '' } },
-                                            url: '../../img/quote/signature-mobile.png',
-                                            alt: 'подпись'
-                                        },
-                                    ]
+                                    elem: 'icon',
+                                    content: {
+                                        tag: 'picture',
+                                        content: [
+                                            {
+                                                tag: 'source',
+                                                attrs: { media: '(min-width:  1020px)', srcset: '../../img/quote/signature-desktop.png' }
+                                            },
+                                            {
+                                                tag: 'source',
+                                                attrs: { media: '(min-width:  700px)', srcset: '../../img/quote/signature-tablet.png' }
+                                            },
+                                            {
+                                                block: 'image',
+                                                mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                url: '../../img/quote/signature-mobile.png',
+                                                alt: 'подпись'
+                                            },
+                                        ]
+                                    }
                                 },
                             ]
                         }
@@ -2481,33 +2509,29 @@ module.exports = {
                         elemMods: { size: 'l', align: 'center' },
                         content: [
                             {
-                                elem: 'content',
-                                content: [
-                                    {
-                                        elem: 'heading',
-                                        content: {
-                                            block: 'text', mods: { align: 'center'} ,
-                                            content: [
-                                                {
-                                                    block: 'text',
-                                                    tag: 'h2',
-                                                    mods: { size: 'xs-24-s-28-m-40', view: 'primary', },
-                                                    mix: [
-                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                        { block: 'decorator', mods: { 'indent-b': 'xs' }}
-                                                    ],
-                                                    content: 'Наши преимущества'
-                                                },
-                                                {
-                                                    block: 'text',
-                                                    mods: { size: 'xs-22-s-26-m-35', view: 'promo', },
-                                                    mix: { block: 'theme', mods: { font: 'introScriptR-H2Base' } },
-                                                    content: 'Почему нас выбирают?'
-                                                },
-                                            ]
-                                        }
-                                    },
-                                ],
+                                elem: 'heading',
+                                content: {
+                                    block: 'text', mods: { align: 'center'} ,
+                                    content: [
+                                        {
+                                            block: 'text',
+                                            tag: 'h2',
+                                            mods: { size: 'xs-24-s-28-m-40', view: 'primary', },
+                                            mix: [
+                                                { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                { block: 'decorator', mods: { 'indent-b': 'xs' }}
+                                            ],
+                                            content: 'Наши преимущества'
+                                        },
+                                        {
+                                            block: 'text',
+                                            tag: 'p',
+                                            mods: { size: 'xs-22-s-26-m-35', view: 'promo', },
+                                            mix: { block: 'theme', mods: { font: 'introScriptR-H2Base' } },
+                                            content: 'Почему нас выбирают?'
+                                        },
+                                    ]
+                                }
                             },
                             {
                                 block: 'tpl-layout', elem: 'content',
@@ -2515,31 +2539,76 @@ module.exports = {
                                     { block: 'advantages', elem: 'item' },
                                     { block: 'theme', mods: { 'xs-color-bg': 'default'} },
                                     { block: 'text', mods: {'xs-align': 'center' } },
+                                    { block: 'decorator', mods: { 'space-v': 'l' }},
                                 ],
                                 content: [
                                     {
-                                        block: 'text',
-                                        tag: 'p',
-                                        mods: { size: 'xs-14-s-14-m-20', view: 'black', weight: 'bold', },
-                                        content: 'Без искусственных добавок'
+                                        block: 'pt-icon-plus',
+                                        mods: { 'vertical-align': 'center', 'xs-direction': 'column', distribute: 'between' },
+                                        content: [
+                                        {
+                                            elem: 'icon',
+                                            mix: { block: 'decorator', mods: { 'indent-h': 'm' }},
+                                            content: [
+                                            {
+                                                // тут иконка
+                                                block: 'icon',
+                                                mods: { hover: 'default', size: '', view: 'brand', },
+                                                content: { html: '<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 61 61" width="61" height="61" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.1 0 0 -.1 0 61)"><path d="m213 596c-93-30-181-124-203-218-34-139 36-285 168-349 67-33 187-34 254-1 60 30 120 90 150 150 33 67 32 187-1 254-29 60-89 120-148 149-56 27-161 34-220 15zm216-47c160-80 200-276 86-425-39-51-135-94-210-94-153 0-275 122-275 275 0 108 55 196 151 244 87 43 161 43 248 0z"/><path d="m292 548c3-7 23-16 46-20 56-9 95-31 141-79 26-27 41-37 46-29 11 18-63 89-120 116-54 26-120 33-113 12z"/><path d="m274 484c-19-28-21-81-5-97 20-20 11-25-25-14-41 13-54 2-46-41 6-34 37-68 68-76 13-4 24-11 24-17 0-7-7-8-17-4-42 16-73 17-74 4-5-60 26-109 68-109 20 0 23-5 23-40 0-54 27-56 32-3 2 29 8 39 23 41 38 7 65 43 65 85 0 38-1 39-27 34-16-3-36-9-45-12-11-4-18-3-18 4 0 6 11 13 24 17 31 8 62 42 68 76 8 42-3 51-46 40-36-10-45-5-25 15 27 27-1 123-36 123-8 0-22-11-31-26zm56-54c0-9-6-25-14-35-14-19-15-19-27 8-10 22-10 32 0 54 12 27 13 27 27 8 8-10 14-26 14-35zm-60-100c11-11 20-27 20-35 0-21-26-19-50 5s-26 50-5 50c8 0 24-9 35-20zm120 5c0-19-36-55-55-55-21 0-19 26 5 50s50 26 50 5zm-118-132c22-20 24-53 3-53-19 0-55 36-55 55 0 20 29 19 52-2zm118 2c0-19-36-55-55-55-21 0-19 26 5 50s50 26 50 5z"/><path d="m523 403c-9-3-9-12-2-29 5-14 9-39 9-55 0-20 5-29 16-29 14 0 16 8 10 46-7 53-16 73-33 67z"/></g></svg>' }
+                                            }]
+                                        },
+                                        {
+                                            elem: 'block',
+                                            content: [
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'black', weight: 'bold', },
+                                                mix:{ block: 'decorator', mods: { 'indent-b': 'xxs' }},
+                                                content: 'Без искусственных добавок'
+                                            },
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'black', },
+                                                mix:{ block: 'decorator', mods: { 'indent-t': 'xxs' }},
+                                                content: 'Работаем  с натуральными ингредиентами и свежими продуктами'
+                                            }]
+                                        }]
                                     },
                                     {
-                                        block: 'text',
-                                        tag: 'p',
-                                        mods: { size: 'xs-14-s-14-m-20', view: 'black', },
-                                        content: 'Работаем  с натуральными ингредиентами и свежими продуктами'
-                                    },
-                                    {
-                                        block: 'text',
-                                        tag: 'p',
-                                        mods: { size: 'xs-14-s-14-m-20', view: 'black', weight: 'bold', },
-                                        content: 'Свежий торт в день торжества'
-                                    },
-                                    {
-                                        block: 'text',
-                                        tag: 'p',
-                                        mods: { size: 'xs-14-s-14-m-20', view: 'black', },
-                                        content: 'Торты изготавливаются в течение суток до отправки'
+                                        block: 'pt-icon-plus',
+                                        mods: { 'vertical-align': 'center', 'xs-direction': 'column' },
+                                        content: [
+                                        {
+                                            elem: 'icon',
+                                            mix: { block: 'decorator', mods: { 'indent-r': 'xs' }},
+                                            content: [
+                                            {
+                                                // тут иконка
+                                                block: 'icon',
+                                                mods: { hover: 'default', size: '', view: 'brand', 'display': 'block', distribute: 'between' },
+                                                content: { html: '<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 84 50" width="84" height="50" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.1 0 0 -.1 0 50)"><path d="m72 480c-92-56-94-190-5-243 19-11 32-25 29-31-21-48-37-122-34-158l3-43 376-3c434-3 409-8 390 85-35 176-145 292-307 325l-54 11 6 33c5 26 2 35-11 40-23 9-54-21-37-38 23-23 12-35-35-41-27-3-61-9-78-12-26-5-32-2-47 24-37 66-130 91-196 51zm160-49c77-87-11-216-124-182-71 22-102 117-57 175 29 37 55 47 109 42 34-3 51-11 72-35zm383-80c101-50 168-149 190-278l7-43h-91-90l-3 102-3 103-72 3c-72 3-72 3-53 22 25 25 26 60 2 60-10 0-23-5-29-11-9-9-19-6-39 10-15 11-40 21-55 21-24 0-29-4-29-25 0-14 11-37 25-50l24-25h-69-69l-3-102-3-103h-85-85l3 35c2 19 11 57 20 83 16 46 20 50 72 67 63 21 97 57 106 112 6 32 11 38 43 47 20 6 78 9 128 7 81-3 102-7 158-35zm-185-71c9-16 8-20-5-20-20 0-57 38-50 50 8 14 42-5 55-30zm170-119c0-35-4-51-16-55-25-9-29-8-69 24-47 37-59 37-114 0-24-17-50-30-58-30-25 0-63 47-63 80v30h160 160zm-98-58c20-19 39-27 63-27 27 0 35-4 35-18 0-17-13-18-160-18h-160v30c0 35-1 34 35 16 32-17 79-7 109 24 27 27 44 25 78-7z"/><path d="m79 394c-12-15-11-16 9-10 29 9 30-14 2-39s-25-35 10-35c17 0 30 5 30 11s-7 9-15 5c-8-3-15-2-15 3s7 14 15 21c20 16 19 46-1 54-21 8-20 8-35-10z"/><path d="m161 374c-26-44-26-44 3-44 13 0 27-6 29-12 4-10 8-9 16 2 6 8 11 17 11 20s-5 12-11 20c-8 11-12 12-16 3-2-7-9-13-15-13s-3 11 6 25c18 28 20 35 7 35-5 0-18-16-30-36z"/><path d="m580 324c0-9 5-14 12-12 18 6 21 28 4 28-9 0-16-7-16-16z"/><path d="m620 305c0-3 22-26 49-52 33-32 55-65 67-101 10-28 25-52 32-52 34 0-23 124-79 174-34 31-69 47-69 31z"/></g></svg>' }
+                                            }]
+                                        },
+                                        {
+                                            elem: 'block',
+                                            content: [
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'black', weight: 'bold', },
+                                                mix:{ block: 'decorator', mods: { 'indent-b': 'xxs' }},
+                                                content: 'Свежий торт в день торжества'
+                                            },
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'black', },
+                                                mix:{ block: 'decorator', mods: { 'indent-t': 'xxs' }},
+                                                content: 'Торты изготавливаются в течение суток до отправки'
+                                            }]
+                                        }]
                                     },
                                 ]
                             },
