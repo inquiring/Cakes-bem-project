@@ -1,6 +1,7 @@
 module.exports = {
     block: 'page',
-    title: 'Title of the page',
+    title: 'Торты на заказ',
+    lang: 'ru',
     favicon: '/favicon.ico',
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' } },
@@ -132,7 +133,7 @@ module.exports = {
                                 ],
                                 content: {
                                     tag: 'a',
-                                    attrs: { href: 'tel: +7 906 899 92 96' },
+                                    attrs: { href:'tel:89068999296' },
                                     block: 'text',
                                     mods: { size: 'm', view: 'primary', weight: 'bold', },
                                     mix: { block: 'new-menu', elem: 'item', elemMods: { view: 'link' } },
@@ -680,7 +681,6 @@ module.exports = {
                                                                 ]
                                                             }
                                                         },
-
                                                         // footer
                                                         {
                                                             elem: 'footer',
@@ -1663,7 +1663,6 @@ module.exports = {
                                                                                                 attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item1-tablet.jpg' },
                                                                                             },
                                                                                             {
-
                                                                                                 block: 'image',
                                                                                                 mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                                 url: '../../img/decor/decor_item1-mobile.jpg',
@@ -2102,7 +2101,6 @@ module.exports = {
                                                         mods: { 'xs-direction': 'column', 'vertical-align': 'center' },
                                                         mix: { block: 'decorator', mods: {'space-a': 'l' }},
                                                         content: [
-
                                                             {
                                                                 elem: 'icon',
                                                                 content: {
@@ -2442,7 +2440,6 @@ module.exports = {
                 //  quote цитата
                 {
                     elem: 'section',
-                    tag: 'section',
                     mix: { block: 'quote' },
                     content: {
                         elem: 'container',
@@ -2851,7 +2848,6 @@ module.exports = {
                                                     }
                                                 },
                                                 {
-
                                                         block: 'button',
                                                         mix: { block: 'pt-form', elem: 'button' },
                                                         mods: {
@@ -2861,7 +2857,6 @@ module.exports = {
                                                             type: 'submit'
                                                         },
                                                         text: 'Отправить'
-
                                                 }]
                                             }
                                         ]
@@ -2881,7 +2876,7 @@ module.exports = {
                                             {
                                                 block: 'text',
                                                 tag: 'a',
-                                                attrs: { href: 'tel:+7 906 899 92 96' },
+                                                attrs: { href:'tel:89068999296' },
                                                 mods: { size: 'xs-14-s-14-m-20', view: 'link', },
                                                 mix: { block: 'decorator', mods: { 'indent-t': 'xxs' } },
                                                 content: '+7 906 899 92 96'
@@ -2899,11 +2894,10 @@ module.exports = {
                                             {
                                                 block: 'text',
                                                 tag: 'a',
-                                                attrs: { href: 'mailto: bakerybypavel@mail.ru' },
+                                                attrs: { href:'mailto:bakerybypavel@mail.ru' },
                                                 mods: { size: 'xs-14-s-14-m-20', view: 'link', },
                                                 content: 'bakerybypavel@mail.ru'
                                             },
-
                                             {
                                                 block: 'text',
                                                 tag: 'p',
