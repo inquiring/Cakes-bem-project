@@ -1,29 +1,5 @@
-.reviews__text {
-    margin-top: 5px;
-    margin-bottom: 0;
-}
-@media screen and (min-width: $screen-xs) {
-
-    .reviews__text {
-        width: 230px;
-        display: inline;
-    }
-}
-
 @media screen and (min-width: $screen-s) {
-
     .reviews__text {
-        text-align: left;
-        width: 250px;
         display: block;
-    }
-}
-
-@media screen and (min-width: $screen-m) {
-
-    .reviews__text {
-        text-align: left;
-        width: 353px;
-        display: inline;
     }
 }

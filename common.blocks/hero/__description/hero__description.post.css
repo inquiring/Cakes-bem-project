@@ -4,21 +4,20 @@
     .hero__description {
         margin: var(--space-xxxl) auto 0;
         text-align: center;
+        width: 181px;
     }
 }
 
-@media screen and (min-width: $screen-xs-max) {
-
+@media screen and (min-width: $screen-s) {
     .hero__description {
+        margin-bottom: 17px;
         width: 270px;
-        height: 270px;
     }
-
 }
 
 @media screen and (min-width: $screen-m) {
 
     .hero__description {
-        width: 370px;
+        width: 355px;
     }
 }

@@ -3,6 +3,7 @@
     .decor__content {
         max-width: 450px;
         margin-left: auto;
+        margin-top: -50px;
     }
 }
 

@@ -1,0 +1,13 @@
+@media screen and (min-width: $screen-s) {
+
+    .delivery__content {
+        width: 340px;
+        margin-left: auto;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .delivery__content {
+        width: 464px;
+    }
+}

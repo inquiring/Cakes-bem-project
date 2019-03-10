@@ -8,11 +8,6 @@
     margin: 0;
 }
 
-@media screen and (max-width: $screen-xs-max) {
-
-    .tpl-layout__header {
-    }
-}
 @media screen and (min-width: $screen-s) {
 
     .tpl-layout__header {

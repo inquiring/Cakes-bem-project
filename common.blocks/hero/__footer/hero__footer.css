@@ -1,17 +1,24 @@
 
 @media screen and (max-width: $screen-xs-max) {
 
+    .hero__footer {
+        width: 240px;
+    }
 }
 
 @media screen and (min-width: $screen-s) {
 
     .hero__footer {
         display: flex;
+        justify-content: space-between;
+        width: 387px;
     }
-
 }
 
 @media screen and (min-width: $screen-m) {
 
+    .hero__footer {
+        padding-bottom: 292px;
+    }
 }
 

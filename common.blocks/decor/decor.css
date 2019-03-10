@@ -3,7 +3,8 @@
     .decor {
         background-image: url('../../img/decor/decor-tablet.png');
         background-repeat: no-repeat;
-        background-position: 35px 180px;
+        background-position-x: left;
+        background-position-y: 80px;
     }
 }
 @media screen and (min-width: $screen-m) {

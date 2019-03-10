@@ -14,7 +14,7 @@ module.exports = {
     mix: {
         block: 'theme',
         mods: {
-            color: 'whitepaper-normal',    // цвета
+            color: 'cakes-normal',    // цвета
             breakpoint: 'default', //
             space: 'default',    // отступы
             menu: 'default',    // размер меню
@@ -25,7 +25,7 @@ module.exports = {
     content: [
         {
             block: 'tpl-layout',
-            mix: [{ block: 'theme', mods: { color: '' } }, ],
+            mix: [{ block: 'theme', mods: { 'color-bg': 'default' } }, ],
             content: [
                 // new-menu
                 {
@@ -36,7 +36,7 @@ module.exports = {
                         mix: {
                             block: 'tpl-layout',
                             elem: 'container',
-                            elemMods: { size: 'l', align: 'center' },
+                            elemMods: { size: 'm', align: 'center' },
                         },
                         content: [
                             // new-menu__logo
@@ -146,102 +146,106 @@ module.exports = {
                 // hero
                 {
                     block: 'hero',
-                    content: [
-                        {
-                            elem: 'intro',
+                    content: {
+                        block: 'tpl-layout', elem: 'container',
+                        elemMods: { size: 'm', align: 'center' },
+                        content: {
+                            elem: 'content',
                             content: [
                                 {
-                                    elem: 'description',
+                                    block: 'hero', elem: 'intro',
                                     content: [
                                         {
-                                            block: 'text',
-                                            tag: 'h1',
-                                            mods: { size: 'xs-40-s-60-m-78', view: 'primary', weight: 'bold' },
-                                            mix: [
-                                                { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                { block: 'decorator', mods: {'indent-b': 'xxs' }}
-                                            ],
-                                            content: 'Торты на заказ'
-                                        },
-                                        {
-                                            block: 'text',
-                                            tag: 'p',
-                                            mods: { size: 'xs-22-s-36-m-41', view: 'promo',  },
-                                            mix: [
-                                                { block: 'theme', mods: { font: 'introScriptR-H2Base' }
-                                            }],
-                                            content: 'Ручная работа'
-                                        },
-                                    ]
-                                },
-                                {
-                                    block: 'button',
-                                    mix: { block: 'hero', elem: 'button' },
-                                    mods: { theme: 'cake', size: 'm' },
-                                    name: 'Test_1',
-                                    val: 'passed',
-                                    text: 'Выбрать торт'
-                                },
-                                {
-                                    elem: 'footer',
-                                    content: [
-                                        {
-                                            block: 'pt-icon-plus',
-                                            mods: { 'vertical-align': 'center' },
-                                            mix: { block: 'decorator', mods: { 'indent-t': 'm' }},
-                                            content: [
-                                            {
-                                                elem: 'icon',
-                                                mix: [
-                                                    { block: 'hero', elem: 'icon' },
-                                                    { block: 'decorator', mods: { 'indent-r': 'm' } }
-                                                ],
-                                                content: {
-                                                    block: 'icon',
-                                                    mods: { view: 'brand', size: 'm' },
-                                                    content: { html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="" ><path class="gst0" d="M438 75C389.7 26.6 325.4 0 257 0S124.3 26.6 76 75C27.6 123.3 1 187.6 1 256s26.6 132.7 75 181c48.4 48.4 112.6 75 181 75s132.7-26.6 181-75c48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181zm-10.7 351.3c-45.5 45.5-105.9 70.5-170.3 70.5s-124.8-25-170.3-70.5c-45.4-45.5-70.5-106-70.5-170.3s25-124.8 70.5-170.3c45.5-45.4 106-70.5 170.3-70.5s124.8 25 170.3 70.5c45.5 45.5 70.5 105.9 70.5 170.3s-25.1 124.8-70.5 170.3z"></path><path class="gst0" d="M451.8 173l-13.8 6.4c13 27.8 19.6 57.8 19.6 88.9h15.2c0-33.4-7-65.4-21-95.3zm-42.3-65.9C366.9 64.5 310.2 41 250 41v15.2c56.2 0 109 21.9 148.8 61.6 12.9 12.9 24 27.3 33.1 42.8l13.1-7.7c-9.8-16.6-21.7-32-35.5-45.8z"></path><path class="gst1" d="M340.6 309.2h-8.7c-15 0-43 2.8-61.2 21-2.4 2.4-4.5 5-6.4 7.8v-41.4h.9c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9-.4-3.4-3.1-6.1-6.5-6.5h-8.7c-15 0-43 2.8-61.2 21-2.4 2.4-4.5 5-6.4 7.8v-19c8.2-7.3 32.1-31.8 32.1-61.7 0-35.3-33.4-62.9-34.8-64-2.7-2.2-6.5-2.2-9.2 0-1.5 1.2-34.8 28.8-34.8 64 0 29.9 24 54.3 32.1 61.7v18.6c-1.9-2.8-4-5.4-6.4-7.9-18.3-18.3-46.2-21-61.2-21h-8.7c-3.4.4-6.1 3.1-6.5 6.5 0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v41c-1.9-2.7-4.1-5.1-6.5-7.4-18.3-18.3-46.2-21-61.2-21h-8.7c-3.4.4-6.1 3.1-6.5 6.5 0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v59.6c0 4 3.3 7.3 7.3 7.3s7.3-3.3 7.3-7.3v-59.1h.8c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9-.2-3.4-2.9-6.1-6.3-6.5zM198 265.4c-15.1-15.1-16.8-40.3-16.8-51.9h.9c10.3 0 35.8 1.6 51 16.8s16.8 40.3 16.8 51.9c-9.9.2-36.3-1.2-51.9-16.8zM249.9 392c-9.9.2-36.3-1.2-51.9-16.8-15.1-15.1-16.8-40.3-16.8-51.9 10 0 36.4 1.2 51.9 16.8s16.9 40.4 16.8 51.9zm7.4-196c-8.4-8.2-24.9-27.2-24.9-48.6s16.6-40.3 24.8-48.5c8.3 8.2 24.8 27.2 24.8 48.5s-16.4 40.4-24.7 48.6zm24 34.2l-.4.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.4-16.8 51.9s-41.9 17-51.9 16.8c.3-11.9 2-36.8 17.2-52zm35.1 145.1c-15.2 15.5-40.6 16.8-51 16.8h-.9c0-11.7 1.7-36.8 16.8-51.9l-.1-.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.5-16.7 52z"></path></svg>' }
-                                                },
-                                            },
-                                            {
-                                                elem: 'block',
-                                                content: {
-                                                    block: 'text',
-                                                    mods: { size: 's', view: 'black' },
-                                                    content: 'Натуральные ингредиенты'
-                                                }
-                                            }]
-                                        },
-                                        {
-                                            block: 'pt-icon-plus',
-                                            mods: { 'vertical-align': 'center' },
-                                            mix: { block: 'decorator', mods: { 'indent-t': 'm', 'indent-r': 'xxxl' }},
+                                            block: 'hero', elem: 'description',
                                             content: [
                                                 {
-                                                    elem: 'icon',
+                                                    block: 'text',
+                                                    tag: 'h1',
+                                                    mods: { size: 'xs-40-s-60-m-78', view: 'primary', weight: 'bold' },
                                                     mix: [
-                                                        { block: 'decorator', mods: { 'indent-r': 'm' } },
-                                                        { block: 'hero', elem: 'icon' }
+                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                        { block: 'decorator', mods: {'indent-b': 'xxs' }}
                                                     ],
-                                                    content:  {
-                                                        block: 'icon',
-                                                        mods: { view: 'brand', size: 'm' },
-                                                        content: { html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" width="32" height="32"><g fill=""><path d="M484.684 116.809h-71.022c11.595-12.57 18.694-29.348 18.694-47.757 0 0-.014-2.81-.041-3.612-.767-22.718-13.156-42.978-33.139-54.2-20.387-11.446-44.674-11.443-64.967.011l-32.3 18.229C281.68 40.897 265.849 58.105 256 78.339c-9.849-20.234-25.68-37.442-45.908-48.858l-32.3-18.231c-20.293-11.453-44.58-11.457-64.967-.011-19.983 11.221-32.372 31.482-33.139 54.2-.027.802-.041 3.612-.041 3.612 0 18.409 7.099 35.187 18.694 47.758H27.316C12.254 116.809 0 129.064 0 144.126v64.834c0 15.062 12.254 27.316 27.316 27.316h12.506v245.751c0 15.062 12.254 27.316 27.316 27.316h377.723c15.062 0 27.316-12.254 27.316-27.316V236.275h12.506c15.062 0 27.316-12.254 27.316-27.316v-64.834c.001-15.061-12.253-27.316-27.315-27.316zM313.093 49.297l32.3-18.229c13.309-7.512 29.25-7.506 42.642.014 12.99 7.293 21.041 20.424 21.537 35.127.018.546.027 2.843.027 2.843 0 26.334-21.424 47.758-47.758 47.758h-93.813c3.411-28.148 20.027-53.383 45.065-67.513zM102.427 66.208c.497-14.702 8.548-27.833 21.537-35.127 6.702-3.763 14.038-5.643 21.366-5.643 7.317 0 14.626 1.876 21.275 5.63l32.3 18.229c25.038 14.13 41.654 39.365 45.064 67.511h-93.813c-26.333 0-47.757-21.424-47.757-47.757.001.001.01-2.297.028-2.843zm102.374 204.68h-46.842c-6.284 0-11.378 5.095-11.378 11.378s5.094 11.378 11.378 11.378h46.842v192.943H67.138a4.564 4.564 0 0 1-4.56-4.559V236.275h142.223v34.613zm0-57.367H27.316a4.566 4.566 0 0 1-4.56-4.56v-64.834a4.565 4.565 0 0 1 4.56-4.561h177.485v73.955zm79.641 273.065h-56.885V139.564h56.885v347.022zm164.98-4.559a4.565 4.565 0 0 1-4.56 4.56H307.198V293.643h43.355c6.284 0 11.378-5.095 11.378-11.378s-5.094-11.378-11.378-11.378h-43.355v-34.612h142.225v245.752zm39.822-273.066a4.566 4.566 0 0 1-4.56 4.56H307.198v-73.956h177.487a4.566 4.566 0 0 1 4.56 4.561v64.835z"></path><path d="M404.598 293.643h1.138c6.284 0 11.378-5.095 11.378-11.378s-5.094-11.378-11.378-11.378h-1.138c-6.284 0-11.378 5.095-11.378 11.378.001 6.283 5.094 11.378 11.378 11.378zm-301.82 0h1.138c6.284 0 11.378-5.095 11.378-11.378s-5.095-11.378-11.378-11.378h-1.138c-6.284 0-11.378 5.095-11.378 11.378s5.094 11.378 11.378 11.378z"></path></g></svg>' }
-                                                    },
+                                                    content: 'Торты на заказ'
                                                 },
                                                 {
-                                                elem: 'block',
-                                                content: {
                                                     block: 'text',
-                                                    mods: { size: 's', view: 'black' },
-                                                    content: 'Доставка бесплатно при заказе от 2000 рублей*'
+                                                    tag: 'p',
+                                                    mods: { size: 'xs-22-s-36-m-41', view: 'promo',  },
+                                                    mix: [
+                                                        { block: 'theme', mods: { font: 'introScriptR-H2Base' }
+                                                    }],
+                                                    content: 'Ручная работа'
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            block: 'button',
+                                            mix: { block: 'hero', elem: 'button' },
+                                            mods: { theme: 'cake', size: 'm' },
+                                            name: 'Test_1',
+                                            val: 'passed',
+                                            text: 'Выбрать торт'
+                                        },
+                                        {
+                                            block: 'hero', elem: 'footer',
+                                            content: [
+                                                {
+                                                    block: 'pt-icon-plus',
+                                                    mix: { block: 'decorator', mods: { 'indent-r': 'xxxxxl' } },
+                                                    content: [
+                                                    {
+                                                        elem: 'icon',
+                                                        mix: [
+                                                            { block: 'hero', elem: 'icon' },
+                                                            { block: 'decorator', mods: { 'indent-r': 'm' } }
+                                                        ],
+                                                        content: {
+                                                            block: 'icon',
+                                                            mods: { view: 'brand', size: 'l' },
+                                                            content: { html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="32" height="32" fill="" ><path class="gst0" d="M438 75C389.7 26.6 325.4 0 257 0S124.3 26.6 76 75C27.6 123.3 1 187.6 1 256s26.6 132.7 75 181c48.4 48.4 112.6 75 181 75s132.7-26.6 181-75c48.4-48.4 75-112.6 75-181s-26.6-132.7-75-181zm-10.7 351.3c-45.5 45.5-105.9 70.5-170.3 70.5s-124.8-25-170.3-70.5c-45.4-45.5-70.5-106-70.5-170.3s25-124.8 70.5-170.3c45.5-45.4 106-70.5 170.3-70.5s124.8 25 170.3 70.5c45.5 45.5 70.5 105.9 70.5 170.3s-25.1 124.8-70.5 170.3z"></path><path class="gst0" d="M451.8 173l-13.8 6.4c13 27.8 19.6 57.8 19.6 88.9h15.2c0-33.4-7-65.4-21-95.3zm-42.3-65.9C366.9 64.5 310.2 41 250 41v15.2c56.2 0 109 21.9 148.8 61.6 12.9 12.9 24 27.3 33.1 42.8l13.1-7.7c-9.8-16.6-21.7-32-35.5-45.8z"></path><path class="gst1" d="M340.6 309.2h-8.7c-15 0-43 2.8-61.2 21-2.4 2.4-4.5 5-6.4 7.8v-41.4h.9c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9-.4-3.4-3.1-6.1-6.5-6.5h-8.7c-15 0-43 2.8-61.2 21-2.4 2.4-4.5 5-6.4 7.8v-19c8.2-7.3 32.1-31.8 32.1-61.7 0-35.3-33.4-62.9-34.8-64-2.7-2.2-6.5-2.2-9.2 0-1.5 1.2-34.8 28.8-34.8 64 0 29.9 24 54.3 32.1 61.7v18.6c-1.9-2.8-4-5.4-6.4-7.9-18.3-18.3-46.2-21-61.2-21h-8.7c-3.4.4-6.1 3.1-6.5 6.5 0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v41c-1.9-2.7-4.1-5.1-6.5-7.4-18.3-18.3-46.2-21-61.2-21h-8.7c-3.4.4-6.1 3.1-6.5 6.5 0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v59.6c0 4 3.3 7.3 7.3 7.3s7.3-3.3 7.3-7.3v-59.1h.8c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9-.2-3.4-2.9-6.1-6.3-6.5zM198 265.4c-15.1-15.1-16.8-40.3-16.8-51.9h.9c10.3 0 35.8 1.6 51 16.8s16.8 40.3 16.8 51.9c-9.9.2-36.3-1.2-51.9-16.8zM249.9 392c-9.9.2-36.3-1.2-51.9-16.8-15.1-15.1-16.8-40.3-16.8-51.9 10 0 36.4 1.2 51.9 16.8s16.9 40.4 16.8 51.9zm7.4-196c-8.4-8.2-24.9-27.2-24.9-48.6s16.6-40.3 24.8-48.5c8.3 8.2 24.8 27.2 24.8 48.5s-16.4 40.4-24.7 48.6zm24 34.2l-.4.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.4-16.8 51.9s-41.9 17-51.9 16.8c.3-11.9 2-36.8 17.2-52zm35.1 145.1c-15.2 15.5-40.6 16.8-51 16.8h-.9c0-11.7 1.7-36.8 16.8-51.9l-.1-.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.5-16.7 52z"></path></svg>' }
+                                                        },
+                                                    },
+                                                    {
+                                                        elem: 'block',
+                                                        content: {
+                                                            block: 'text',
+                                                            mods: { size: 's', view: 'black' },
+                                                            content: 'Натуральные ингредиенты'
+                                                        }
+                                                    }]
+                                                },
+                                                {
+                                                    block: 'pt-icon-plus',
+                                                    content: [
+                                                        {
+                                                            elem: 'icon',
+                                                            mix: [
+                                                                { block: 'decorator', mods: { 'indent-r': 'm' } },
+                                                                { block: 'hero', elem: 'icon' }
+                                                            ],
+                                                            content:  {
+                                                                block: 'icon',
+                                                                mods: { view: 'brand', size: 'l' },
+                                                                content: { html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.999 511.999" width="32" height="32"><g fill=""><path d="M484.684 116.809h-71.022c11.595-12.57 18.694-29.348 18.694-47.757 0 0-.014-2.81-.041-3.612-.767-22.718-13.156-42.978-33.139-54.2-20.387-11.446-44.674-11.443-64.967.011l-32.3 18.229C281.68 40.897 265.849 58.105 256 78.339c-9.849-20.234-25.68-37.442-45.908-48.858l-32.3-18.231c-20.293-11.453-44.58-11.457-64.967-.011-19.983 11.221-32.372 31.482-33.139 54.2-.027.802-.041 3.612-.041 3.612 0 18.409 7.099 35.187 18.694 47.758H27.316C12.254 116.809 0 129.064 0 144.126v64.834c0 15.062 12.254 27.316 27.316 27.316h12.506v245.751c0 15.062 12.254 27.316 27.316 27.316h377.723c15.062 0 27.316-12.254 27.316-27.316V236.275h12.506c15.062 0 27.316-12.254 27.316-27.316v-64.834c.001-15.061-12.253-27.316-27.315-27.316zM313.093 49.297l32.3-18.229c13.309-7.512 29.25-7.506 42.642.014 12.99 7.293 21.041 20.424 21.537 35.127.018.546.027 2.843.027 2.843 0 26.334-21.424 47.758-47.758 47.758h-93.813c3.411-28.148 20.027-53.383 45.065-67.513zM102.427 66.208c.497-14.702 8.548-27.833 21.537-35.127 6.702-3.763 14.038-5.643 21.366-5.643 7.317 0 14.626 1.876 21.275 5.63l32.3 18.229c25.038 14.13 41.654 39.365 45.064 67.511h-93.813c-26.333 0-47.757-21.424-47.757-47.757.001.001.01-2.297.028-2.843zm102.374 204.68h-46.842c-6.284 0-11.378 5.095-11.378 11.378s5.094 11.378 11.378 11.378h46.842v192.943H67.138a4.564 4.564 0 0 1-4.56-4.559V236.275h142.223v34.613zm0-57.367H27.316a4.566 4.566 0 0 1-4.56-4.56v-64.834a4.565 4.565 0 0 1 4.56-4.561h177.485v73.955zm79.641 273.065h-56.885V139.564h56.885v347.022zm164.98-4.559a4.565 4.565 0 0 1-4.56 4.56H307.198V293.643h43.355c6.284 0 11.378-5.095 11.378-11.378s-5.094-11.378-11.378-11.378h-43.355v-34.612h142.225v245.752zm39.822-273.066a4.566 4.566 0 0 1-4.56 4.56H307.198v-73.956h177.487a4.566 4.566 0 0 1 4.56 4.561v64.835z"></path><path d="M404.598 293.643h1.138c6.284 0 11.378-5.095 11.378-11.378s-5.094-11.378-11.378-11.378h-1.138c-6.284 0-11.378 5.095-11.378 11.378.001 6.283 5.094 11.378 11.378 11.378zm-301.82 0h1.138c6.284 0 11.378-5.095 11.378-11.378s-5.095-11.378-11.378-11.378h-1.138c-6.284 0-11.378 5.095-11.378 11.378s5.094 11.378 11.378 11.378z"></path></g></svg>' }
+                                                            },
+                                                        },
+                                                        {
+                                                        elem: 'block',
+                                                        content: {
+                                                            block: 'text',
+                                                            mods: { size: 's', view: 'black' },
+                                                            content: 'Доставка бесплатно при заказе от 2000 рублей*'
+                                                        }
+                                                    }]
                                                 }
-                                            }]
+                                            ]
                                         }
                                     ]
                                 }
                             ]
                         }
-                    ]
+                    },
                 },
                 // наши торты
                 {
@@ -254,7 +258,7 @@ module.exports = {
                     attrs: { id: "products-scroll" },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -817,7 +821,7 @@ module.exports = {
                     attrs: { id: 'order-scroll' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -840,7 +844,7 @@ module.exports = {
                                             {
                                                 block: 'text',
                                                 tag: 'p',
-                                                mods: { size: 'xxl', view: 'promo' },
+                                                mods: { size: 'xs-22-s-26-m-35', view: 'promo' },
                                                 mix: [
                                                     { block: 'theme', mods: { font: 'introScriptR-H2Base' } },
                                                     { block: 'decorator',  mods: {'indent-t': 'xxs' }}
@@ -854,7 +858,7 @@ module.exports = {
                                 {
                                     elem: 'content',
                                     mix: [
-                                        { block: 'theme', mods: { 'color-bg': 'default' } },
+                                        { block: 'theme', mods: { 'color-bg': 'normal' } },
                                         { block: 'filling' }
                                     ],
                                     content: [
@@ -1230,7 +1234,7 @@ module.exports = {
                                 {
                                     elem: 'content',
                                     mix: [
-                                        { block: 'theme', mods: { 'color-bg': 'default' } },
+                                        { block: 'theme', mods: { 'color-bg': 'normal' } },
                                         { block: 'size' }
                                     ],
                                     content: [
@@ -1533,7 +1537,7 @@ module.exports = {
                                 {
                                     elem: 'content',
                                     mix: [
-                                        { block: 'theme', mods: { 'color-bg': 'default' } },
+                                        { block: 'theme', mods: { 'color-bg': 'normal' } },
                                         { block: 'decor' }
                                     ],
                                     content: [
@@ -2002,7 +2006,7 @@ module.exports = {
                     ],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             elem: 'content',
                             mix: { block: 'reviews', elem: 'content' },
@@ -2074,7 +2078,7 @@ module.exports = {
                                                                         content: [
                                                                             {
                                                                                 block: 'text',
-                                                                                mods: { size: 'xs-12-s-14-m-18', view: 'primary', },
+                                                                                mods: { size: 'xs-12-s-14-m-18', view: 'primary', display: 'inline' },
                                                                                 mix: { block: 'reviews', elem: 'text' },
                                                                                 content: "Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)"
                                                                             },
@@ -2281,7 +2285,7 @@ module.exports = {
                     mix: [{ block: 'about' }, , { block: 'decorator', mods: { 'indent-b': 'xxl' } }],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -2322,26 +2326,28 @@ module.exports = {
                                                     block: 'text',
                                                     tag: 'p',
                                                     mods: { size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold' },
-                                                    mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                    mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
                                                     content: 'Кондитер - как призвание'
                                                 },
                                                 {
                                                     block: 'text',
                                                     tag: 'p',
                                                     mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                    mix: { block: 'decorator', mods: { 'indent-v': 'xs' } },
                                                     content: "Павел — профессиональный повар в различных гастрономических областях, но однажды его сердце покорило кондитерское искусство. С ранних лет он увлекался утонченным мастерством и обратился к своим талантам как кондитер."
                                                 },
                                                 {
                                                     block: 'text',
                                                     tag: 'p',
                                                     mods: { size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold' },
-                                                    mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                    mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
                                                     content: 'Принцип – натуральные ингредиенты'
                                                 },
                                                 {
                                                     block: 'text',
                                                     tag: 'p',
                                                     mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                    mix: { block: 'decorator', mods: { 'indent-v': 'xs' } },
                                                     content: "Сегодня Павел радует изделиями не только близких, но и тех, кто предпочитает качественную продукцию для торжества, а главным принципом является выбор натуральных ингредиентов."
                                                 },
                                             ]
@@ -2391,7 +2397,7 @@ module.exports = {
                                                 content: [
                                                     {
                                                         block: 'icon-background',
-                                                        mods: { size: '36', view: 'default' },
+                                                        mods: { size: '36', view: 'normal' },
                                                         tag: 'li',
                                                         content: {
                                                             block: 'social-icon',
@@ -2404,7 +2410,7 @@ module.exports = {
                                                     },
                                                     {
                                                         block: 'icon-background',
-                                                        mods: { size: '36', view: 'default' },
+                                                        mods: { size: '36', view: 'normal' },
                                                         tag: 'li',
                                                         content: {
                                                             block: 'social-icon',
@@ -2417,7 +2423,7 @@ module.exports = {
                                                     },
                                                     {
                                                         block: 'icon-background',
-                                                        mods: { size: '36', view: 'default' },
+                                                        mods: { size: '36', view: 'normal' },
                                                         tag: 'li',
                                                         content: {
                                                             block: 'social-icon',
@@ -2443,7 +2449,7 @@ module.exports = {
                     mix: { block: 'quote' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             block: 'pt-icon-plus',
                             mods: { 'vertical-align': 'center', 'flex-direction': 'column' },
@@ -2457,7 +2463,7 @@ module.exports = {
                                             block: 'text',
                                             mods: { align: 'center', size: 'xs-60-s-77-m-140', view: 'desable', width: 'blockquote' },
                                             mix: [
-                                                { block: 'theme', mods: { color: 'whitepaper-inverse'} },
+                                                { block: 'theme', mods: { 'color': 'normal'} },
                                                 { block: 'theme', mods: { font: 'playfairDisplay' } }
                                             ],
                                             content: '’’'
@@ -2503,7 +2509,7 @@ module.exports = {
                     mix: { block: 'advantages' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: [
                             {
                                 elem: 'heading',
@@ -2625,14 +2631,22 @@ module.exports = {
                                     },
                                     {
                                         block: 'text',
+                                        tag: 'p',
                                         mods: { size: 'xs-22-s-26-m-35', view: 'promo', },
-                                        mix: { block: 'theme', mods: { font: 'introScriptR-H2Base' } },
+                                        mix: [
+                                            { block: 'theme', mods: { font: 'introScriptR-H2Base' } },
+                                            { block: 'decorator', mods: { 'indent-t': 'l' }},
+                                            { block: 'decorator', mods: { 'indent-b': 'xs' }}
+                                        ],
                                         content: 'Для нас важно'
                                     },
                                     {
                                         block: 'text',
                                         tag: 'p',
-                                        mods: {  size: 'xs-14-s-14-m-20', view: 'black', },
+                                        mods: { size: 'xs-14-s-14-m-20', view: 'black', },
+                                        mix: [
+                                            { block: 'decorator', mods: { 'indent-v': 'xxs' }}
+                                        ],
                                         content: 'Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно для вас и для вашего события.'
                                     },
                                 ]
@@ -2651,109 +2665,88 @@ module.exports = {
                     ],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'l', align: 'center' },
+                        elemMods: { size: 'm', align: 'center' },
                         content: {
                             elem: 'content',
+                            mix: { block: 'delivery', elem: 'content' },
                             content: [
                                 {
-                                    elem: 'header',
-                                    content: {
-                                        block: 'text',
-                                        tag: 'h2',
-                                        mods: { align: 'center', view: 'primary' },
-                                        content: "Как заказать"
-                                    },
+                                    block: 'text',
+                                    tag: 'h2',
+                                    mods: {  size: 'xs-24-s-28-m-40', 'xs-align': 'center', view: 'primary' },
+                                    mix: [
+                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                    ],
+                                    content: 'Как заказать'
                                 },
                                 {
-                                    elem: 'content',
+                                    block: 'pt-list',
+                                    mix: { block: 'delivery-list'},
+                                    tag: 'ol',
                                     content: [
-                                        {
-                                            block: "tpl-grid",
-                                            mods: { 'xs-ratio': '1', 's-columns': '8', 'm-columns': '12', "col-gap": "third", "row-gap": "half"},
-                                            content: [
-                                                {
-                                                    elem: 'fraction',
-                                                    elemMods: { 'xs-col': '1', 's-col': '4', 'm-col':'6' },
-                                                },
-                                                {
-                                                    elem: 'fraction',
-                                                    elemMods: { 'xs-col': '1', 's-col': '4', 'm-col':'6' },
-                                                    mix: { block: 'decorator', mods: { 'space-l': '' } },
-                                                    content: [
-                                                        {
-                                                            block: 'pt-list',
-                                                            mix: { block: 'delivery-list'},
-                                                            tag: 'ol',
-                                                            content: [
-                                                            {
-                                                                elem: 'item',
-                                                                mix: { block: 'delivery-list', elem: 'item'},
-                                                                tag: 'li',
-                                                                content: [
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
-                                                                        content: "Срок заказа"
-                                                                    },
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
-                                                                        content: "Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю."
-                                                                    },
-                                                                ]
-                                                            },
-                                                            {
-                                                                elem: 'item',
-                                                                mix: { block: 'delivery-list', elem: 'item'},
-                                                                tag: 'li',
-                                                                content: [
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
-                                                                        content: "Доставка по городу"
-                                                                    },
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
-                                                                        content: " Доставка в пределах города 200 рублей, при заказе на сумму более 2000  доставка бесплатно."
-                                                                    },
-                                                                ]
-                                                            },
-                                                            {
-                                                                elem: 'item',
-                                                                mix: { block: 'delivery-list', elem: 'item'},
-                                                                tag: 'li',
-                                                                content: [
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
-                                                                        content: "Доставка за городом"
-                                                                    },
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                        mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
-                                                                        content: "Доставка за пределами города рассчитывается индивидуально."
-                                                                    },
-                                                                ]
-                                                            }]
-                                                        }
-                                                    ]
-                                                },
-                                            ]
-                                        }
-                                    ]
+                                    {
+                                        elem: 'item',
+                                        mix: { block: 'delivery-list', elem: 'item'},
+                                        tag: 'li',
+                                        content: [
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
+                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
+                                                content: "Срок заказа"
+                                            },
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
+                                                content: "Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю."
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        elem: 'item',
+                                        mix: { block: 'delivery-list', elem: 'item'},
+                                        tag: 'li',
+                                        content: [
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
+                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
+                                                content: "Доставка по городу"
+                                            },
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
+                                                content: " Доставка в пределах города 200 рублей, при заказе на сумму более 2000  доставка бесплатно."
+                                            },
+                                        ]
+                                    },
+                                    {
+                                        elem: 'item',
+                                        mix: { block: 'delivery-list', elem: 'item'},
+                                        tag: 'li',
+                                        content: [
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-15-s-15-m-21', view: 'primary', weight: 'bold', },
+                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs' }},
+                                                content: "Доставка за городом"
+                                            },
+                                            {
+                                                block: 'text',
+                                                tag: 'p',
+                                                mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs' }},
+                                                content: "Доставка за пределами города рассчитывается индивидуально."
+                                            },
+                                        ]
+                                    }]
                                 }
                             ]
                         }
@@ -2777,7 +2770,7 @@ module.exports = {
                                     {
                                         block: 'text',
                                         tag: 'h2',
-                                        mods: { 'xs-align': 'center', size: 'xxl', view: 'primary', weight: 'bold', },
+                                        mods: { 'xs-align': 'center', size: 'xs-24-s-28-m-40', view: 'primary', weight: 'bold', },
                                         mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
                                         content: 'Контакты'
                                     },
@@ -2802,6 +2795,7 @@ module.exports = {
                                             },
                                             {
                                                 block: 'text',
+                                                tag: 'p',
                                                 mods: { size: 'xs-14-s-14-m-20', view: 'primary', },
                                                 content: 'Заполните форму ниже и наш кондитер свяжется с Вами'
                                             },
@@ -2849,7 +2843,7 @@ module.exports = {
                                                 },
                                                 {
                                                         block: 'button',
-                                                        mix: { block: 'pt-form', elem: 'button' },
+                                                        mix: { block: 'contacts', elem: 'button' },
                                                         mods: {
                                                             theme: 'cake',
                                                             size: 'm',
@@ -2912,7 +2906,7 @@ module.exports = {
                                                 content: [
                                                     {
                                                         block: 'icon-background',
-                                                        mods: { size: '63', view: 'default' },
+                                                        mods: { size: '63', view: 'normal' },
                                                         tag: 'li',
                                                         content: {
                                                             block: 'social-icon',
@@ -2925,7 +2919,7 @@ module.exports = {
                                                     },
                                                     {
                                                         block: 'icon-background',
-                                                        mods: { size: '63', view: 'default' },
+                                                        mods: { size: '63', view: 'normal' },
                                                         mix: { block: 'decorator', mods: { 'indent-l': 'xxl' } },
                                                         tag: 'li',
                                                         content: {
@@ -2956,7 +2950,11 @@ module.exports = {
                     content: [
                         {
                             elem: 'container',
-                            mix: { block: 'tpl-layout', elem: 'container',elemMods: { size: 'l', align: 'center' }},
+                            mix: {
+                                block: 'tpl-layout',
+                                elem: 'container',
+                                elemMods: { size: 'm', align: 'center' }
+                            },
                             content: {
                                 block: 'footer', elem: 'content',
                                 content: [

@@ -1,0 +1,12 @@
+@media screen and (min-width: $screen-s) {
+    .contacts__button {
+        margin-top: 20px;
+        margin-bottom: 110px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+    .contacts__button {
+        margin-top: 70px;
+        margin-bottom: 297px;
+    }
+}

@@ -4,23 +4,21 @@
     justify-content: space-between;
     background-position: center;
     background-repeat: no-repeat;
-    padding: var(--gap);
 }
 
 @media screen and (max-width: $screen-xs-max) {
 
     .hero {
         background-image: url('../../img/hero/hero-mobile.png');
-        background-position: -18px -195px;
-        background-size: 391px;
+        background-position-y: top;
     }
 }
 @media screen and (min-width: $screen-s)  {
 
     .hero {
         background-image: url('../../img/hero/hero-tablet.png');
-        background-position: 344px 0;
-        background-size: 572px;
+        background-position-x: right;
+        background-position-y: bottom;
     }
 }
 @media screen and (min-width: $screen-m) {
@@ -29,6 +27,13 @@
         background-image: url('../../img/hero/hero-desktop.png');
         background-position-x: right;
         background-position-y: 60px;
-        background-size: 919px;
+    }
+}
+@media screen and (min-width: $screen-l) {
+
+    .hero {
+        background-image: url('../../img/hero/hero-desktop.png');
+        background-position-x: right;
+        background-position-y: 60px;
     }
 }

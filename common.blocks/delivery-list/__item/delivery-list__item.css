@@ -1,31 +1,60 @@
 .delivery-list__item {
     counter-increment: item;
     position: relative;
-    margin-bottom: 25px;
     color: #fff;
+    margin-bottom: 25px;
     padding-left: 25px;
 }
-
 .delivery-list__item:before {
     content: counter(item);
     position: absolute;
-    left: 0px;
-    top: 0;
-    font-family: "Playfair Display",serif;
-    font-size: 64px;
-    line-height: 14px;
-}
 
-@media screen and (max-width: $screen-xs-max) {
+    left: 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+@media screen and (min-width: $screen-s) {
+
+    .delivery-list__item {
+        padding-left: 45px;
+    }
+}
+@media screen and (min-width: $screen-xs) {
+
     .delivery-list__item:before {
         font-size: 35px;
-        /* padding-left: 35px; */
+        top: -19px;
     }
-
 }
-
 @media screen and (min-width: $screen-s) {
+
     .delivery-list__item {
-         padding-left: 45px;
+        padding-left: 30px;
     }
+
+    .delivery-list__item:before {
+        font-size: 36px;
+        top: -14px;
+    }
+    .delivery-list__item:nth-child(1) > p.text {
+        margin-right: 50px;
+    }
+    .delivery-list__item:nth-child(2) > p.text {
+        margin-right: 50px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .delivery-list__item {
+        padding-left: 46px;
+    }
+
+    .delivery-list__item:before {
+        font-size: 64px;
+        top: -30px;
+    }
+    .delivery-list__item:nth-child(2) > p.text {
+        margin-right: 0px;
+    }
+
 }
