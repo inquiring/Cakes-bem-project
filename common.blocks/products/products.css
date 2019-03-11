@@ -1,7 +1,15 @@
 .products {
     margin-top: -140px;
     padding-top: 60px;
+
 }
+
+@media screen and (min-width: $screen-xs) {
+    .products {
+        margin: 0 auto;
+    }
+}
+
 @media screen and (min-width: $screen-s) {
     .products {
         margin-top: 0px;

@@ -4,5 +4,6 @@
 @media screen and (max-width: $screen-xs-max) {
     .pt-card_xs-height_120 {
         max-height: 120px;
+        width: 280px;
     }
 }

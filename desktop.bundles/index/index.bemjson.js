@@ -192,7 +192,7 @@ module.exports = {
                                             content: [
                                                 {
                                                     block: 'pt-icon-plus',
-                                                    mix: { block: 'decorator', mods: { 'indent-r': 'xxxxxl' } },
+                                                    mix: { block: 'decorator', mods: { 'indent-b': 's' } },
                                                     content: [
                                                     {
                                                         elem: 'icon',

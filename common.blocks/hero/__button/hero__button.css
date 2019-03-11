@@ -1,9 +1,14 @@
-.hero__button {
-    width: 226px;
+@media screen and (min-width: $screen-xs) {
+    .hero__button {
+        width: 226px;
+        min-height: 51px;
+        order: 1;
+    }
 }
 @media screen and (min-width: $screen-s) {
     .hero__button {
         margin-bottom: 147px;
+        order: 0;
     }
 }
 @media screen and (min-width: $screen-m) {
