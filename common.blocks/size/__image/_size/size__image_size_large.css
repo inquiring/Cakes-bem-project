@@ -1,0 +1,15 @@
+@media screen and (min-width: $screen-xs) {
+
+    .size__image_size_large {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .size__image_size_large {
+        width: 175px;
+        height: 175px;
+    }
+}

@@ -1,0 +1,6 @@
+@media screen and (min-width: $screen-m) {
+    .tpl-layout__content {
+        padding: 0 22px;
+    }
+
+}

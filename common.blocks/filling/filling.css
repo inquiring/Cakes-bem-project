@@ -1,7 +1,11 @@
+.filling {
+    /* border: 1px solid; */
+    width: fit-content;
+    align-self: center;
+    margin: 0 auto;
+}
 @media screen and (min-width: $screen-s) {
-    .filling {
-        display: flex;
-        margin-bottom: var(--gap);
+    .filling > .pt-card__content {
+        flex-direction: row;
     }
-
 }

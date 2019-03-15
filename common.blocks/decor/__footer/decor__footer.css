@@ -1,0 +1,14 @@
+.decor__footer .pt-card__content {
+    margin: 0 auto;
+}
+@media screen and (max-width: $screen-xs-max) {
+    .decor__footer {
+        position: relative;
+    }
+}
+@media screen and (min-width: $screen-s) {
+    .decor__footer {
+        position: absolute;
+        bottom: 10px;
+    }
+}

@@ -1,24 +1,8 @@
 .product {
     display: block;
     overflow: hidden;
-    /* min-height: 120px; */
-    position: relative;
-    background: var(--color-bg-default);
-    -webkit-transition: .3s ease;
-    -o-transition: .3s ease;
+    object-fit: fill;
     transition: .3s ease;
-    -webkit-box-shadow: 0 10px 13px 0.25px rgba(163,6,60,.05);
     box-shadow: 0 10px 13px 0.25px rgba(163,6,60,.05);
-}
-
-@media screen and (min-width: $screen-s) {
-    .product {
-        /* height: 184px; */
-    }
-}
-
-@media screen and (min-width: $screen-m) {
-    .product {
-        /* height: 305px; */
-    }
+    text-align: center;
 }

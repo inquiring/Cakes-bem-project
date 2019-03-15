@@ -1,0 +1,22 @@
+@media screen and (min-width: $screen-xs) {
+
+    .product_size_small {
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .product_size_small {
+        // width: 288px;
+        height: 184px;
+    }
+}
+
+@media screen and (min-width: $screen-l) {
+
+    .product_size_small {
+        // width: 484px;
+        height: 305px;
+    }
+}

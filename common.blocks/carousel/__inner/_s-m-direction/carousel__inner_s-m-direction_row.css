@@ -1,9 +1,8 @@
-
 @media screen and (min-width: $screen-s)  {
 
     .carousel__inner_s-m-direction_row {
         display: flex;
-        align-items: baseline;
-        justify-content: space-between;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }

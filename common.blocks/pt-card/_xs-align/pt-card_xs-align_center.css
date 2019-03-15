@@ -1,7 +1,0 @@
-@media screen and (max-width: $screen-xs-max) {
-
-    .pt-card_xs-align_center {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}

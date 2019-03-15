@@ -1,0 +1,27 @@
+.filling__image {
+    width: 241px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .filling__image {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .filling__image {
+        width: 210px;
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .filling__image {
+        width: 343px;
+        margin-right: 40px;
+    }
+}

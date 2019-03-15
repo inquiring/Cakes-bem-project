@@ -46,6 +46,6 @@
     .carousel__item_type_next,
     .carousel__item_type_prev
     {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 }

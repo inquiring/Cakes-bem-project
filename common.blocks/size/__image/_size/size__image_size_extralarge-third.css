@@ -1,0 +1,17 @@
+@media screen and (min-width: $screen-xs) {
+
+    .size__image_size_extralarge-third {
+        width: 65px;
+        height: 65px;
+        box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .size__image_size_extralarge-third {
+        width: 95px;
+        height: 95px;
+        box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+    }
+}

@@ -1,0 +1,15 @@
+@media screen and (min-width: $screen-s) {
+
+    .size__image-wrapper_size_large {
+        width: 155px;
+        height: 155px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .size__image-wrapper_size_large {
+        width: 210px;
+        height: 210px;
+    }
+}

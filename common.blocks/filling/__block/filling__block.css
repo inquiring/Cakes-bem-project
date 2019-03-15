@@ -1,0 +1,8 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .filling__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

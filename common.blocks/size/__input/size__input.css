@@ -1,0 +1,14 @@
+.size__input {
+    visibility: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    overflow: visible;
+}
+.size__input:checked~.size__image-wrapper {
+    -webkit-box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+    box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
+}

@@ -8,7 +8,7 @@
     .hero__intro {
         margin-top: 85px;
         align-self: center;
-        height: 370px;
+        margin-bottom: 30px;
     }
     .hero__intro .button {
         align-self: center;

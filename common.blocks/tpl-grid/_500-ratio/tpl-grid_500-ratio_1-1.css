@@ -1,0 +1,10 @@
+@media screen and (min-width: 500px) and (max-width: $screen-xs-max) {
+	.tpl-grid_500-ratio_1-1 {
+		grid-template-columns: 1fr 1fr;
+
+		.tpl-grid__fraction {
+			padding: var(--col-gap-half);
+			box-sizing: border-box;
+		}
+	}
+}

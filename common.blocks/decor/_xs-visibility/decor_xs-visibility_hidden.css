@@ -1,0 +1,5 @@
+@media screen and (max-width: $screen-xs-max) {
+    .decor_xs-visibility_hidden {
+        display: none;
+    }
+}

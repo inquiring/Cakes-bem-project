@@ -9,7 +9,9 @@ module.exports = {
         { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700' },
         { elem: 'css', url: 'index.min.css' },
     ],
-    scripts: [{ elem: "js", url: "index.min.js" }],
+    scripts: [
+        { elem: "js", url: "index.min.js" },
+    ],
     mods: { theme: "islands" },
     mix: {
         block: 'theme',
@@ -255,15 +257,14 @@ module.exports = {
                         { block: 'products' },
                         { block: 'decorator', mods: { 'indent-b': '' } }
                     ],
-                    attrs: { id: "products-scroll" },
+                    attrs: { id: 'products-scroll' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
-                        content: {
-                            elem: 'content',
-                            content: [
-                                // заголовок секции
-                                {
+                        elemMods: { size: 'l', align: 'center' },
+                        content: [
+                            {
+                                elem: 'content',
+                                content: {
                                     block: 'text',
                                     mods: { size: 'xs-24-s-28-m-40', view: 'primary' },
                                     tag: 'h2',
@@ -273,24 +274,27 @@ module.exports = {
                                     ],
                                     content: 'Наши торты'
                                 },
-                                {
+                            },
+                            {
+                                elem: 'content',
+                                content: {
                                     block: 'tpl-grid',
-                                    mods: { 'xs-ratio': '1', 's-columns': '12', 'm-columns': '12', 'col-gap': 'full', 'row-gap': 'full' },
+                                    mods: { 'col-gap': 'full', 'row-gap': 'full', 'xs-ratio': '1', '500-ratio': '1-1', 's-columns': '8', 'm-columns': '12' },
                                     content: [
-                                        // 1 картинка Классические
                                         {
+                                            block: 'tpl-grid',
                                             elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '7', 's-row': '2', 'm-col': '7', 'm-row': '2' },
+                                            elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
                                             content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'large' }},
                                                 content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '388', 'm-height': '392', 'l-height': '653' },
+                                                    elem: 'content',
                                                     content: [
                                                         // image
                                                         {
                                                             elem: 'image',
+                                                            mix: { block: 'product', elem: 'image' },
                                                             content: {
                                                                 tag: 'picture',
                                                                 content: [
@@ -313,7 +317,7 @@ module.exports = {
                                                         // header
                                                         {
                                                             elem: 'header',
-                                                            elemMods: { 'space-a': 'gap'},
+                                                            mix: { block: 'product', elem: 'header' },
                                                             content: {
                                                                 elem: 'info',
                                                                 content: [
@@ -327,7 +331,7 @@ module.exports = {
                                                                     {
                                                                         block: 'text',
                                                                         tag: 'p',
-                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
+                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
                                                                         mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
                                                                         content: '24 вида'
                                                                     },
@@ -337,7 +341,8 @@ module.exports = {
                                                         // footer
                                                         {
                                                             elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
+                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', },
+                                                            mix: { block: 'product', elem: 'footer' },
                                                             content: {
                                                                 block: 'pt-icon-plus',
                                                                 mods: { 'vertical-align': 'center' },
@@ -362,135 +367,45 @@ module.exports = {
                                                         },
                                                     ]
                                                 }
-                                            }
+                                            },
                                         },
-                                        // 2 картинка Муссовые
                                         {
+                                            block: 'tpl-grid',
                                             elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '5', 's-row': '1', 'm-col': '5', 'm-row': '1' },
+                                            elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
-                                                content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '184', 'l-height': '305' },
-                                                    content: [
-                                                        // image
-                                                        {
-                                                            elem: 'image',
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/mousCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/mousCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/mousCake-mobile.jpg',
-                                                                        alt: 'муссовый торт'
-                                                                    },
-                                                                ]
-                                                            }
-                                                        },
-                                                        // header
-                                                        {
-                                                            elem: 'header',
-                                                            elemMods: { 'space-a': 'gap'},
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'small' }},
+                                                content: [
+                                                    // image
+                                                    {
+                                                        elem: 'image',
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
                                                             content: [
                                                                 {
-                                                                    elem: 'info',
-                                                                    content: [
-                                                                        {
-                                                                            block: 'text',
-                                                                            tag: 'h3',
-                                                                            mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
-                                                                            mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                            content: 'Муссовые'
-                                                                        },
-                                                                        {
-                                                                            block: 'text',
-                                                                            tag: 'p',
-                                                                            mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
-                                                                            mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                            content: '12 видов'
-                                                                        },
-                                                                    ]
-                                                                }
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/mousCake-desktop.jpg' }
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/mousCake-tablet.jpg' }
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/mousCake-mobile.jpg',
+                                                                    alt: 'муссовый торт'
+                                                                },
                                                             ]
-                                                        },
-                                                        // footer
-                                                        {
-                                                            elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
-                                                            content: {
-                                                                block: 'pt-icon-plus',
-                                                                mods: { 'vertical-align': 'center' },
-                                                                content: [
-                                                                    {
-                                                                        elem: 'block',
-                                                                        content: {
-                                                                            block: 'text',
-                                                                            mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
-                                                                            content: 'Смотреть'
-                                                                        },
-                                                                    },
-                                                                    {
-                                                                        elem: 'icon',
-                                                                        content: {
-                                                                            block: 'icon',
-                                                                            mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                    ]
-                                                }
-                                            }
-                                        },
-                                        // 3 картинка Свадебные
-                                        {
-                                            elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '5', 's-row': '1', 'm-col': '5', 'm-row': '1' },
-                                            content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
-                                                content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '184', 'l-height': '305' },
-                                                    content: [
-                                                        // image
-                                                        {
-                                                            elem: 'image',
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/weddingCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/weddingCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/weddingCake-mobile.jpg',
-                                                                        alt: 'свадебный торт'
-                                                                    },
-                                                                ]
-                                                            },
-                                                        },
-                                                        // header
-                                                        {
-                                                            elem: 'header',
-                                                            elemMods: { 'space-a': 'gap'},
-                                                            content: {
+                                                        }
+                                                    },
+                                                    // header
+                                                    {
+                                                        elem: 'header',
+                                                        mix: { block: 'product', elem: 'header' },
+                                                        content: [
+                                                            {
                                                                 elem: 'info',
                                                                 content: [
                                                                     {
@@ -498,174 +413,337 @@ module.exports = {
                                                                         tag: 'h3',
                                                                         mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
                                                                         mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                        content: 'Свадебные'
+                                                                        content: 'Муссовые'
                                                                     },
                                                                     {
                                                                         block: 'text',
                                                                         tag: 'p',
-                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
-                                                                        mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                        content: '20 видов'
-                                                                    },
-                                                                ]
-                                                            }
-                                                        },
-                                                        // footer
-                                                        {
-                                                            elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
-                                                            content: {
-                                                                block: 'pt-icon-plus',
-                                                                mods: { 'vertical-align': 'center' },
-                                                                content: [
-                                                                    {
-                                                                        elem: 'block',
-                                                                        content: {
-                                                                            block: 'text',
-                                                                            mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
-                                                                            content: 'Смотреть'
-                                                                        },
-                                                                    },
-                                                                    {
-                                                                        elem: 'icon',
-                                                                        content: {
-                                                                            block: 'icon',
-                                                                            mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                    ]
-                                                }
-                                            }
-                                        },
-                                        // 4 картинка Мужчинам
-                                        {
-                                            elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '5', 's-row': '1', 'm-col': '5', 'm-row': '1' },
-                                            content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
-                                                content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '184', 'l-height': '305' },
-                                                    content: [
-                                                        // image
-                                                        {
-                                                            elem: 'image',
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/menCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/menCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/menCake-mobile.jpg',
-                                                                        alt: 'торт для мужчин'
-                                                                    },
-                                                                ]
-                                                            },
-                                                        },
-                                                        // header
-                                                        {
-                                                            elem: 'header',
-                                                            elemMods: { 'space-a': 'gap'},
-                                                            content: {
-                                                                elem: 'info',
-                                                                content: [
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'h3',
-                                                                        mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
-                                                                        mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                        content: 'Мужчинам'
-                                                                    },
-                                                                    {
-                                                                        block: 'text',
-                                                                        tag: 'p',
-                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
+                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
                                                                         mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
                                                                         content: '12 видов'
                                                                     },
                                                                 ]
                                                             }
-                                                        },
-                                                        // footer
-                                                        {
-                                                            elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
-                                                            content: {
-                                                                block: 'pt-icon-plus',
-                                                                mods: { 'vertical-align': 'center' },
-                                                                content: [
-                                                                    {
-                                                                        elem: 'block',
-                                                                        content: {
-                                                                            block: 'text',
-                                                                            mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
-                                                                            content: 'Смотреть'
-                                                                        },
+                                                        ]
+                                                    },
+                                                    // footer
+                                                    {
+                                                        elem: 'footer',
+                                                        elemMods: { distribute: 'right', 'vertical-align': 'center',},
+                                                        mix: { block: 'product', elem: 'footer' },
+                                                        content: {
+                                                            block: 'pt-icon-plus',
+                                                            mods: { 'vertical-align': 'center' },
+                                                            content: [
+                                                                {
+                                                                    elem: 'block',
+                                                                    content: {
+                                                                        block: 'text',
+                                                                        mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
+                                                                        content: 'Смотреть'
                                                                     },
-                                                                    {
-                                                                        elem: 'icon',
-                                                                        content: {
-                                                                            block: 'icon',
-                                                                            mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
-                                                                        }
+                                                                },
+                                                                {
+                                                                    elem: 'icon',
+                                                                    content: {
+                                                                        block: 'icon',
+                                                                        mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
                                                                     }
-                                                                ]
-                                                            }
-                                                        },
-                                                    ]
-                                                }
-                                            }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                ]
+                                            },
                                         },
-                                        // 6 картинка Детские
                                         {
-                                            elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '7', 's-row': '2', 'm-col': '7', 'm-row': '2' },
+                                            block: 'tpl-grid',
+                                            elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
-                                                content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '388', 'm-height': '392', 'l-height': '653' },
-                                                    content: [
-                                                        // image
-                                                        {
-                                                            elem: 'image',
-                                                            elemMods: { bg: 'gray' },
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/kidsCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/kidsCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/kidsCake-mobile.jpg',
-                                                                        alt: 'торт для детей'
-                                                                    },
-                                                                ]
-                                                            },
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'small' }},
+                                                content: [
+                                                    // image
+                                                    {
+                                                        elem: 'image',
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/weddingCake-desktop.jpg' }
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/weddingCake-tablet.jpg' }
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/weddingCake-mobile.jpg',
+                                                                    alt: 'свадебный торт'
+                                                                },
+                                                            ]
                                                         },
-                                                        // header
-                                                        {
-                                                            elem: 'header',
-                                                            elemMods: { 'space-a': 'gap' },
-                                                            content: {
+                                                    },
+                                                    // header
+                                                    {
+                                                        elem: 'header',
+                                                        mix: { block: 'product', elem: 'header' },
+                                                        content: {
+                                                            elem: 'info',
+                                                            content: [
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'h3',
+                                                                    mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: 'Свадебные'
+                                                                },
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'p',
+                                                                    mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: '20 видов'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
+                                                    // footer
+                                                    {
+                                                        elem: 'footer',
+                                                        elemMods: { distribute: 'right', 'vertical-align': 'center', },
+                                                        mix: { block: 'product', elem: 'footer' },
+                                                        content: {
+                                                            block: 'pt-icon-plus',
+                                                            mods: { 'vertical-align': 'center' },
+                                                            content: [
+                                                                {
+                                                                    elem: 'block',
+                                                                    content: {
+                                                                        block: 'text',
+                                                                        mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
+                                                                        content: 'Смотреть'
+                                                                    },
+                                                                },
+                                                                {
+                                                                    elem: 'icon',
+                                                                    content: {
+                                                                        block: 'icon',
+                                                                        mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                ]
+                                            },
+                                        },
+                                        {
+                                            block: 'tpl-grid',
+                                            elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
+                                            content: {
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'small' }},
+                                                content: [
+                                                    // image
+                                                    {
+                                                        elem: 'image',
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/menCake-desktop.jpg' }
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/menCake-tablet.jpg' }
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/menCake-mobile.jpg',
+                                                                    alt: 'торт для мужчин'
+                                                                },
+                                                            ]
+                                                        },
+                                                    },
+                                                    // header
+                                                    {
+                                                        elem: 'header',
+                                                        mix: { block: 'product', elem: 'header' },
+                                                        content: {
+                                                            elem: 'info',
+                                                            content: [
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'h3',
+                                                                    mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: 'Мужчинам'
+                                                                },
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'p',
+                                                                    mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: '12 видов'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
+                                                    // footer
+                                                    {
+                                                        elem: 'footer',
+                                                        elemMods: { distribute: 'right', 'vertical-align': 'center', },
+                                                        mix: { block: 'product', elem: 'footer' },
+                                                        content: {
+                                                            block: 'pt-icon-plus',
+                                                            mods: { 'vertical-align': 'center' },
+                                                            content: [
+                                                                {
+                                                                    elem: 'block',
+                                                                    content: {
+                                                                        block: 'text',
+                                                                        mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
+                                                                        content: 'Смотреть'
+                                                                    },
+                                                                },
+                                                                {
+                                                                    elem: 'icon',
+                                                                    content: {
+                                                                        block: 'icon',
+                                                                        mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                ]
+                                            },
+                                        },
+                                        {
+                                            block: 'tpl-grid',
+                                            elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
+                                            content: {
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'large' }},
+                                                content: [
+                                                    // image
+                                                    {
+                                                        elem: 'image',
+                                                        mix: { block: 'product', elem: 'image', elemMods: { 'bg-color': 'grey' } },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/kidsCake-desktop.jpg' }
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/kidsCake-tablet.jpg' }
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/kidsCake-mobile.jpg',
+                                                                    alt: 'торт для детей'
+                                                                },
+                                                            ]
+                                                        },
+                                                    },
+                                                    // header
+                                                    {
+                                                        elem: 'header',
+                                                        mix: { block: 'product', elem: 'header' },
+                                                        content: {
+                                                            elem: 'info',
+                                                            content: [
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'h3',
+                                                                    mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: 'Детские'
+                                                                },
+                                                                {
+                                                                    block: 'text',
+                                                                    tag: 'p',
+                                                                    mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
+                                                                    mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
+                                                                    content: '18 видов'
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                    // footer
+                                                    {
+                                                        elem: 'footer',
+                                                        elemMods: { distribute: 'right', 'vertical-align': 'center',},
+                                                        mix: { block: 'product', elem: 'footer' },
+                                                        content: {
+                                                            block: 'pt-icon-plus',
+                                                            mods: { 'vertical-align': 'center' },
+                                                            content: [
+                                                                {
+                                                                    elem: 'block',
+                                                                    content: {
+                                                                        block: 'text',
+                                                                        mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
+                                                                        content: 'Смотреть'
+                                                                    },
+                                                                },
+                                                                {
+                                                                    elem: 'icon',
+                                                                    content: {
+                                                                        block: 'icon',
+                                                                        mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    },
+                                                ]
+                                            },
+                                        },
+                                        {
+                                            block: 'tpl-grid',
+                                            elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
+                                            content: {
+                                                block: 'pt-card',
+                                                mix: { block: 'product', mods: { size: 'small' }},
+                                                content: [
+                                                    // image
+                                                    {
+                                                        elem: 'image',
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width: 1220px)', srcset: '../../img/product/womenCake-desktop.jpg' }
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/womenCake-tablet.jpg' }
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/womenCake-mobile.jpg',
+                                                                    alt: 'торт для женщин'
+                                                                },
+                                                            ]
+                                                        },
+                                                    },
+                                                    // header
+                                                    {
+                                                        elem: 'header',
+                                                        mix: { block: 'product', elem: 'header' },
+                                                        content: [
+                                                            {
                                                                 elem: 'info',
                                                                 content: [
                                                                     {
@@ -673,141 +751,53 @@ module.exports = {
                                                                         tag: 'h3',
                                                                         mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
                                                                         mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                        content: 'Детские'
+                                                                        content: 'Женщинам'
                                                                     },
                                                                     {
                                                                         block: 'text',
                                                                         tag: 'p',
-                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
+                                                                        mods: { size: 'xs-10-s-12-m-20', view: 'promo', align: 'left' },
                                                                         mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                        content: '18 видов'
-                                                                    }
+                                                                        content: '24 вида'
+                                                                    },
                                                                 ]
                                                             }
-                                                        },
-                                                        // footer
-                                                        {
-                                                            elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
-                                                            content: {
-                                                                block: 'pt-icon-plus',
-                                                                mods: { 'vertical-align': 'center' },
-                                                                content: [
-                                                                    {
-                                                                        elem: 'block',
-                                                                        content: {
-                                                                            block: 'text',
-                                                                            mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
-                                                                            content: 'Смотреть'
-                                                                        },
-                                                                    },
-                                                                    {
-                                                                        elem: 'icon',
-                                                                        content: {
-                                                                            block: 'icon',
-                                                                            mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                    ]
-                                                }
-                                            }
-                                        },
-                                        // 5 картинка Женщинам
-                                        {
-                                            elem: 'fraction',
-                                            elemMods: { 'xs-col': '1', 'xs-row': '1' , 's-col': '5', 's-row': '1', 'm-col': '5', 'm-row': '1' },
-                                            content: {
-                                                block: 'link',
-                                                attrs: { href: '#' },
-                                                content: {
-                                                    block: 'pt-card',
-                                                    mods: { border: 'all', 'xs-height': '120', 's-height': '184', 'l-height': '305' },
-                                                    content: [
-                                                        // image
-                                                        {
-                                                            elem: 'image',
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width: 1220px)', srcset: '../../img/product/womenCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/womenCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/womenCake-mobile.jpg',
-                                                                        alt: 'торт для женщин'
-                                                                    },
-                                                                ]
-                                                            },
-                                                        },
-                                                        // header
-                                                        {
-                                                            elem: 'header',
-                                                            elemMods: { 'space-a': 'gap'},
+                                                        ]
+                                                    },
+                                                    // footer
+                                                    {
+                                                        elem: 'footer',
+                                                        elemMods: { distribute: 'right', 'vertical-align': 'center', },
+                                                        mix: { block: 'product', elem: 'footer' },
+                                                        content: {
+                                                            block: 'pt-icon-plus',
+                                                            mods: { 'vertical-align': 'center' },
                                                             content: [
                                                                 {
-                                                                    elem: 'info',
-                                                                    content: [
-                                                                        {
-                                                                            block: 'text',
-                                                                            tag: 'h3',
-                                                                            mods: { size: 'xs-14-s-14-m-24', view: 'primary', weight: 'regular' },
-                                                                            mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                            content: 'Женщинам'
-                                                                        },
-                                                                        {
-                                                                            block: 'text',
-                                                                            tag: 'p',
-                                                                            mods: { size: 'xs-10-s-12-m-20', view: 'promo' },
-                                                                            mix: { block: 'decorator', mods: {'indent-v': 'xxs' }},
-                                                                            content: '24 вида'
-                                                                        },
-                                                                    ]
+                                                                    elem: 'block',
+                                                                    content: {
+                                                                        block: 'text',
+                                                                        mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
+                                                                        content: 'Смотреть'
+                                                                    },
+                                                                },
+                                                                {
+                                                                    elem: 'icon',
+                                                                    content: {
+                                                                        block: 'icon',
+                                                                        mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
+                                                                    }
                                                                 }
                                                             ]
-                                                        },
-                                                        // footer
-                                                        {
-                                                            elem: 'footer',
-                                                            elemMods: { distribute: 'right', 'vertical-align': 'center', 'space-a': 'gap'},
-                                                            content: {
-                                                                block: 'pt-icon-plus',
-                                                                mods: { 'vertical-align': 'center' },
-                                                                content: [
-                                                                    {
-                                                                        elem: 'block',
-                                                                        content: {
-                                                                            block: 'text',
-                                                                            mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
-                                                                            content: 'Смотреть'
-                                                                        },
-                                                                    },
-                                                                    {
-                                                                        elem: 'icon',
-                                                                        content: {
-                                                                            block: 'icon',
-                                                                            mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
-                                                                        }
-                                                                    }
-                                                                ]
-                                                            }
-                                                        },
-                                                    ]
-                                                }
+                                                        }
+                                                    },
+                                                ]
                                             }
-                                        },
-                                    ]
+                                        }
+                                    ],
                                 }
-                            ]
-                        }
+                            }
+                        ]
                     }
                 },
                 // order индивидуальный заказ
@@ -816,7 +806,6 @@ module.exports = {
                     tag: 'section',
                     mix: [
                         { block: 'order' },
-                        { block: 'decorator', mods: { 'indent-b': '' } }
                     ],
                     attrs: { id: 'order-scroll' },
                     content: {
@@ -859,7 +848,7 @@ module.exports = {
                                     elem: 'content',
                                     mix: [
                                         { block: 'theme', mods: { 'color-bg': 'normal' } },
-                                        { block: 'filling' }
+                                        { block: 'order', elem: 'card' }
                                     ],
                                     content: [
                                         {
@@ -886,32 +875,32 @@ module.exports = {
                                             ]
                                         },
                                         {
-                                            elem: 'content',
-                                            mix: { block: 'filling', elem: 'content' },
-                                            content: {
-                                                block: 'carousel',
-                                                mods: { orientation: 'horizontal', animate: true },
-                                                content: [
-                                                    {
-                                                        elem: 'inner',
-                                                        content: [
-                                                            // первый слайд шага1
-                                                            {
-                                                                elem: 'item',
-                                                                elemMods: { state: 'active' },
-                                                                content: [
-                                                                    {
-                                                                        block: 'pt-card',
-                                                                        mods: { align: 'center', view: 'filling' },
+                                            block: 'carousel',
+                                            mods: { orientation: 'horizontal', animate: true },
+                                            content: [
+                                                {
+                                                    elem: 'inner', elemMods: { 's-m-direction': 'row' },
+                                                    content: [
+                                                        // элемент карусели
+                                                        {
+                                                            elem: 'item',
+                                                            elemMods: { state: 'active' },
+                                                            content: [
+                                                                {
+                                                                    block: 'pt-card',
+                                                                    mix: { block: 'filling' },
+                                                                    content: {
+                                                                        elem: 'content', elemMods: { distribute: 'center' },
                                                                         content: [
                                                                             {
                                                                                 elem: 'image',
+                                                                                mix: { block: 'filling', elem: 'image' },
                                                                                 content: {
                                                                                     tag: 'picture',
                                                                                     content: [
                                                                                         {
                                                                                             tag: 'source',
-                                                                                            attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
+                                                                                            attrs: { media: '(min-width:  1024px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
                                                                                         },
                                                                                         {
                                                                                             tag: 'source',
@@ -919,7 +908,6 @@ module.exports = {
                                                                                         },
                                                                                         {
                                                                                             block: 'image',
-                                                                                            mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                             url: '../../img/filling/filling_item1-mobile.jpg',
                                                                                             alt: 'торт Шоколадный ганаш'
                                                                                         },
@@ -927,306 +915,314 @@ module.exports = {
                                                                                 },
                                                                             },
                                                                             {
-                                                                                elem: 'content',
-                                                                                elemMods: { view: 'filling' },
-                                                                                content: [
-                                                                                    {
-                                                                                        block: 'text',
-                                                                                        tag: 'h3',
-                                                                                        mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                        content: 'Шоколадный ганаш'
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                        content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                        mix: [
-                                                                                            { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                        ],
-                                                                                        content: '1000 руб/кг'
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'button',
-                                                                                        mods: {
-                                                                                            theme: 'cake',
-                                                                                            'xs-align': 'center',
-                                                                                            size: 'm',
-                                                                                            width: 'xs',
-                                                                                            togglable: 'check'
-                                                                                        },
-                                                                                        text: 'ВЫБРАТЬ'
-                                                                                    }
-                                                                                ]
-                                                                            },
-                                                                        ]
-                                                                    },
-                                                                ]
-                                                            },
-                                                            // второй слайд шага1
-                                                            {
-                                                                elem: 'item',
-                                                                content: [
-                                                                    {
-                                                                        block: 'pt-card',
-                                                                        mods: { align: 'center', view: 'filling' },
-                                                                        content: [
-                                                                            {
-                                                                                elem: 'image',
+                                                                                elem: 'footer',
+                                                                                mix: { block: 'filling', elem: 'footer' },
                                                                                 content: {
-                                                                                    tag: 'picture',
+                                                                                    elem: 'info',
                                                                                     content: [
                                                                                         {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
+
+                                                                                            block: 'text',
+                                                                                            tag: 'h3',
+                                                                                            mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                                                            content: 'Шоколадный ганаш'
                                                                                         },
                                                                                         {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
+                                                                                            block: 'text',
+                                                                                            tag: 'p',
+                                                                                            mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                            content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
                                                                                         },
                                                                                         {
-                                                                                            block: 'image',
-                                                                                            mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                            alt: 'торт Шоколадный ганаш'
+                                                                                            block: 'filling', elem: 'block',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { size: 'xs-18-s-20-m-22', view: 'primary', weight: 'bold' },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                                    ],
+                                                                                                    content: '1000 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        theme: 'cake',
+                                                                                                        'xs-align': 'center',
+                                                                                                        size: 'm',
+                                                                                                        width: 'xs',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'выбрать'
+                                                                                                }
+                                                                                            ]
                                                                                         },
                                                                                     ]
-                                                                                },
-                                                                            },
-                                                                            {
-                                                                                elem: 'content',
-                                                                                elemMods: { view: 'filling' },
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                },
+                                                            ]
+                                                        },
+                                                        // элемент карусели
+                                                        {
+                                                            elem: 'item',
+                                                            content: [
+                                                                {
+                                                                    block: 'pt-card',
+                                                                    mods: { align: 'center', view: 'filling' },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'image',
+                                                                            content: {
+                                                                                tag: 'picture',
                                                                                 content: [
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'h3',
-                                                                                        mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                        content: 'Шоколадный ганаш'
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                        content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                        mix: [
-                                                                                            { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                        ],
-                                                                                        content: '1000 руб/кг'
+                                                                                        block: 'image',
+                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                        alt: 'торт Шоколадный ганаш'
                                                                                     },
-                                                                                    {
-                                                                                        block: 'button',
-                                                                                        mods: {
-                                                                                            theme: 'cake',
-                                                                                            'xs-align': 'center',
-                                                                                            size: 'm',
-                                                                                            width: 'xs',
-                                                                                            togglable: 'check'
-                                                                                        },
-                                                                                        text: 'ВЫБРАТЬ'
-                                                                                    }
                                                                                 ]
                                                                             },
-                                                                        ]
-                                                                    },
-                                                                ]
-                                                            },
-                                                            // третий слайд шага1
-                                                            {
-                                                                elem: 'item',
-                                                                content: [
-                                                                    {
-                                                                        block: 'pt-card',
-                                                                        mods: { align: 'center', view: 'filling' },
-                                                                        content: [
-                                                                            {
-                                                                                elem: 'image',
-                                                                                content: {
-                                                                                    tag: 'picture',
-                                                                                    content: [
-                                                                                        {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
-                                                                                        },
-                                                                                        {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
-                                                                                        },
-                                                                                        {
-                                                                                            block: 'image',
-                                                                                            mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                            alt: 'торт Шоколадный ганаш'
-                                                                                        },
-                                                                                    ]
+                                                                        },
+                                                                        {
+                                                                            elem: 'content',
+                                                                            elemMods: { view: 'filling' },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'h3',
+                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
+                                                                                    content: 'Шоколадный ганаш'
                                                                                 },
-                                                                            },
-                                                                            {
-                                                                                elem: 'content',
-                                                                                elemMods: { view: 'filling' },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
+                                                                                    mix: [
+                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                    ],
+                                                                                    content: '1000 руб/кг'
+                                                                                },
+                                                                                {
+                                                                                    block: 'button',
+                                                                                    mods: {
+                                                                                        theme: 'cake',
+                                                                                        'xs-align': 'center',
+                                                                                        size: 'm',
+                                                                                        width: 'xs',
+                                                                                        togglable: 'check'
+                                                                                    },
+                                                                                    text: 'ВЫБРАТЬ'
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                    ]
+                                                                },
+                                                            ]
+                                                        },
+                                                       // элемент карусели
+                                                        {
+                                                            elem: 'item',
+                                                            content: [
+                                                                {
+                                                                    block: 'pt-card',
+                                                                    mods: { align: 'center', view: 'filling' },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'image',
+                                                                            content: {
+                                                                                tag: 'picture',
                                                                                 content: [
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'h3',
-                                                                                        mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                        content: 'Шоколадный ганаш'
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                        content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                        mix: [
-                                                                                            { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                        ],
-                                                                                        content: '1000 руб/кг'
+                                                                                        block: 'image',
+                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                        alt: 'торт Шоколадный ганаш'
                                                                                     },
-                                                                                    {
-                                                                                        block: 'button',
-                                                                                        mods: {
-                                                                                            theme: 'cake',
-                                                                                            'xs-align': 'center',
-                                                                                            size: 'm',
-                                                                                            width: 'xs',
-                                                                                            togglable: 'check'
-                                                                                        },
-                                                                                        text: 'ВЫБРАТЬ'
-                                                                                    }
                                                                                 ]
                                                                             },
-                                                                        ]
-                                                                    },
-                                                                ]
-                                                            },
-                                                            // четвертый слайд шага1
-                                                            {
-                                                                elem: 'item',
-                                                                content: [
-                                                                    {
-                                                                        block: 'pt-card',
-                                                                        mods: { align: 'center', view: 'filling' },
-                                                                        content: [
-                                                                            {
-                                                                                elem: 'image',
-                                                                                content: {
-                                                                                    tag: 'picture',
-                                                                                    content: [
-                                                                                        {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
-                                                                                        },
-                                                                                        {
-                                                                                            tag: 'source',
-                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
-                                                                                        },
-                                                                                        {
-                                                                                            block: 'image',
-                                                                                            mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                            alt: 'торт Шоколадный ганаш'
-                                                                                        },
-                                                                                    ]
+                                                                        },
+                                                                        {
+                                                                            elem: 'content',
+                                                                            elemMods: { view: 'filling' },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'h3',
+                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
+                                                                                    content: 'Шоколадный ганаш'
                                                                                 },
-                                                                            },
-                                                                            {
-                                                                                elem: 'content',
-                                                                                elemMods: { view: 'filling' },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
+                                                                                    mix: [
+                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                    ],
+                                                                                    content: '1000 руб/кг'
+                                                                                },
+                                                                                {
+                                                                                    block: 'button',
+                                                                                    mods: {
+                                                                                        theme: 'cake',
+                                                                                        'xs-align': 'center',
+                                                                                        size: 'm',
+                                                                                        width: 'xs',
+                                                                                        togglable: 'check'
+                                                                                    },
+                                                                                    text: 'ВЫБРАТЬ'
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                    ]
+                                                                },
+                                                            ]
+                                                        },
+                                                       // элемент карусели
+                                                        {
+                                                            elem: 'item',
+                                                            content: [
+                                                                {
+                                                                    block: 'pt-card',
+                                                                    mods: { align: 'center', view: 'filling' },
+                                                                    content: [
+                                                                        {
+                                                                            elem: 'image',
+                                                                            content: {
+                                                                                tag: 'picture',
                                                                                 content: [
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'h3',
-                                                                                        mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                        content: 'Шоколадный ганаш'
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                        mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                        content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        tag: 'source',
+                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
                                                                                     },
                                                                                     {
-                                                                                        block: 'text',
-                                                                                        tag: 'p',
-                                                                                        mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                        mix: [
-                                                                                            { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                        ],
-                                                                                        content: '1000 руб/кг'
+                                                                                        block: 'image',
+                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                        alt: 'торт Шоколадный ганаш'
                                                                                     },
-                                                                                    {
-                                                                                        block: 'button',
-                                                                                        mods: {
-                                                                                            theme: 'cake',
-                                                                                            'xs-align': 'center',
-                                                                                            size: 'm',
-                                                                                            width: 'xs',
-                                                                                            togglable: 'check'
-                                                                                        },
-                                                                                        text: 'ВЫБРАТЬ'
-                                                                                    }
                                                                                 ]
                                                                             },
-                                                                        ]
-                                                                    },
-                                                                ]
-                                                            },
-                                                        ]
-                                                    },
-                                                    {
-                                                        elem: 'control',
-                                                        elemMods: { type: 'left', xs: 'hide', 's-view': 'circle' },
-                                                        content: {
-                                                            block: 'icon',
-                                                            mods: { size: 'm', name: 'arrow-left', view: 'brand' },
-                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xs' }},
-                                                        }
-                                                    },
-                                                    {
-                                                        elem: 'control',
-                                                        elemMods: { type: 'right', xs: 'hide', 's-view': 'circle' },
-                                                        content: {
-                                                            block: 'icon',
-                                                            mods: { size: 'm', name: 'arrow-right', view: 'brand' },
-                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xs' }},
-                                                        }
-                                                    },
-                                                    {
-                                                        elem: 'paginator',
-                                                        elemMods: { top: '120' },
-                                                        content: [
-                                                            {
-                                                                elem: 'paginator-button',
-                                                                elemMods: { state: 'active' },
-                                                            },
-                                                            {
-                                                                elem: 'paginator-button',
-                                                            }
-                                                        ]
+                                                                        },
+                                                                        {
+                                                                            elem: 'content',
+                                                                            elemMods: { view: 'filling' },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'h3',
+                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
+                                                                                    content: 'Шоколадный ганаш'
+                                                                                },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                },
+                                                                                {
+                                                                                    block: 'text',
+                                                                                    tag: 'p',
+                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
+                                                                                    mix: [
+                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                    ],
+                                                                                    content: '1000 руб/кг'
+                                                                                },
+                                                                                {
+                                                                                    block: 'button',
+                                                                                    mods: {
+                                                                                        theme: 'cake',
+                                                                                        'xs-align': 'center',
+                                                                                        size: 'm',
+                                                                                        width: 'xs',
+                                                                                        togglable: 'check'
+                                                                                    },
+                                                                                    text: 'ВЫБРАТЬ'
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                    ]
+                                                                },
+                                                            ]
+                                                        },
+                                                    ]
+                                                },
+                                                {
+                                                    elem: 'control',
+                                                    elemMods: { type: 'left', xs: 'hide', 's-view': 'circle' },
+                                                    content: {
+                                                        block: 'icon',
+                                                        mods: { size: 'm', name: 'arrow-left', view: 'brand' },
+                                                        mix: { block: 'decorator', mods: { 'indent-t': 'xs' }},
                                                     }
-                                                ]
-                                            },
+                                                },
+                                                {
+                                                    elem: 'control',
+                                                    elemMods: { type: 'right', xs: 'hide', 's-view': 'circle' },
+                                                    content: {
+                                                        block: 'icon',
+                                                        mods: { size: 'm', name: 'arrow-right', view: 'brand' },
+                                                        mix: { block: 'decorator', mods: { 'indent-t': 'xs' }},
+                                                    }
+                                                },
+                                                {
+                                                    elem: 'paginator', elem: 'paginator', elemMods: { position: 'order-1' },
+                                                    content: [
+                                                        {
+                                                            elem: 'paginator-button',
+                                                            elemMods: { state: 'active' },
+                                                        },
+                                                        {
+                                                            elem: 'paginator-button',
+                                                        }
+                                                    ]
+                                                }
+                                            ]
                                         }
                                     ]
                                 },
@@ -1235,7 +1231,7 @@ module.exports = {
                                     elem: 'content',
                                     mix: [
                                         { block: 'theme', mods: { 'color-bg': 'normal' } },
-                                        { block: 'size' }
+                                        { block: 'order', elem: 'card' }
                                     ],
                                     content: [
                                         {
@@ -1260,277 +1256,322 @@ module.exports = {
                                             ]
                                         },
                                         {
-                                            elem: 'content',
-                                            content: {
-                                                block: 'carousel',
-                                                mods: { orientation: 'horizontal', animate: true },
-                                                content: [
-                                                    {
-                                                        elem: 'inner',
-                                                        elemMods: { 's-m-direction': 'row' },
-                                                        content: [
-                                                            // первый слайд шага2
-                                                            {
-                                                                elem: 'item',
-                                                                elemMods: { 's-m-display': 'block', state: 'active' },
+                                            block: 'carousel',
+                                            mods: { orientation: 'horizontal', animate: true },
+                                            content: [
+                                                {
+                                                    elem: 'inner',
+                                                    elemMods: { 's-m-direction': 'row' },
+                                                    content: [
+                                                        // первый слайд шага2
+                                                        {
+                                                            elem: 'item',
+                                                            elemMods: { 's-m-display': 'block', state: 'active' },
+                                                            mix: { block: 'decorator', mods: { 'indent-a': 'xxs', }},
+                                                            content: {
+                                                                block: 'pt-card',
+                                                                mix: [
+                                                                    { block: 'size' },
+                                                                ],
                                                                 content: {
-                                                                    block: 'pt-card',
-                                                                    content: {
-                                                                        elem: 'content',
-                                                                        elemMods: { distribute: 'center', 'space-a': 'm' },
-                                                                        content: [
-                                                                            {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/size/size_item-1-desktop.png' },
+                                                                    elem: 'content',
+                                                                    elemMods: { distribute: 'center', 'space-h': '' },
+                                                                    content: [
+                                                                        {
+                                                                            block: 'size', elem: 'label',
+                                                                            tag: 'label',
+                                                                            attrs: { for: 'small' }
+                                                                        },
+                                                                        {
+                                                                            block: 'size', elem: 'input',
+                                                                            tag: 'input',
+                                                                            attrs: { type: 'radio', name: 'size', id: 'small', 'data-size': '1кг' }
+                                                                        },
+                                                                        {
+                                                                            elem: 'image',
+                                                                            mix: { block: 'size', elem: 'image-wrapper', elemMods: { size: 'small' }, },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'small' },
+                                                                                    content: {
+                                                                                        block: 'text',
+                                                                                        mods: { size: 'xs-14-s-12-m-18' },
+                                                                                        tag: 'span',
+                                                                                        mix: { block: 'size', elem: 'image-text' },
+                                                                                        content: '1кг'
                                                                                     },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/size/size_item-1-tablet.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/size/size_item-1-tablet.png',
-                                                                                        title: '1кг',
-                                                                                        alt: 'вес торта на 1кг'
-                                                                                    },
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
-                                                                                content: '17-18 см'
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
-                                                                                content: '(1 - 6 персон)'
-                                                                            },
-                                                                            {
-                                                                                block: 'button',
-                                                                                mix: { block: 'size', elem: 'button' },
-                                                                                mods: {
-                                                                                    's-m': 'hide',
-                                                                                    'xs-align': 'center',
-                                                                                    theme: 'cake',
-                                                                                    size: 'm',
-                                                                                    width: 'small',
-                                                                                    togglable: 'check'
                                                                                 },
-                                                                                text: 'ВЫБРАТЬ'
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                },
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
+                                                                            content: '17-18 см'
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
+                                                                            content: '(1 - 6 персон)'
+                                                                        },
+                                                                        {
+                                                                            block: 'button',
+                                                                            mix: { block: 'size', elem: 'button' },
+                                                                            mods: {
+                                                                                's-m': 'hide',
+                                                                                'xs-align': 'center',
+                                                                                theme: 'cake',
+                                                                                size: 'm',
+                                                                                width: 'small',
+                                                                                togglable: 'check'
+                                                                            },
+                                                                            text: 'ВЫБРАТЬ'
+                                                                        }
+                                                                    ]
+                                                                }
                                                             },
-                                                            // второй слайд шага2
-                                                            {
-                                                                elem: 'item',
-                                                                elemMods: { 's-m-display': 'block', },
+                                                        },
+                                                        // второй слайд шага2
+                                                        {
+                                                            elem: 'item',
+                                                            elemMods: { 's-m-display': 'block', },
+                                                            mix: { block: 'decorator', mods: { 'indent-a': 'xxs', }},
+                                                            content: {
+                                                                block: 'pt-card',
+                                                                mix: [
+                                                                    { block: 'size' },
+                                                                ],
                                                                 content: {
-                                                                    block: 'pt-card',
-                                                                    content: {
-                                                                        elem: 'content',
-                                                                        elemMods: { distribute: 'center', 'space-a': 'm' },
-                                                                        content: [
-                                                                            {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/size/size_item-2-desktop.png' },
+                                                                    elem: 'content',
+                                                                    elemMods: { distribute: 'center', 'space-a': '' },
+                                                                    content: [
+                                                                        {
+                                                                            block: 'size', elem: 'label',
+                                                                            tag: 'label',
+                                                                            attrs: { for: 'medium' }
+                                                                        },
+                                                                        {
+                                                                            block: 'size', elem: 'input',
+                                                                            tag: 'input',
+                                                                            attrs: { type: 'radio', name: 'size', id: 'medium', 'data-size': '2кг' }
+                                                                        },
+                                                                        {
+                                                                            elem: 'image',
+                                                                            mix: { block: 'size', elem: 'image-wrapper', elemMods: { size: 'medium' }, },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'medium' },
+                                                                                    content: {
+                                                                                        block: 'text',
+                                                                                        mods: { size: 'xs-14-s-12-m-18' },
+                                                                                        tag: 'span',
+                                                                                        mix: { block: 'size', elem: 'image-text' },
+                                                                                        content: '2кг'
                                                                                     },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/size/size_item-2-tablet.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/size/size_item-2-tablet.png',
-                                                                                        title: '2кг',
-                                                                                        alt: 'вес торта на 2кг'
-                                                                                    },
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
-                                                                                content: '23-24 см'
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
-                                                                                content: '(10–12 персон)'
-                                                                            },
-                                                                            {
-                                                                                block: 'button',
-                                                                                mix: { block: 'size', elem: 'button' },
-                                                                                mods: {
-                                                                                    's-m': 'hide',
-                                                                                    'xs-align': 'center',
-                                                                                    theme: 'cake',
-                                                                                    size: 'm',
-                                                                                    width: 'small',
-                                                                                    togglable: 'check'
                                                                                 },
-                                                                                text: 'ВЫБРАТЬ'
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                },
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
+                                                                            content: '23-24 см'
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
+                                                                            content: '(10–12 персон)'
+                                                                        },
+                                                                        {
+                                                                            block: 'button',
+                                                                            mix: { block: 'size', elem: 'button' },
+                                                                            mods: {
+                                                                                's-m': 'hide',
+                                                                                'xs-align': 'center',
+                                                                                theme: 'cake',
+                                                                                size: 'm',
+                                                                                width: 'small',
+                                                                                togglable: 'check'
+                                                                            },
+                                                                            text: 'ВЫБРАТЬ'
+                                                                        }
+                                                                    ]
+                                                                }
                                                             },
-                                                            // третий слайд шага2
-                                                            {
-                                                                elem: 'item',
-                                                                elemMods: { 's-m-display': 'block', },
+                                                        },
+                                                        // третий слайд шага2
+                                                        {
+                                                            elem: 'item',
+                                                            elemMods: { 's-m-display': 'block', },
+                                                            mix: { block: 'decorator', mods: { 'indent-a': 'xxs', }},
+                                                            content: {
+                                                                block: 'pt-card',
+                                                                mix: [
+                                                                    { block: 'size' },
+                                                                ],
                                                                 content: {
-                                                                    block: 'pt-card',
-                                                                    content: {
-                                                                        elem: 'content',
-                                                                        elemMods: { distribute: 'center', 'space-a': 'm' },
-                                                                        content: [
-                                                                            {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/size/size_item-3-desktop.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/size/size_item-3-tablet.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/size/size_item-3-tablet.png',
-                                                                                        title: '2кг',
-                                                                                        alt: 'вес торта на 5кг'
-                                                                                    },
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
-                                                                                content: 'Два яруса 25 и 20 см'
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
-                                                                                content: '(15–20 персон)'
-                                                                            },
-                                                                            {
-                                                                                block: 'button',
-                                                                                mix: { block: 'size', elem: 'button' },
-                                                                                mods: {
-                                                                                    's-m': 'hide',
-                                                                                    'xs-align': 'center',
-                                                                                    theme: 'cake',
-                                                                                    size: 'm',
-                                                                                    width: 'small',
-                                                                                    togglable: 'check'
+                                                                    elem: 'content',
+                                                                    elemMods: { distribute: 'center', 'space-a': '' },
+                                                                    content: [
+                                                                        {
+                                                                            block: 'size', elem: 'label',
+                                                                            tag: 'label',
+                                                                            attrs: { for: 'large' }
+                                                                        },
+                                                                        {
+                                                                            block: 'size', elem: 'input',
+                                                                            tag: 'input',
+                                                                            attrs: { type: 'radio', name: 'size', id: 'large', 'data-size': '5кг' }
+                                                                        },
+                                                                        {
+                                                                            elem: 'image',
+                                                                            mix: { block: 'size', elem: 'image-wrapper', elemMods: { size: 'large' }, },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'large-two' },
                                                                                 },
-                                                                                text: 'ВЫБРАТЬ'
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                },
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'large' },
+                                                                                    content: {
+                                                                                        block: 'text',
+                                                                                        mods: { size: 'xs-14-s-12-m-18' },
+                                                                                        tag: 'span',
+                                                                                        mix: { block: 'size', elem: 'image-text' },
+                                                                                        content: '5кг'
+                                                                                    },
+                                                                                },
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
+                                                                            content: 'Два яруса 25 и 20 см'
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
+                                                                            content: '(15–20 персон)'
+                                                                        },
+                                                                        {
+                                                                            block: 'button',
+                                                                            mix: { block: 'size', elem: 'button' },
+                                                                            mods: {
+                                                                                's-m': 'hide',
+                                                                                'xs-align': 'center',
+                                                                                theme: 'cake',
+                                                                                size: 'm',
+                                                                                width: 'small',
+                                                                                togglable: 'check'
+                                                                            },
+                                                                            text: 'ВЫБРАТЬ'
+                                                                        }
+                                                                    ]
+                                                                }
                                                             },
-                                                            // четвертый слайд шага2
-                                                            {
-                                                                elem: 'item',
-                                                                elemMods: { 's-m-display': 'block', },
+                                                        },
+                                                        // четвертый слайд шага2
+                                                        {
+                                                            elem: 'item',
+                                                            elemMods: { 's-m-display': 'block', },
+                                                            mix: { block: 'decorator', mods: { 'indent-a': 'xxs', }},
+                                                            content: {
+                                                                block: 'pt-card',
+                                                                mix: [
+                                                                    { block: 'size' },
+                                                                ],
                                                                 content: {
-                                                                    block: 'pt-card',
-                                                                    content: {
-                                                                        elem: 'content',
-                                                                        elemMods: { distribute: 'center', 'space-a': 'm' },
-                                                                        content: [
-                                                                            {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/size/size_item-4-desktop.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/size/size_item-4-tablet.png' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/size/size_item-4-tablet.png',
-                                                                                        title: '2кг',
-                                                                                        alt: 'вес торта на 8кг'
-                                                                                    },
-                                                                                ]
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
-                                                                                content: 'Три яруса 30, 25 и 18 см'
-                                                                            },
-                                                                            {
-                                                                                block: 'text',
-                                                                                mods: { size: 'xs-14-s-12-m-18' },
-                                                                                tag: 'p',
-                                                                                mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
-                                                                                content: '(25–30 персон)'
-                                                                            },
-                                                                            {
-                                                                                block: 'button',
-                                                                                mix: { block: 'size', elem: 'button' },
-                                                                                mods: {
-                                                                                    's-m': 'hide',
-                                                                                    'xs-align': 'center',
-                                                                                    theme: 'cake',
-                                                                                    size: 'm',
-                                                                                    width: 'small',
-                                                                                    togglable: 'check'
+                                                                    elem: 'content',
+                                                                    elemMods: { distribute: 'center', 'space-a': '' },
+                                                                    content: [
+                                                                        {
+                                                                            block: 'size', elem: 'label',
+                                                                            tag: 'label',
+                                                                            attrs: { for: 'extralarge' }
+                                                                        },
+                                                                        {
+                                                                            block: 'size', elem: 'input',
+                                                                            tag: 'input',
+                                                                            attrs: { type: 'radio', name: 'size', id: 'extralarge', 'data-size': '8кг' }
+                                                                        },
+                                                                        {
+                                                                            elem: 'image',
+                                                                            mix: { block: 'size', elem: 'image-wrapper', elemMods: { size: 'extralarge' }, },
+                                                                            content: [
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'extralarge-third' },
                                                                                 },
-                                                                                text: 'ВЫБРАТЬ'
-                                                                            }
-                                                                        ]
-                                                                    }
-                                                                },
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'extralarge-two' },
+                                                                                },
+                                                                                {
+                                                                                    block: 'size', elem: 'image', elemMods: { size: 'extralarge' },
+                                                                                    content: {
+                                                                                        block: 'text',
+                                                                                        mods: { size: 'xs-14-s-12-m-18' },
+                                                                                        tag: 'span',
+                                                                                        mix: { block: 'size', elem: 'image-text' },
+                                                                                        content: '8кг'
+                                                                                    },
+                                                                                },
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-b': 'xxxs',  } },
+                                                                            content: 'Три яруса 30, 25 и 18 см'
+                                                                        },
+                                                                        {
+                                                                            block: 'text',
+                                                                            mods: { size: 'xs-14-s-12-m-18' },
+                                                                            tag: 'p',
+                                                                            mix: { block: 'decorator', mods: { 'indent-t': 'xxxs',  } },
+                                                                            content: '(25–30 персон)'
+                                                                        },
+                                                                        {
+                                                                            block: 'button',
+                                                                            mix: { block: 'size', elem: 'button' },
+                                                                            mods: {
+                                                                                's-m': 'hide',
+                                                                                'xs-align': 'center',
+                                                                                theme: 'cake',
+                                                                                size: 'm',
+                                                                                width: 'small',
+                                                                                togglable: 'check'
+                                                                            },
+                                                                            text: 'ВЫБРАТЬ'
+                                                                        }
+                                                                    ]
+                                                                }
                                                             },
-                                                        ]
-                                                    },
-                                                    {
-                                                        elem: 'paginator',
-                                                        elemMods: { top: '160' },
-                                                        content: [
-                                                            {
-                                                                elem: 'paginator-button',
-                                                                elemMods: { state: 'active' },
-                                                            },
-                                                            {
-                                                                elem: 'paginator-button',
-                                                            }
-                                                        ]
-                                                    }
-                                                ]
-                                            },
-                                        }
+                                                        },
+                                                    ]
+                                                },
+                                                {
+                                                    elem: 'paginator', elemMods: { position: 'order-2' },
+                                                    content: [
+                                                        {
+                                                            elem: 'paginator-button',
+                                                            elemMods: { state: 'active' },
+                                                        },
+                                                        {
+                                                            elem: 'paginator-button',
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
                                     ],
                                 },
                                 // шаг 3
@@ -1538,7 +1579,7 @@ module.exports = {
                                     elem: 'content',
                                     mix: [
                                         { block: 'theme', mods: { 'color-bg': 'normal' } },
-                                        { block: 'decor' }
+                                        { block: 'order', elem: 'card', elemMods: { bg: 'image' } }
                                     ],
                                     content: [
                                         // оглавление
@@ -1563,10 +1604,8 @@ module.exports = {
                                                 }
                                             ]
                                         },
-                                        // карточки
                                         {
                                             elem: 'content',
-                                            mix: { block: 'decor', elem: 'content'},
                                             content: [
                                                 {
                                                     block: 'carousel',
@@ -1574,278 +1613,349 @@ module.exports = {
                                                     content: [
                                                         {
                                                             elem: 'inner',
-                                                            elemMods: { width: 'decor' },
+                                                            elemMods: { 's-m-display': 'block', 's-m-direction': 'row' },
                                                             content: [
-                                                                // 2 карты
+                                                                // элемент карусели
                                                                 {
                                                                     elem: 'item',
                                                                     elemMods: { state: 'active' },
                                                                     content: [
-                                                                        // карта
+                                                                        // карта #1
                                                                         {
                                                                             block: 'pt-card',
-                                                                            mods: { 'xs-align': 'center', view: 'decor' },
-                                                                            content: [
-                                                                                //image
-                                                                                {
-                                                                                    elem: 'image',
-                                                                                    elemMods: { view: 'decor' },
-                                                                                    content: {
-                                                                                    tag: 'picture',
-                                                                                        content: [
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item2-tablet.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'image',
-                                                                                                mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                                url: '../../img/decor/decor_item2-mobile.jpg',
-                                                                                                alt: 'торт ягодное ассорти'
-                                                                                            },
-                                                                                        ]
-                                                                                    }
-                                                                                },
-                                                                                // footer
-                                                                                {
-                                                                                    elem: 'footer',
-                                                                                    elemMods: { distribute: 'center' },
-                                                                                    content: {
-                                                                                        elem: 'info',
-                                                                                        content: [
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'h3',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                                                content: 'Ягодное ассорти'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'p',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
-                                                                                                mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                                                                content: '700 руб/кг'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'button',
-                                                                                                mods: {
-                                                                                                    's-m': 'hide',
-                                                                                                    theme: 'cake',
-                                                                                                    size: 'm',
-                                                                                                    width: 'small',
-                                                                                                    togglable: 'check'
+                                                                            mix: { block: 'decor' },
+                                                                            content: {
+                                                                                elem: 'content', elemMods: { distribute: 'center' },
+                                                                                content: [
+                                                                                    // переключатель
+                                                                                    {
+                                                                                        block: 'decor', elem: 'label',
+                                                                                        tag: 'label',
+                                                                                        attrs: { for: 'decor-1' }
+                                                                                    },
+                                                                                    {
+                                                                                        block: 'decor', elem: 'input',
+                                                                                        tag: 'input',
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-1', 'data-decor': 'Ягодное ассорти' }
+                                                                                    },
+                                                                                    //image
+                                                                                    {
+                                                                                        elem: 'image',
+                                                                                        mix: { block: 'decor', elem: 'image' },
+                                                                                        content: {
+                                                                                        tag: 'picture',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
                                                                                                 },
-                                                                                                text: 'ВЫБРАТЬ'
-                                                                                            }
-                                                                                        ]
-                                                                                    }
-                                                                                }
-                                                                            ]
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item2-tablet.jpg' },
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'image',
+                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                                    url: '../../img/decor/decor_item2-mobile.jpg',
+                                                                                                    alt: 'торт ягодное ассорти'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    // footer
+                                                                                    {
+                                                                                        elem: 'footer',
+                                                                                        mix: { block: 'decor', elem: 'footer' },
+                                                                                        content: {
+                                                                                            elem: 'content', elemMods: { distribute: 'center' },
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'h3',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs' }},
+                                                                                                    content: 'Ягодное ассорти'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                                                                        { block: 'decorator', mods: {'indent-t': 'xxs' }}
+                                                                                                    ],
+                                                                                                    content: '700 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        's-m': 'hide',
+                                                                                                        theme: 'cake',
+                                                                                                        size: 'm',
+                                                                                                        width: 'small',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'ВЫБРАТЬ'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                ]
+                                                                            }
                                                                         },
-                                                                        // карта
+                                                                        // карта #2
                                                                         {
                                                                             block: 'pt-card',
-                                                                            mods: { 'xs-align': 'center', view: 'decor', 'xs-max': 'hide' },
-                                                                            content: [
-                                                                                //image
-                                                                                {
-                                                                                    elem: "image",
-                                                                                    elemMods: { view: 'decor' },
-                                                                                    content: {
-                                                                                    tag: 'picture',
-                                                                                        content: [
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item1-tablet.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'image',
-                                                                                                mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                                url: '../../img/decor/decor_item1-mobile.jpg',
-                                                                                                alt: 'торт Маршмеллоу'
-                                                                                            },
-                                                                                        ]
-                                                                                    }
-                                                                                },
-                                                                                // footer
-                                                                                {
-                                                                                    elem: 'footer',
-                                                                                    elemMods: { distribute: 'center' },
-                                                                                    content: {
-                                                                                        elem: 'info',
-                                                                                        content: [
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'h3',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                                                content: 'Маршмеллоу'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'p',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
-                                                                                                mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                                                                content: '600 руб/кг'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'button',
-                                                                                                mods: {
-                                                                                                    's-m': 'hide',
-                                                                                                    theme: 'cake',
-                                                                                                    size: 'm',
-                                                                                                    width: 'small',
-                                                                                                    togglable: 'check'
+                                                                            mix: { block: 'decor', mods: { 'xs-visibility': 'hidden'} },
+                                                                            content: {
+                                                                                elem: 'content', elemMods: { distribute: 'center' },
+                                                                                content: [
+                                                                                    // переключатель
+                                                                                    {
+                                                                                        block: 'decor', elem: 'label',
+                                                                                        tag: 'label',
+                                                                                        attrs: { for: 'decor-2' }
+                                                                                    },
+                                                                                    {
+                                                                                        block: 'decor', elem: 'input',
+                                                                                        tag: 'input',
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-2', 'data-decor': 'Ягодное ассорти' }
+                                                                                    },
+                                                                                    //image
+                                                                                    {
+                                                                                        elem: 'image',
+                                                                                        mix: { block: 'decor', elem: 'image' },
+                                                                                        content: {
+                                                                                        tag: 'picture',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
                                                                                                 },
-                                                                                                text: 'ВЫБРАТЬ'
-                                                                                            }
-                                                                                        ]
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item1-tablet.jpg' },
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'image',
+                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                                    url: '../../img/decor/decor_item1-mobile.jpg',
+                                                                                                    alt: 'торт Маршмеллоу'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    // footer
+                                                                                    {
+                                                                                        elem: 'footer',
+                                                                                        mix: { block: 'decor', elem: 'footer' },
+                                                                                        content: {
+                                                                                            elem: 'content', elemMods: { distribute: 'center' },
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'h3',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs' }},
+                                                                                                    content: 'Маршмеллоу'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                                                                        { block: 'decorator', mods: {'indent-t': 'xxs' }}
+                                                                                                    ],
+                                                                                                    content: '600 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        's-m': 'hide',
+                                                                                                        theme: 'cake',
+                                                                                                        size: 'm',
+                                                                                                        width: 'small',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'ВЫБРАТЬ'
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     }
-                                                                                }
-                                                                            ]
+                                                                                ]
+                                                                            },
                                                                         },
                                                                     ]
                                                                 },
-                                                                // 2 карты
+                                                                // элемент карусели
                                                                 {
                                                                     elem: 'item',
                                                                     content: [
-                                                                        // карта
+                                                                        // карта #2
                                                                         {
                                                                             block: 'pt-card',
-                                                                            mods: { 'xs-align': 'center', view: 'decor' },
-                                                                            content: [
-                                                                                //image
-                                                                                {
-                                                                                    elem: "image",
-                                                                                    elemMods: { view: 'decor' },
-                                                                                    content: {
-                                                                                    tag: 'picture',
-                                                                                        content: [
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item1-tablet.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'image',
-                                                                                                mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                                url: '../../img/decor/decor_item1-mobile.jpg',
-                                                                                                alt: 'торт Маршмеллоу'
-                                                                                            },
-                                                                                        ]
-                                                                                    }
-                                                                                },
-                                                                                // footer
-                                                                                {
-                                                                                    elem: 'footer',
-                                                                                    elemMods: { distribute: 'center' },
-                                                                                    content: {
-                                                                                        elem: 'info',
-                                                                                        content: [
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'h3',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                                                content: 'Маршмеллоу'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'p',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
-                                                                                                mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                                                                content: '600 руб/кг'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'button',
-                                                                                                mods: {
-                                                                                                    's-m': 'hide',
-                                                                                                    theme: 'cake',
-                                                                                                    size: 'm',
-                                                                                                    width: 'small',
-                                                                                                    togglable: 'check'
+                                                                            mix: { block: 'decor', },
+                                                                            content: {
+                                                                                elem: 'content', elemMods: { distribute: 'center' },
+                                                                                content: [
+                                                                                    // переключатель
+                                                                                    {
+                                                                                        block: 'decor', elem: 'label',
+                                                                                        tag: 'label',
+                                                                                        attrs: { for: 'decor-3' }
+                                                                                    },
+                                                                                    {
+                                                                                        block: 'decor', elem: 'input',
+                                                                                        tag: 'input',
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-3', 'data-decor': 'Ягодное ассорти' }
+                                                                                    },
+                                                                                    //image
+                                                                                    {
+                                                                                        elem: 'image',
+                                                                                        mix: { block: 'decor', elem: 'image' },
+                                                                                        content: {
+                                                                                        tag: 'picture',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item1-desktop.jpg' },
                                                                                                 },
-                                                                                                text: 'ВЫБРАТЬ'
-                                                                                            }
-                                                                                        ]
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item1-tablet.jpg' },
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'image',
+                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                                    url: '../../img/decor/decor_item1-mobile.jpg',
+                                                                                                    alt: 'торт Маршмеллоу'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    // footer
+                                                                                    {
+                                                                                        elem: 'footer',
+                                                                                        mix: { block: 'decor', elem: 'footer' },
+                                                                                        content: {
+                                                                                            elem: 'content', elemMods: { distribute: 'center' },
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'h3',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs' }},
+                                                                                                    content: 'Маршмеллоу'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                                                                        { block: 'decorator', mods: {'indent-t': 'xxs' }}
+                                                                                                    ],
+                                                                                                    content: '600 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        's-m': 'hide',
+                                                                                                        theme: 'cake',
+                                                                                                        size: 'm',
+                                                                                                        width: 'small',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'ВЫБРАТЬ'
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     }
-                                                                                }
-                                                                            ]
+                                                                                ]
+                                                                            },
                                                                         },
-                                                                        // карта
+                                                                        // карта #1
                                                                         {
                                                                             block: 'pt-card',
-                                                                            mods: { 'xs-align': 'center', view: 'decor', 'xs-max': 'hide' },
-                                                                            content: [
-                                                                                //image
-                                                                                {
-                                                                                    elem: "image",
-                                                                                    elemMods: { view: 'decor' },
-                                                                                    content: {
-                                                                                    tag: 'picture',
-                                                                                        content: [
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                tag: 'source',
-                                                                                                attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item2-tablet.jpg' },
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'image',
-                                                                                                mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                                url: '../../img/decor/decor_item2-mobile.jpg',
-                                                                                                alt: 'торт Ягодное ассорти'
-                                                                                            },
-                                                                                        ]
-                                                                                    }
-                                                                                },
-                                                                                // footer
-                                                                                {
-                                                                                    elem: 'footer',
-                                                                                    elemMods: { distribute: 'center' },
-                                                                                    content: {
-                                                                                        elem: 'info',
-                                                                                        content: [
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'h3',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
-                                                                                                content: 'Ягодное ассорти'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'text',
-                                                                                                tag: 'p',
-                                                                                                mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
-                                                                                                mix: { block: 'theme', mods: { font: 'playfairDisplay' } },
-                                                                                                content: '700 руб/кг'
-                                                                                            },
-                                                                                            {
-                                                                                                block: 'button',
-                                                                                                mods: {
-                                                                                                    's-m': 'hide',
-                                                                                                    theme: 'cake',
-                                                                                                    size: 'm',
-                                                                                                    width: 'small',
-                                                                                                    togglable: 'check'
+                                                                            mix: { block: 'decor', mods: { 'xs-visibility': 'hidden'} },
+                                                                            content: {
+                                                                                elem: 'content', elemMods: { distribute: 'center' },
+                                                                                content: [
+                                                                                    // переключатель
+                                                                                    {
+                                                                                        block: 'decor', elem: 'label',
+                                                                                        tag: 'label',
+                                                                                        attrs: { for: 'decor-4' }
+                                                                                    },
+                                                                                    {
+                                                                                        block: 'decor', elem: 'input',
+                                                                                        tag: 'input',
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-4', 'data-decor': 'Ягодное ассорти' }
+                                                                                    },
+                                                                                    //image
+                                                                                    {
+                                                                                        elem: 'image',
+                                                                                        mix: { block: 'decor', elem: 'image' },
+                                                                                        content: {
+                                                                                        tag: 'picture',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  1024px)', srcset: '../../img/decor/decor_item2-desktop.jpg' },
                                                                                                 },
-                                                                                                text: 'ВЫБРАТЬ'
-                                                                                            }
-                                                                                        ]
-                                                                                    }
-                                                                                }
-                                                                            ]
+                                                                                                {
+                                                                                                    tag: 'source',
+                                                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/decor/decor_item2-tablet.jpg' },
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'image',
+                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
+                                                                                                    url: '../../img/decor/decor_item2-mobile.jpg',
+                                                                                                    alt: 'торт ягодное ассорти'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    {
+                                                                                        elem: 'footer',
+                                                                                        mix: { block: 'decor', elem: 'footer' },
+                                                                                        content: {
+                                                                                            elem: 'content', elemMods: { distribute: 'center' },
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'h3',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', },
+                                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs' }},
+                                                                                                    content: 'Ягодное ассорти'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { align: 'center', size: 'xs-14-s-14-m-20', view: 'primary', weight: 'bold', },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' } },
+                                                                                                        { block: 'decorator', mods: {'indent-t': 'xxs' }}
+                                                                                                    ],
+                                                                                                    content: '700 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        's-m': 'hide',
+                                                                                                        theme: 'cake',
+                                                                                                        size: 'm',
+                                                                                                        width: 'small',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'ВЫБРАТЬ'
+                                                                                                },
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                ]
+                                                                            }
                                                                         },
                                                                     ]
                                                                 },
@@ -1870,8 +1980,7 @@ module.exports = {
                                                             }
                                                         },
                                                         {
-                                                            elem: 'paginator',
-                                                            elemMods: { top: '215' },
+                                                            elem: 'paginator', elemMods: { position: 'order-3' },
                                                             content: [
                                                                 {
                                                                     elem: 'paginator-button',
@@ -2443,7 +2552,7 @@ module.exports = {
                         }
                     }
                 },
-                //  quote цитата
+                // quote цитата
                 {
                     elem: 'section',
                     mix: { block: 'quote' },

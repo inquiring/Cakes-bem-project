@@ -1,0 +1,19 @@
+@media screen and (min-width: $screen-xs) {
+
+    .order__card {
+        padding: 5px 20px;
+        margin-top: 20px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .order__card {
+        padding: 45px
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .order__card {
+        padding: 65px;
+    }
+}

@@ -1,0 +1,22 @@
+@media screen and (min-width: $screen-xs) {
+
+    .size__image_size_extralarge {
+        width: 125px;
+        height: 125px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .size__image_size_extralarge {
+        width: 145px;
+        height: 145px;
+    }
+}
+
+@media screen and (min-width: $screen-m) {
+
+    .size__image_size_extralarge {
+        width: 210px;
+        height: 210px;
+    }
+}

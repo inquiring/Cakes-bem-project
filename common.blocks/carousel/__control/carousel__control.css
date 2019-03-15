@@ -1,20 +1,10 @@
-.carousel__control
-{
+.carousel__control {
     position: absolute;
     top: 50%;
-    left: -60px;
-
+    left: -40px;
     width: 40px;
     height: 40px;
     margin-top: -20px;
-
     cursor: pointer;
-
     user-select: none;
-}
-
-.carousel__control_type_right
-{
-    left: auto;
-    right: -35px;
 }
