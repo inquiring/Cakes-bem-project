@@ -20,7 +20,7 @@
 @media screen and (max-width: $screen-s-max) {
 
     .new-menu__nav {
-        width: 320px;
+        min-width: 320px;
         flex-direction: column;
         background: #e7e7e7;
         position: absolute;

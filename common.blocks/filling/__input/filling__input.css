@@ -1,4 +1,4 @@
-.size__input {
+.filling__input {
     visibility: hidden;
     box-sizing: border-box;
     padding: 0;
@@ -8,6 +8,6 @@
     margin: 0;
     overflow: visible;
 }
-.size__input:checked~.size__image-wrapper {
+.filling__input:checked~.filling__image {
     box-shadow: 0 8px 15px 5px rgba(163,6,60,.12);
 }

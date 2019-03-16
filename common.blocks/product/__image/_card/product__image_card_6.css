@@ -1,0 +1,27 @@
+.product__image_card_6 {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .product__image_card_6  {
+        background-image: url(womenCake-mobile.jpg);
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .product__image_card_6  {
+        background-image: url(womenCake-tablet.jpg);
+        height: 184px;
+    }
+}
+@media screen and (min-width: $screen-l) {
+
+    .product__image_card_6  {
+        background-image: url(womenCake-desktop.jpg);
+        height: 305px;
+    }
+}

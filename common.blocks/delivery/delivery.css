@@ -4,36 +4,29 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .delivery {
-        background-image: url('../../img/delivery/delivery-mobile.jpg');
+        background-image: url('delivery-mobile.jpg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: 50% 100%;
-        padding-top: 20px;
-        padding-bottom: 134px;
     }
 }
 
 @media screen and (min-width: $screen-s) {
 
     .delivery {
-        background-image: url('../../img/delivery/delivery-tablet.jpg');
+        background-image: url('delivery-tablet.jpg');
         background-color: #e3353d;
         background-repeat: no-repeat;
         background-size: cover;
-        padding-top: 30px;
-        padding-bottom: 41px;
     }
 
 }
-@media screen and (min-width: $screen-m) {
+@media screen and (min-width: $screen-l) {
 
     .delivery {
-        background-image: url('../../img/delivery/delivery-desktop.jpg');
+        background-image: url('delivery-desktop.jpg');
         background-color: #e3353d;
         background-repeat: no-repeat;
-        padding-top: 95px;
-        padding-bottom: 160px;
-        padding-left: 125px;
     }
 
 }

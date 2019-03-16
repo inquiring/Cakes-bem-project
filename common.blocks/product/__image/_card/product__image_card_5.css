@@ -1,0 +1,27 @@
+.product__image_card_5  {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: $screen-xs-max) {
+
+    .product__image_card_5  {
+        background-image: url(kidsCake-mobile.jpg);
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: $screen-s) {
+
+    .product__image_card_5  {
+        background-image: url(kidsCake-tablet.jpg);
+        height: 388px;
+    }
+}
+@media screen and (min-width: $screen-l) {
+
+    .product__image_card_5  {
+        background-image: url(kidsCake-desktop.jpg);
+        height: 653px;
+    }
+}

@@ -38,7 +38,7 @@ module.exports = {
                         mix: {
                             block: 'tpl-layout',
                             elem: 'container',
-                            elemMods: { size: 'm', align: 'center' },
+                            elemMods: { size: 'l', align: 'center' },
                         },
                         content: [
                             // new-menu__logo
@@ -287,6 +287,8 @@ module.exports = {
                                             elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'large' }},
                                                 content: {
                                                     elem: 'content',
@@ -294,25 +296,7 @@ module.exports = {
                                                         // image
                                                         {
                                                             elem: 'image',
-                                                            mix: { block: 'product', elem: 'image' },
-                                                            content: {
-                                                                tag: 'picture',
-                                                                content: [
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/classicCake-desktop.jpg' }
-                                                                    },
-                                                                    {
-                                                                        tag: 'source',
-                                                                        attrs: { media: '(min-width:  720px)', srcset: '../../img/product/classicCake-tablet.jpg' }
-                                                                    },
-                                                                    {
-                                                                        block: 'image',
-                                                                        url: '../../img/product/classicCake-mobile.jpg',
-                                                                        alt: 'классический торт'
-                                                                    },
-                                                                ]
-                                                            },
+                                                            mix: { block: 'product', elem: 'image', elemMods: { card: '1' } },
                                                         },
                                                         // header
                                                         {
@@ -375,30 +359,14 @@ module.exports = {
                                             elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
                                                     // image
                                                     {
                                                         elem: 'image',
-                                                        mix: { block: 'product', elem: 'image' },
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/mousCake-desktop.jpg' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/mousCake-tablet.jpg' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/product/mousCake-mobile.jpg',
-                                                                    alt: 'муссовый торт'
-                                                                },
-                                                            ]
-                                                        }
+                                                        mix: { block: 'product', elem: 'image', elemMods: { card: '2' } },
                                                     },
                                                     // header
                                                     {
@@ -461,30 +429,14 @@ module.exports = {
                                             elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
                                                     // image
                                                     {
                                                         elem: 'image',
-                                                        mix: { block: 'product', elem: 'image' },
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/weddingCake-desktop.jpg' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/weddingCake-tablet.jpg' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/product/weddingCake-mobile.jpg',
-                                                                    alt: 'свадебный торт'
-                                                                },
-                                                            ]
-                                                        },
+                                                        mix: { block: 'product', elem: 'image', elemMods: { card: '3' } },
                                                     },
                                                     // header
                                                     {
@@ -545,30 +497,14 @@ module.exports = {
                                             elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
                                                     // image
                                                     {
                                                         elem: 'image',
-                                                        mix: { block: 'product', elem: 'image' },
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/menCake-desktop.jpg' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/menCake-tablet.jpg' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/product/menCake-mobile.jpg',
-                                                                    alt: 'торт для мужчин'
-                                                                },
-                                                            ]
-                                                        },
+                                                        mix: { block: 'product', elem: 'image', elemMods: { card: '4' } },
                                                     },
                                                     // header
                                                     {
@@ -629,30 +565,14 @@ module.exports = {
                                             elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'large' }},
                                                 content: [
                                                     // image
                                                     {
                                                         elem: 'image',
-                                                        mix: { block: 'product', elem: 'image', elemMods: { 'bg-color': 'grey' } },
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  1220px)', srcset: '../../img/product/kidsCake-desktop.jpg' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/kidsCake-tablet.jpg' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/product/kidsCake-mobile.jpg',
-                                                                    alt: 'торт для детей'
-                                                                },
-                                                            ]
-                                                        },
+                                                        mix: { block: 'product', elem: 'image', elemMods: { card: '5' } },
                                                     },
                                                     // header
                                                     {
@@ -713,30 +633,14 @@ module.exports = {
                                             elem: 'fraction', elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '3', 's-row': '1', 'm-col': '5' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
                                                     // image
                                                     {
                                                         elem: 'image',
-                                                        mix: { block: 'product', elem: 'image' },
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width: 1220px)', srcset: '../../img/product/womenCake-desktop.jpg' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  720px)', srcset: '../../img/product/womenCake-tablet.jpg' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/product/womenCake-mobile.jpg',
-                                                                    alt: 'торт для женщин'
-                                                                },
-                                                            ]
-                                                        },
+                                                        mix: { block: 'product', elem: 'image', elemMods: { card: '6' } },
                                                     },
                                                     // header
                                                     {
@@ -810,7 +714,7 @@ module.exports = {
                     attrs: { id: 'order-scroll' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -886,12 +790,25 @@ module.exports = {
                                                             elem: 'item',
                                                             elemMods: { state: 'active' },
                                                             content: [
+                                                                //
                                                                 {
                                                                     block: 'pt-card',
                                                                     mix: { block: 'filling' },
                                                                     content: {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
                                                                         content: [
+                                                                            // переключатель
+                                                                            {
+                                                                                block: 'filling', elem: 'label',
+                                                                                tag: 'label',
+                                                                                attrs: { for: 'filling-1' }
+                                                                            },
+                                                                            {
+                                                                                block: 'filling', elem: 'input',
+                                                                                tag: 'input',
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-1', 'data-filling': 'Шоколадный ганаш-1' }
+                                                                            },
+                                                                            // image
                                                                             {
                                                                                 elem: 'image',
                                                                                 mix: { block: 'filling', elem: 'image' },
@@ -914,6 +831,7 @@ module.exports = {
                                                                                     ]
                                                                                 },
                                                                             },
+                                                                            // footer
                                                                             {
                                                                                 elem: 'footer',
                                                                                 mix: { block: 'filling', elem: 'footer' },
@@ -926,7 +844,7 @@ module.exports = {
                                                                                             tag: 'h3',
                                                                                             mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
                                                                                             mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
-                                                                                            content: 'Шоколадный ганаш'
+                                                                                            content: 'Шоколадный ганаш 1'
                                                                                         },
                                                                                         {
                                                                                             block: 'text',
@@ -972,73 +890,99 @@ module.exports = {
                                                         {
                                                             elem: 'item',
                                                             content: [
+                                                                //
                                                                 {
                                                                     block: 'pt-card',
-                                                                    mods: { align: 'center', view: 'filling' },
-                                                                    content: [
-                                                                        {
-                                                                            elem: 'image',
-                                                                            content: {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                        alt: 'торт Шоколадный ганаш'
-                                                                                    },
-                                                                                ]
+                                                                    mix: { block: 'filling' },
+                                                                    content: {
+                                                                        elem: 'content', elemMods: { distribute: 'center' },
+                                                                        content: [
+                                                                            // переключатель
+                                                                            {
+                                                                                block: 'filling', elem: 'label',
+                                                                                tag: 'label',
+                                                                                attrs: { for: 'filling-2' }
                                                                             },
-                                                                        },
-                                                                        {
-                                                                            elem: 'content',
-                                                                            elemMods: { view: 'filling' },
-                                                                            content: [
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'h3',
-                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                    content: 'Шоколадный ганаш'
+                                                                            {
+                                                                                block: 'filling', elem: 'input',
+                                                                                tag: 'input',
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-2', 'data-filling': 'Шоколадный ганаш-2' }
+                                                                            },
+                                                                            // image
+                                                                            {
+                                                                                elem: 'image',
+                                                                                mix: { block: 'filling', elem: 'image' },
+                                                                                content: {
+                                                                                    tag: 'picture',
+                                                                                    content: [
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  1024px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'image',
+                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                            alt: 'торт Шоколадный ганаш 2'
+                                                                                        },
+                                                                                    ]
                                                                                 },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
-                                                                                },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                    mix: [
-                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                    ],
-                                                                                    content: '1000 руб/кг'
-                                                                                },
-                                                                                {
-                                                                                    block: 'button',
-                                                                                    mods: {
-                                                                                        theme: 'cake',
-                                                                                        'xs-align': 'center',
-                                                                                        size: 'm',
-                                                                                        width: 'xs',
-                                                                                        togglable: 'check'
-                                                                                    },
-                                                                                    text: 'ВЫБРАТЬ'
+                                                                            },
+                                                                            // footer
+                                                                            {
+                                                                                elem: 'footer',
+                                                                                mix: { block: 'filling', elem: 'footer' },
+                                                                                content: {
+                                                                                    elem: 'info',
+                                                                                    content: [
+                                                                                        {
+
+                                                                                            block: 'text',
+                                                                                            tag: 'h3',
+                                                                                            mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                                                            content: 'Шоколадный ганаш 2'
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'text',
+                                                                                            tag: 'p',
+                                                                                            mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                            content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'filling', elem: 'block',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { size: 'xs-18-s-20-m-22', view: 'primary', weight: 'bold' },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                                    ],
+                                                                                                    content: '1000 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        theme: 'cake',
+                                                                                                        'xs-align': 'center',
+                                                                                                        size: 'm',
+                                                                                                        width: 'xs',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'выбрать'
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                    ]
                                                                                 }
-                                                                            ]
-                                                                        },
-                                                                    ]
+                                                                            }
+                                                                        ]
+                                                                    }
                                                                 },
                                                             ]
                                                         },
@@ -1046,73 +990,99 @@ module.exports = {
                                                         {
                                                             elem: 'item',
                                                             content: [
+                                                                //
                                                                 {
                                                                     block: 'pt-card',
-                                                                    mods: { align: 'center', view: 'filling' },
-                                                                    content: [
-                                                                        {
-                                                                            elem: 'image',
-                                                                            content: {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                        alt: 'торт Шоколадный ганаш'
-                                                                                    },
-                                                                                ]
+                                                                    mix: { block: 'filling' },
+                                                                    content: {
+                                                                        elem: 'content', elemMods: { distribute: 'center' },
+                                                                        content: [
+                                                                            // переключатель
+                                                                            {
+                                                                                block: 'filling', elem: 'label',
+                                                                                tag: 'label',
+                                                                                attrs: { for: 'filling-3' }
                                                                             },
-                                                                        },
-                                                                        {
-                                                                            elem: 'content',
-                                                                            elemMods: { view: 'filling' },
-                                                                            content: [
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'h3',
-                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                    content: 'Шоколадный ганаш'
+                                                                            {
+                                                                                block: 'filling', elem: 'input',
+                                                                                tag: 'input',
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-3', 'data-filling': 'Шоколадный ганаш-3' }
+                                                                            },
+                                                                            // image
+                                                                            {
+                                                                                elem: 'image',
+                                                                                mix: { block: 'filling', elem: 'image' },
+                                                                                content: {
+                                                                                    tag: 'picture',
+                                                                                    content: [
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  1024px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'image',
+                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                            alt: 'торт Шоколадный ганаш 3'
+                                                                                        },
+                                                                                    ]
                                                                                 },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
-                                                                                },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                    mix: [
-                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                    ],
-                                                                                    content: '1000 руб/кг'
-                                                                                },
-                                                                                {
-                                                                                    block: 'button',
-                                                                                    mods: {
-                                                                                        theme: 'cake',
-                                                                                        'xs-align': 'center',
-                                                                                        size: 'm',
-                                                                                        width: 'xs',
-                                                                                        togglable: 'check'
-                                                                                    },
-                                                                                    text: 'ВЫБРАТЬ'
+                                                                            },
+                                                                            // footer
+                                                                            {
+                                                                                elem: 'footer',
+                                                                                mix: { block: 'filling', elem: 'footer' },
+                                                                                content: {
+                                                                                    elem: 'info',
+                                                                                    content: [
+                                                                                        {
+
+                                                                                            block: 'text',
+                                                                                            tag: 'h3',
+                                                                                            mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                                                            content: 'Шоколадный ганаш 3'
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'text',
+                                                                                            tag: 'p',
+                                                                                            mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                            content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'filling', elem: 'block',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { size: 'xs-18-s-20-m-22', view: 'primary', weight: 'bold' },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                                    ],
+                                                                                                    content: '1000 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        theme: 'cake',
+                                                                                                        'xs-align': 'center',
+                                                                                                        size: 'm',
+                                                                                                        width: 'xs',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'выбрать'
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                    ]
                                                                                 }
-                                                                            ]
-                                                                        },
-                                                                    ]
+                                                                            }
+                                                                        ]
+                                                                    }
                                                                 },
                                                             ]
                                                         },
@@ -1120,73 +1090,99 @@ module.exports = {
                                                         {
                                                             elem: 'item',
                                                             content: [
+                                                                //
                                                                 {
                                                                     block: 'pt-card',
-                                                                    mods: { align: 'center', view: 'filling' },
-                                                                    content: [
-                                                                        {
-                                                                            elem: 'image',
-                                                                            content: {
-                                                                                tag: 'picture',
-                                                                                content: [
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  1020px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        tag: 'source',
-                                                                                        attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
-                                                                                    },
-                                                                                    {
-                                                                                        block: 'image',
-                                                                                        mix: { block: '', elem: '', elemMods: { size: '' } },
-                                                                                        url: '../../img/filling/filling_item1-mobile.jpg',
-                                                                                        alt: 'торт Шоколадный ганаш'
-                                                                                    },
-                                                                                ]
+                                                                    mix: { block: 'filling' },
+                                                                    content: {
+                                                                        elem: 'content', elemMods: { distribute: 'center' },
+                                                                        content: [
+                                                                            // переключатель
+                                                                            {
+                                                                                block: 'filling', elem: 'label',
+                                                                                tag: 'label',
+                                                                                attrs: { for: 'filling-4' }
                                                                             },
-                                                                        },
-                                                                        {
-                                                                            elem: 'content',
-                                                                            elemMods: { view: 'filling' },
-                                                                            content: [
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'h3',
-                                                                                    mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-b': 'xxs'} },
-                                                                                    content: 'Шоколадный ганаш'
+                                                                            {
+                                                                                block: 'filling', elem: 'input',
+                                                                                tag: 'input',
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-4', 'data-filling': 'Шоколадный ганаш-4' }
+                                                                            },
+                                                                            // image
+                                                                            {
+                                                                                elem: 'image',
+                                                                                mix: { block: 'filling', elem: 'image' },
+                                                                                content: {
+                                                                                    tag: 'picture',
+                                                                                    content: [
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  1024px)', srcset: '../../img/filling/filling_item1-desktop.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            tag: 'source',
+                                                                                            attrs: { media: '(min-width:  700px)', srcset: '../../img/filling/filling_item1-tablet.jpg' },
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'image',
+                                                                                            url: '../../img/filling/filling_item1-mobile.jpg',
+                                                                                            alt: 'торт Шоколадный ганаш 4'
+                                                                                        },
+                                                                                    ]
                                                                                 },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
-                                                                                    mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
-                                                                                    content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
-                                                                                },
-                                                                                {
-                                                                                    block: 'text',
-                                                                                    tag: 'p',
-                                                                                    mods: { size: 'xs-18-s-20-m-22', 'xs-align': 'center', view: 'primary', weight: 'bold' },
-                                                                                    mix: [
-                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                    ],
-                                                                                    content: '1000 руб/кг'
-                                                                                },
-                                                                                {
-                                                                                    block: 'button',
-                                                                                    mods: {
-                                                                                        theme: 'cake',
-                                                                                        'xs-align': 'center',
-                                                                                        size: 'm',
-                                                                                        width: 'xs',
-                                                                                        togglable: 'check'
-                                                                                    },
-                                                                                    text: 'ВЫБРАТЬ'
+                                                                            },
+                                                                            // footer
+                                                                            {
+                                                                                elem: 'footer',
+                                                                                mix: { block: 'filling', elem: 'footer' },
+                                                                                content: {
+                                                                                    elem: 'info',
+                                                                                    content: [
+                                                                                        {
+
+                                                                                            block: 'text',
+                                                                                            tag: 'h3',
+                                                                                            mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: { 'indent-v': 'xxs' } },
+                                                                                            content: 'Шоколадный ганаш 4'
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'text',
+                                                                                            tag: 'p',
+                                                                                            mods: { size: 'xs-14-s-14-m-18', view: 'primary', },
+                                                                                            mix: { block: 'decorator', mods: {'indent-t': 'xxs'} },
+                                                                                            content: "Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!"
+                                                                                        },
+                                                                                        {
+                                                                                            block: 'filling', elem: 'block',
+                                                                                            content: [
+                                                                                                {
+                                                                                                    block: 'text',
+                                                                                                    tag: 'p',
+                                                                                                    mods: { size: 'xs-18-s-20-m-22', view: 'primary', weight: 'bold' },
+                                                                                                    mix: [
+                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
+                                                                                                    ],
+                                                                                                    content: '1000 руб/кг'
+                                                                                                },
+                                                                                                {
+                                                                                                    block: 'button',
+                                                                                                    mods: {
+                                                                                                        theme: 'cake',
+                                                                                                        'xs-align': 'center',
+                                                                                                        size: 'm',
+                                                                                                        width: 'xs',
+                                                                                                        togglable: 'check'
+                                                                                                    },
+                                                                                                    text: 'выбрать'
+                                                                                                }
+                                                                                            ]
+                                                                                        },
+                                                                                    ]
                                                                                 }
-                                                                            ]
-                                                                        },
-                                                                    ]
+                                                                            }
+                                                                        ]
+                                                                    }
                                                                 },
                                                             ]
                                                         },
@@ -2115,7 +2111,7 @@ module.exports = {
                     ],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             mix: { block: 'reviews', elem: 'content' },
@@ -2394,7 +2390,7 @@ module.exports = {
                     mix: [{ block: 'about' }, , { block: 'decorator', mods: { 'indent-b': 'xxl' } }],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -2471,28 +2467,10 @@ module.exports = {
                                                 {
                                                     elem: 'photo',
                                                     elemMods: { size: 'l' },
-                                                    content: [
-                                                    {
+                                                    content: {
                                                         block: 'image',
-                                                        content: {
-                                                            tag: 'picture',
-                                                            content: [
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  1020px)', srcset: '../../img/about/about-desktop.png' }
-                                                                },
-                                                                {
-                                                                    tag: 'source',
-                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/about/about-tablet.png' }
-                                                                },
-                                                                {
-                                                                    block: 'image',
-                                                                    url: '../../img/about/about-mobile.png',
-                                                                    alt: 'подпись'
-                                                                },
-                                                            ]
-                                                        }
-                                                    }]
+                                                        mix: { block: 'about', elem: 'image' },
+                                                    }
                                                 }]
                                             }
                                         },
@@ -2558,7 +2536,7 @@ module.exports = {
                     mix: { block: 'quote' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             block: 'pt-icon-plus',
                             mods: { 'vertical-align': 'center', 'flex-direction': 'column' },
@@ -2618,7 +2596,7 @@ module.exports = {
                     mix: { block: 'advantages' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: [
                             {
                                 elem: 'heading',
@@ -2774,7 +2752,7 @@ module.exports = {
                     ],
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             mix: { block: 'delivery', elem: 'content' },
@@ -2869,7 +2847,7 @@ module.exports = {
                     attrs: { id: 'contacts-scroll' },
                     content: {
                         elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [
@@ -3062,7 +3040,7 @@ module.exports = {
                             mix: {
                                 block: 'tpl-layout',
                                 elem: 'container',
-                                elemMods: { size: 'm', align: 'center' }
+                                elemMods: { size: 'l', align: 'center' }
                             },
                             content: {
                                 block: 'footer', elem: 'content',

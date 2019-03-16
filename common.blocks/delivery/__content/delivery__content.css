@@ -1,13 +1,30 @@
+@media screen and (max-width: $screen-xs-max) {
+
+    .delivery__content {
+        padding-top: 20px;
+        padding-bottom: 134px;
+    }
+}
 @media screen and (min-width: $screen-s) {
 
     .delivery__content {
         width: 340px;
         margin-left: auto;
+        padding-top: 30px;
+        padding-bottom: 41px;
     }
 }
 @media screen and (min-width: $screen-m) {
 
     .delivery__content {
         width: 464px;
+    }
+}
+
+@media screen and (min-width: $screen-l) {
+
+    .delivery__content {
+        padding-top: 95px;
+        padding-bottom: 160px;
     }
 }
