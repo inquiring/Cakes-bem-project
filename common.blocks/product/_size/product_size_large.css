@@ -8,15 +8,13 @@
 @media screen and (min-width: $screen-s) {
 
     .product_size_large {
-        // width: 419px;
         height: 388px;
     }
 }
 
-@media screen and (min-width: $screen-l) {
+@media screen and (min-width: $screen-m) {
 
     .product_size_large {
-        // width: 696px;
         height: 653px;
     }
 }

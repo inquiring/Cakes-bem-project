@@ -1,13 +1,7 @@
-.product__image_card_4 {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 @media screen and (max-width: $screen-xs-max) {
 
     .product__image_card_4  {
         background-image: url(menCake-mobile.jpg);
-        height: 120px;
     }
 }
 
@@ -15,13 +9,11 @@
 
     .product__image_card_4  {
         background-image: url(menCake-tablet.jpg);
-        height: 184px;
     }
 }
-@media screen and (min-width: $screen-l) {
+@media screen and (min-width: $screen-m) {
 
     .product__image_card_4  {
         background-image: url(menCake-desktop.jpg);
-        height: 305px;
     }
 }

@@ -1,13 +1,7 @@
-.product__image_card_1  {
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 @media screen and (max-width: $screen-xs-max) {
 
     .product__image_card_1  {
         background-image: url(classicCake-mobile.jpg);
-        height: 120px;
     }
 }
 
@@ -15,13 +9,11 @@
 
     .product__image_card_1  {
         background-image: url(classicCake-tablet.jpg);
-        height: 388px;
     }
 }
-@media screen and (min-width: $screen-l) {
+@media screen and (min-width: $screen-m) {
 
     .product__image_card_1  {
         background-image: url(classicCake-desktop.jpg);
-        height: 653px;
     }
 }

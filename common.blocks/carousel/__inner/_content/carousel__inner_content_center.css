@@ -1,0 +1,6 @@
+@media screen and (min-width: $screen-s)  {
+
+    .carousel__inner_content_center {
+        justify-content: center;
+    }
+}

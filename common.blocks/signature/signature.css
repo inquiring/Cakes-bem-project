@@ -1,0 +1,28 @@
+ .signature {
+    width: 100%;
+    height: 100%;
+}
+@media screen and (min-width: $screen-xs) {
+
+    .signature {
+        background-image: url(signature-mobile.png);
+        width: 64px;
+        height: 32px;
+    }
+}
+@media screen and (min-width: $screen-s) {
+
+    .signature {
+        background-image: url(signature-tablet.png);
+        width: 82px;
+        height: 40px;
+    }
+}
+@media screen and (min-width: $screen-m) {
+
+    .signature {
+        background-image: url(signature-desktop.png);
+        width: 149px;
+        height: 73px;
+    }
+}

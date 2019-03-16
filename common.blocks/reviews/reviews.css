@@ -1,14 +1,13 @@
-
- .reviews {
+.reviews {
     text-align: center;
     background-size: auto;
     padding-top: 60px;
 }
 
 @media screen and (min-width: $screen-s) {
+
     .reviews {
-        background-image: url('../../img/reviews/reviews-bg-left-tablet.png'),
-                url('../../img/reviews/reviews-bg-right-tablet.png');
+        background-image: url(reviews-bg-left-tablet.png), url(reviews-bg-right-tablet.png);
         background-repeat: no-repeat, no-repeat;
         background-position: 0 0, 100% 0;
         background-size: 310px;
@@ -22,9 +21,9 @@
 }
 
 @media screen and (min-width: $screen-m) {
+
     .reviews {
-        background-image: url('../../img/reviews/reviews-bg-left-desktop.png'),
-                url('../../img/reviews/reviews-bg-right-desktop.png');
+        background-image: url(reviews-bg-left-desktop.png), url(reviews-bg-right-desktop.png);
         background-repeat: no-repeat, no-repeat;
         background-position: 0 0, 100% 0;
         background-size: 310px;
@@ -32,13 +31,11 @@
 }
 
 @media screen and (min-width: $screen-l) {
+
     .reviews {
-        background-image: url('../../img/reviews/reviews-bg-left-desktop.png'),
-                url('../../img/reviews/reviews-bg-right-desktop.png');
         background-repeat: no-repeat, no-repeat;
         background-position: 0 0, 100% 0;
         background-size: 510px;
-
     }
     .reviews .pt-icon-plus__block {
         text-align: left;
