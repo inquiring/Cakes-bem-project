@@ -150,7 +150,7 @@ module.exports = {
                     block: 'hero',
                     content: {
                         block: 'tpl-layout', elem: 'container',
-                        elemMods: { size: 'm', align: 'center' },
+                        elemMods: { size: 'l', align: 'center' },
                         content: {
                             elem: 'content',
                             content: [

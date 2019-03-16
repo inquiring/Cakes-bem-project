@@ -21,11 +21,12 @@
     }
 }
 
-@media screen and (min-width: $screen-l) {
+@media screen and (min-width: $screen-m) {
 
     .hero {
         background-image: url(hero-desktop.png);
         background-position-x: right;
-        background-position-y: 60px;
+        background-position-y: 80px;
+        height: 1000px;
     }
 }

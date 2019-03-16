@@ -19,14 +19,12 @@
 @media screen and (min-width: $screen-m) {
 
     .hero__footer {
-        padding-bottom: 100px;
         margin: 0;
     }
 }
 @media screen and (min-width: $screen-l) {
 
     .hero__footer {
-        padding-bottom: 292px;
         margin: 0;
     }
 }
