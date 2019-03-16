@@ -1,19 +1,19 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .product__image_card_3  {
-        background-image: url(weddingCake-mobile.jpg);
+        background-image: url(../weddingCake-mobile.jpg);
     }
 }
 
 @media screen and (min-width: $screen-s) {
 
     .product__image_card_3  {
-        background-image: url(weddingCake-tablet.jpg);
+        background-image: url(../weddingCake-tablet.jpg);
     }
 }
 @media screen and (min-width: $screen-m) {
 
     .product__image_card_3  {
-        background-image: url(weddingCake-desktop.jpg);
+        background-image: url(../weddingCake-desktop.jpg);
     }
 }

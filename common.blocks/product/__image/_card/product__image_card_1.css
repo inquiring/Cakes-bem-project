@@ -1,19 +1,19 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .product__image_card_1  {
-        background-image: url(classicCake-mobile.jpg);
+        background-image: url(../classicCake-mobile.jpg);
     }
 }
 
 @media screen and (min-width: $screen-s) {
 
     .product__image_card_1  {
-        background-image: url(classicCake-tablet.jpg);
+        background-image: url(../classicCake-tablet.jpg);
     }
 }
 @media screen and (min-width: $screen-m) {
 
     .product__image_card_1  {
-        background-image: url(classicCake-desktop.jpg);
+        background-image: url(../classicCake-desktop.jpg);
     }
 }

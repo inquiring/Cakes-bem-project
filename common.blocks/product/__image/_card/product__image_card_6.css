@@ -1,19 +1,19 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .product__image_card_6  {
-        background-image: url(womenCake-mobile.jpg);
+        background-image: url(../womenCake-mobile.jpg);
     }
 }
 
 @media screen and (min-width: $screen-s) {
 
     .product__image_card_6  {
-        background-image: url(womenCake-tablet.jpg);
+        background-image: url(../womenCake-tablet.jpg);
     }
 }
 @media screen and (min-width: $screen-m) {
 
     .product__image_card_6  {
-        background-image: url(womenCake-desktop.jpg);
+        background-image: url(../womenCake-desktop.jpg);
     }
 }
