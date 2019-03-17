@@ -1,15 +1,16 @@
 @media screen and (min-width: $screen-s) {
 
     .order__card_bg_image {
-        background-image: url('decor-tablet.png');
+        background-image: url('../../../../img/decor/decor-tablet.png');
         background-repeat: no-repeat;
         background-position-x: 10%;
         background-position-y: 40%;
+
     }
 }
 @media screen and (min-width: $screen-m) {
     .order__card_bg_image {
-        background-image: url('decor-desktop.png');
+        background-image: url('../../../../img/decor/decor-desktop.png');
         background-repeat: no-repeat;
         background-position: 0% 42%;
         background-size: 20%;
@@ -17,7 +18,7 @@
 }
 @media screen and (min-width: $screen-l) {
     .order__card_bg_image {
-        background-image: url('decor-desktop.png');
+        background-image: url('../../../../img/decor/decor-desktop.png');
         background-repeat: no-repeat;
         background-position: 5% 40%;
     }

@@ -287,6 +287,8 @@ module.exports = {
                                             elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
                                             content: {
                                                 block: 'pt-card',
+                                                tag: 'a',
+                                                attrs: { href: '#' },
                                                 mix: { block: 'product', mods: { size: 'large' }},
                                                 content: [
                                                     {
@@ -298,7 +300,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/classicCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/classicCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',
@@ -385,7 +387,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/mousCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/mousCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',
@@ -473,7 +475,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/weddingCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/weddingCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',
@@ -559,7 +561,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/menCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/menCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',
@@ -645,7 +647,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/kidsCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/kidsCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',
@@ -723,7 +725,6 @@ module.exports = {
                                                 mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
                                                     {
-
                                                         block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
                                                         mix: { block: 'product', elem: 'image' },
                                                         content: {
@@ -731,7 +732,7 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     tag: 'source',
-                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/womenCake-desktop.jpg' },
+                                                                    attrs: { media: '(min-width:  1266px)', srcset: '../../img/product/womenCake-desktop.jpg' },
                                                                 },
                                                                 {
                                                                     tag: 'source',

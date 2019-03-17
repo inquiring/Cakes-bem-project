@@ -12,6 +12,13 @@
     }
 }
 
+/* @media screen and (min-width: $screen-m) {
+
+    .product_size_large {
+        height: 653px;
+    }
+} */
+
 @media screen and (min-width: $screen-l) {
 
     .product_size_large {
