@@ -8,11 +8,11 @@
 @media screen and (min-width: $screen-s) {
 
     .product_size_large {
-        height: 388px;
+        height: 392px;
     }
 }
 
-@media screen and (min-width: $screen-m) {
+@media screen and (min-width: $screen-l) {
 
     .product_size_large {
         height: 653px;

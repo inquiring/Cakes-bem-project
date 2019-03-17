@@ -5,12 +5,15 @@
 @media screen and (max-width: $screen-s-max) {
 
     .product__footer .pt-icon-plus {
-        display: none;
+        visibility: hidden;
     }
 }
 @media screen and (min-width: $screen-m) {
 
     .product__footer {
         padding: var(--space-l);
+    }
+    .product__footer .pt-icon-plus {
+        visibility: visible;
     }
 }

@@ -287,13 +287,31 @@ module.exports = {
                                             elemMods: { 'xs-col': '1', 'xs-row': '1', 's-col': '5', 's-row': '2', 'm-col': '7' },
                                             content: {
                                                 block: 'pt-card',
-                                                tag: 'a',
-                                                attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'large' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '1' } },
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'large' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/classicCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/classicCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/classicCake-mobile.jpg',
+                                                                    alt: 'классический торт'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -356,11 +374,31 @@ module.exports = {
                                                 block: 'pt-card',
                                                 tag: 'a',
                                                 attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'small' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '2' } },
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/mousCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/mousCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/mousCake-mobile.jpg',
+                                                                    alt: 'муссовый торт'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -424,11 +462,31 @@ module.exports = {
                                                 block: 'pt-card',
                                                 tag: 'a',
                                                 attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'small' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '3' } },
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/weddingCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/weddingCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/weddingCake-mobile.jpg',
+                                                                    alt: 'свадебный торт'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -490,11 +548,31 @@ module.exports = {
                                                 block: 'pt-card',
                                                 tag: 'a',
                                                 attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'small' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '4' } }
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/menCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/menCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/menCake-mobile.jpg',
+                                                                    alt: 'торт для мужчин'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -556,11 +634,31 @@ module.exports = {
                                                 block: 'pt-card',
                                                 tag: 'a',
                                                 attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'large' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '5' } },
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'large' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image', elemMods: { 'bg-color': 'gray' } },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/kidsCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/kidsCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/kidsCake-mobile.jpg',
+                                                                    alt: 'детский торт'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -622,11 +720,31 @@ module.exports = {
                                                 block: 'pt-card',
                                                 tag: 'a',
                                                 attrs: { href: '#' },
-                                                mix: [
-                                                    { block: 'product', mods: { size: 'small' }},
-                                                    { block: 'product', elem: 'image', elemMods: { card: '6' } },
-                                                ],
+                                                mix: { block: 'product', mods: { size: 'small' }},
                                                 content: [
+                                                    {
+
+                                                        block: 'pt-card', elem: 'image', elemMods: { size: 'cover' },
+                                                        mix: { block: 'product', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1200px)', srcset: '../../img/product/womenCake-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/product/womenCake-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/product/womenCake-mobile.jpg',
+                                                                    alt: 'торт для женщин'
+                                                                },
+                                                            ]
+                                                        }
+                                                    },
                                                     // header
                                                     {
                                                         elem: 'header',
@@ -2381,7 +2499,7 @@ module.exports = {
                             content: [
                                 {
                                     block: "tpl-grid",
-                                    mods: { 'xs-ratio': '1-1-1', 's-columns': '6', 'm-columns': '12', 'col-gap': '', 'row-gap': ''},
+                                    mods: { 'xs-ratio': '1-1', 's-columns': '6', 'm-columns': '12', 'col-gap': '', 'row-gap': ''},
                                     content: [
                                         {
                                             elem: 'fraction',
@@ -2442,15 +2560,36 @@ module.exports = {
                                         // фото
                                         {
                                             elem: 'fraction',
-                                            elemMods: { 'xs-col':'2', 'xs-order': '-1', 's-col':'3','s-row':'3', 'm-col':'6', 'm-row':'3' },
+                                            elemMods: { 'xs-col':'1', 'xs-order': '-1', 's-col':'3','s-row':'3', 'm-col':'6', 'm-row':'3' },
                                             content: {
-                                                block: 'avatar',
-                                                content: [
-                                                {
-                                                    elem: 'photo',
-                                                    elemMods: { size: 'l' },
-                                                    mix: { block: 'about', elem: 'image' },
-                                                }]
+                                                block: 'about', elem: 'avatar',
+                                                content: {
+                                                    block: 'avatar',
+                                                    content: [
+                                                    {
+                                                        elem: 'photo',
+                                                        elemMods: { size: 'l' },
+                                                        mix: { block: 'about', elem: 'image' },
+                                                        content: {
+                                                            tag: 'picture',
+                                                            content: [
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  1024px)', srcset: '../../img/about/about-desktop.jpg' },
+                                                                },
+                                                                {
+                                                                    tag: 'source',
+                                                                    attrs: { media: '(min-width:  700px)', srcset: '../../img/about/about-tablet.jpg' },
+                                                                },
+                                                                {
+                                                                    block: 'image',
+                                                                    url: '../../img/about/about-mobile.jpg',
+                                                                    alt: 'кондитер'
+                                                                },
+                                                            ]
+                                                        }
+                                                    }]
+                                                }
                                             }
                                         },
                                         // social

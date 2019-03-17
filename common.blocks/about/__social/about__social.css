@@ -7,19 +7,20 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .about__social {
-        justify-content: space-around;
-        display: flex;
-        flex-direction: column;
         height: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
     }
  }
 @media screen and (min-width: $screen-s) {
 
     .about__social {
+        width: 150px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        width: 150px;
     }
 
 }
