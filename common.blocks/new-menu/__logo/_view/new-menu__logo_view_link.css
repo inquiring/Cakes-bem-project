@@ -1,8 +1,0 @@
-.new-menu__logo_view_link {
-    display: block;
-    text-decoration: none;
-    transition: color .15s;
-}
-.new-menu__logo_view_link:hover {
-    color: var(--color-typo-brand);
-}

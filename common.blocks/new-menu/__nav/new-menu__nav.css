@@ -1,38 +1,18 @@
 
-@media screen and (max-width: $screen-xs-max) {
+@media screen and (min-width: $screen-xs) {
 
     .new-menu__nav {
-        width: 100%;
-        flex-direction: column;
-        background: #e7e7e7;
         position: absolute;
+        left: 0px;
         top: 60px;
-        left: 0;
-    }
-    .new-menu__nav .new-menu__item {
         width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 17px 0 14px;
-        border-top: 1px solid #dfdfdf;
+        background: #e7e7e7;
     }
 }
 @media screen and (max-width: $screen-s-max) {
 
     .new-menu__nav {
-        min-width: 320px;
-        flex-direction: column;
-        background: #e7e7e7;
-        position: absolute;
-        top: 60px;
-        left: 0;
-    }
-    .new-menu__nav .new-menu__item {
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 17px 0 14px;
-        border-top: 1px solid #dfdfdf;
+        width: 320px;
     }
 }
 
@@ -42,5 +22,10 @@
         display: flex;
         flex-flow: row nowrap;
         align-items: baseline;
+        top: 0;
+        left: 0;
+        background: inherit;
+        width: fit-content;
+        position: relative;
     }
 }

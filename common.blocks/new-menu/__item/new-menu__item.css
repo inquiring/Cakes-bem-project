@@ -1,5 +1,14 @@
 .new-menu__item {
     position: relative;
-    margin-left: var(--gap);
     padding: 19px 0 20px;
+    border-top: 1px solid #dfdfdf;
+    text-align: center;
+}
+@media screen and (min-width: $screen-m) {
+
+    .new-menu__item {
+        margin-left: var(--gap);
+        padding: 22px 0 24px;
+        border: none;
+    }
 }
