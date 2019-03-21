@@ -2948,7 +2948,7 @@ module.exports = {
                                 content: [
                                     {
                                         elem: 'fraction',
-                                        elemMods: { 'xs-col': '1', 's-col': '4', 'm-col':'6' },
+                                        elemMods: { 'xs-col': '1', 's-col': '3', 'm-col':'5' },
                                         content: [
                                             {
                                                 block: 'text',
@@ -3023,8 +3023,11 @@ module.exports = {
                                     },
                                     {
                                         elem: 'fraction',
-                                        elemMods: { 'xs-col': '1', 's-col': '4', 'm-col':'6' },
-                                        mix: { block: 'contacts', elem: 'section-right'},
+                                        elemMods: { 'xs-col': '1', 's-col': '1', 'm-col':'1' },
+                                    },
+                                    {
+                                        elem: 'fraction',
+                                        elemMods: { 'xs-col': '1', 's-col': '3', 'm-col':'5' },
                                         content: [
                                             {
                                                 block: 'text',
@@ -3235,6 +3238,7 @@ module.exports = {
                                             }
                                         ]
                                     },
+                                    // footer__copyright
                                     {
                                         block: 'footer', elem: 'copyright',
                                         mix: { block: 'decorator', mods: { 'space-v': 'm' } },
