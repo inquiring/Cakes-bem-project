@@ -1,0 +1,7 @@
+
+@media screen and (min-width: $screen-m) {
+
+    .filling__content {
+        flex-direction: row;
+    }
+}

@@ -889,6 +889,7 @@ module.exports = {
                                                                     mix: { block: 'filling' },
                                                                     content: {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
+                                                                        mix: { block: 'filling', elem: 'content' },
                                                                         content: [
                                                                             // переключатель
                                                                             {
