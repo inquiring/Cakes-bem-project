@@ -1,17 +1,7 @@
-@media screen and (min-width: $screen-xs) {
-    .new-menu__toogle {
-        position: absolute;
-        right: 0px;
-        z-index: 100;
-        padding: 17px;
-        width: fit-content;
-    }
+.new-menu__toogle {
+
 }
-@media screen and (min-width: $screen-s) {
-    .new-menu__toogle {
-        left: 150px;
-    }
-}
+
 @media screen and (min-width: $screen-m) {
 
     .new-menu__toogle {

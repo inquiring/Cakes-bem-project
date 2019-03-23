@@ -1,0 +1,14 @@
+
+.new-menu__header {
+    width: 100%;
+}
+.new-menu__header .pt-list {
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (min-width: $screen-s) {
+
+    .new-menu__header  {
+       width: 150px;
+    }
+}

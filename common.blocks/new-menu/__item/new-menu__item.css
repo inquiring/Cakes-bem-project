@@ -1,14 +1,29 @@
 .new-menu__item {
     position: relative;
-    padding: 19px 0 20px;
     border-top: 1px solid #dfdfdf;
     text-align: center;
+}
+.new-menu__item .text {
+    display: block;
+}
+@media screen and (max-width: $screen-s-max) {
+
+    .new-menu__item:last-child {
+        display: none;
+    }
 }
 @media screen and (min-width: $screen-m) {
 
     .new-menu__item {
         margin-left: var(--gap);
-        padding: 22px 0 24px;
+        border: none;
+    }
+}
+
+@media screen and (min-width: $screen-l) {
+
+    .new-menu__item {
+        margin-left: var(--gap);
         border: none;
     }
 }

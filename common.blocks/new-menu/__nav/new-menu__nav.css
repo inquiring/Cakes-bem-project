@@ -1,7 +1,8 @@
 
-@media screen and (min-width: $screen-xs) {
+@media screen and (max-width: $screen-xs-max) {
 
     .new-menu__nav {
+        display: none;
         position: absolute;
         left: 0px;
         top: 60px;
@@ -9,16 +10,20 @@
         background: #e7e7e7;
     }
 }
-@media screen and (max-width: $screen-s-max) {
+@media screen and (min-width: $screen-s) {
 
-    .new-menu__nav {
+    .new-menu__nav .pt-list {
+        position: absolute;
+        left: 0px;
+        top: 60px;
         width: 320px;
+        background: #e7e7e7;
     }
 }
 
 @media screen and (min-width: $screen-m) {
 
-    .new-menu__nav {
+    .new-menu__nav .pt-list {
         display: flex;
         flex-flow: row nowrap;
         align-items: baseline;

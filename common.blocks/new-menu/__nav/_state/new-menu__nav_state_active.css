@@ -1,0 +1,6 @@
+@media screen and (max-width: $screen-s-max) {
+
+    .new-menu__nav_state_active {
+        display: block;
+    }
+}
