@@ -1,5 +1,6 @@
 @font-face {
 	font-family: 'introScriptR-H2Base';
+    font-display: optional;
 	font-weight: normal;
 	font-style: normal;
 	src: local('IntroScriptR-H2Base'), url('introScriptR-H2Base/fonts/introScriptR-H2Base/IntroScriptR-H2Base.woff2') format('woff2');

@@ -1,0 +1,7 @@
+@media screen and (max-width: $screen-s-max) {
+
+    .new-menu__nav_visibility_hidden {
+        visibility: hidden;
+        display: none;
+    }
+}

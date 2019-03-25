@@ -1,5 +1,14 @@
 .new-menu__toogle {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: content-box;
+    width: 30px;
+    height: 30px;
+    padding: 15px 15px;
+    background: 0 0;
+    border: 0;
+    user-select: none;
 }
 
 @media screen and (min-width: $screen-m) {

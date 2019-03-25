@@ -2,7 +2,6 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .new-menu__nav {
-        display: none;
         position: absolute;
         left: 0px;
         top: 60px;

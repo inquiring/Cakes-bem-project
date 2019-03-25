@@ -1,6 +1,7 @@
 /* cyrillic */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
   src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTjYgEM86xRbPQ.woff2) format('woff2');
@@ -9,6 +10,7 @@
 /* vietnamese */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
   src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTPYgEM86xRbPQ.woff2) format('woff2');
@@ -17,6 +19,7 @@
 /* latin-ext */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
   src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTLYgEM86xRbPQ.woff2) format('woff2');
@@ -25,6 +28,7 @@
 /* latin */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
   src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2) format('woff2');
@@ -33,6 +37,7 @@
 /* cyrillic */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 700;
   src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWoe5j5hNKe1_w.woff2) format('woff2');
@@ -41,6 +46,7 @@
 /* vietnamese */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 700;
   src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWEe5j5hNKe1_w.woff2) format('woff2');
@@ -49,6 +55,7 @@
 /* latin-ext */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 700;
   src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lWAe5j5hNKe1_w.woff2) format('woff2');
@@ -57,6 +64,7 @@
 /* latin */
 @font-face {
   font-family: 'Playfair Display';
+  font-display: optional;
   font-style: normal;
   font-weight: 700;
   src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'), url(https://fonts.gstatic.com/s/playfairdisplay/v14/nuFlD-vYSZviVYUb_rj3ij__anPXBYf9lW4e5j5hNKc.woff2) format('woff2');

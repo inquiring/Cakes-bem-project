@@ -9,14 +9,14 @@
 @media screen and (max-width: $screen-xs-max) {
 
     .hero {
-        background-image: url(hero-mobile.png);
+        background-image: url(hero-mobile.webp), url(hero-mobile.png);
         background-position-y: top;
     }
 }
 @media screen and (min-width: $screen-s)  {
 
     .hero {
-        background-image: url(hero-tablet.png);
+        background-image: url(hero-tablet.webp), url(hero-tablet.png);
         background-position-x: right;
     }
 }
@@ -24,7 +24,7 @@
 @media screen and (min-width: $screen-m) {
 
     .hero {
-        background-image: url(hero-desktop.png);
+        background-image: url(hero-desktop.webp), url(hero-desktop.png);
         background-position-x: right;
         background-position-y: 80px;
         height: 1000px;

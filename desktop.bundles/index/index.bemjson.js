@@ -6,7 +6,6 @@ module.exports = {
     head: [
         { elem: 'meta', attrs: { name: 'description', content: '' } },
         { elem: 'meta', attrs: { name: 'viewport', content: 'width=device-width, initial-scale=1' } },
-        { elem: 'css', url: 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700' },
         { elem: 'css', url: 'index.min.css' },
     ],
     scripts: [
@@ -58,20 +57,29 @@ module.exports = {
                                             }
                                         },
                                         {
-                                            block: 'button',
-                                            mix : { block : 'new-menu', elem : 'toogle' },
-                                            attrs : { title : 'Закрыть меню' },
-                                            text : 'Закрыть',
+                                            elem : 'item',
                                             content: {
-                                                block: 'icon',
-                                                mods: { size: 'm', name: 'close' }
+                                                block: 'button',
+                                                name: 'menu',
+                                                text: 'меню',
+                                                mix: { block: 'new-menu', elem: 'toogle' },
+                                                content: [
+                                                    {
+                                                        block: 'icon',
+                                                        mods: { size: 'm', name: 'hamburger',  }
+                                                    },
+                                                    {
+                                                        block: 'icon',
+                                                        mods: { size: 'm', name: 'close', visibility: 'hidden' }
+                                                    }
+                                                ]
                                             }
-                                        }
+                                        },
                                     ]
                                 }
                             },
                             {
-                                block: 'new-menu', elem: 'nav', elemMods: { state: 'active' },
+                                block: 'new-menu', elem: 'nav', elemMods: { visibility: 'hidden' },
                                 content: {
                                     block: 'pt-list',
                                     content: [
@@ -205,7 +213,7 @@ module.exports = {
                                             block: 'button',
                                             mix: { block: 'hero', elem: 'button' },
                                             mods: { theme: 'cake', size: 'm' },
-                                            name: 'Test_1',
+                                            name: 'Выбрать торт',
                                             val: 'passed',
                                             text: 'Выбрать торт'
                                         },
@@ -230,6 +238,7 @@ module.exports = {
                                                     },
                                                     {
                                                         elem: 'block',
+                                                        tag: 'span',
                                                         content: {
                                                             block: 'text',
                                                             mods: { size: 's', view: 'black' },
@@ -242,6 +251,7 @@ module.exports = {
                                                     content: [
                                                         {
                                                             elem: 'icon',
+                                                            tag: 'span',
                                                             mix: [
                                                                 { block: 'decorator', mods: { 'indent-r': 'm' } },
                                                                 { block: 'hero', elem: 'icon' }
@@ -254,6 +264,7 @@ module.exports = {
                                                         },
                                                         {
                                                         elem: 'block',
+                                                        tag: 'span',
                                                         content: {
                                                             block: 'text',
                                                             mods: { size: 's', view: 'black' },
@@ -364,18 +375,22 @@ module.exports = {
                                                         mix: { block: 'product', elem: 'footer' },
                                                         content: {
                                                             block: 'pt-icon-plus',
+                                                            tag: 'span',
                                                             mods: { 'vertical-align': 'center' },
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -457,14 +472,17 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -543,14 +561,17 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -629,14 +650,17 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -715,14 +739,17 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -802,14 +829,17 @@ module.exports = {
                                                             content: [
                                                                 {
                                                                     elem: 'block',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'text',
+                                                                        tag: 'span',
                                                                         mods: { size: 'xs-0-s-12-m-0', view: 'promo' },
                                                                         content: 'Смотреть'
                                                                     },
                                                                 },
                                                                 {
                                                                     elem: 'icon',
+                                                                    tag: 'span',
                                                                     content: {
                                                                         block: 'icon',
                                                                         mods: { size: 'm', view: 'secondary', name: 'arrow-right' }
@@ -1774,7 +1804,6 @@ module.exports = {
                                                                                                 },
                                                                                                 {
                                                                                                     block: 'image',
-                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                                     url: '../../img/decor/decor_item2-mobile.jpg',
                                                                                                     alt: 'торт ягодное ассорти'
                                                                                                 },
@@ -1857,7 +1886,6 @@ module.exports = {
                                                                                                 },
                                                                                                 {
                                                                                                     block: 'image',
-                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                                     url: '../../img/decor/decor_item1-mobile.jpg',
                                                                                                     alt: 'торт Маршмеллоу'
                                                                                                 },
@@ -1946,7 +1974,6 @@ module.exports = {
                                                                                                 },
                                                                                                 {
                                                                                                     block: 'image',
-                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                                     url: '../../img/decor/decor_item1-mobile.jpg',
                                                                                                     alt: 'торт Маршмеллоу'
                                                                                                 },
@@ -2029,7 +2056,6 @@ module.exports = {
                                                                                                 },
                                                                                                 {
                                                                                                     block: 'image',
-                                                                                                    mix: { block: '', elem: '', elemMods: { size: '' } },
                                                                                                     url: '../../img/decor/decor_item2-mobile.jpg',
                                                                                                     alt: 'торт ягодное ассорти'
                                                                                                 },
@@ -2274,7 +2300,7 @@ module.exports = {
                                                                     {
                                                                         block: 'image',
                                                                         mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
-                                                                        url: '../../img/reviews/reviews-desktop.png',
+                                                                        url: '../../img/reviews/reviews1-desktop.jpg',
                                                                         alt: 'пользователь оставивший отзыв'
                                                                     }]
                                                                 }
@@ -2342,7 +2368,7 @@ module.exports = {
                                                                     {
                                                                         block: 'image',
                                                                         mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
-                                                                        url: '../../img/reviews/jim.jpg',
+                                                                        url: '../../img/reviews/reviews2-desktop.jpg',
                                                                         alt: 'пользователь оставивший отзыв'
                                                                     }]
                                                                 }
@@ -2414,7 +2440,7 @@ module.exports = {
                                                                         {
                                                                             block: 'image',
                                                                             mix: { block: 'avatar', elem: 'photo', elemMods: { size: 'a' } },
-                                                                            url: '../../img/reviews/tom.jpg',
+                                                                            url: '../../img/reviews/reviews3-desktop.jpg',
                                                                             alt: 'пользователь оставивший отзыв'
                                                                         }]
                                                                     }]
