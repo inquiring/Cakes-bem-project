@@ -860,9 +860,7 @@ module.exports = {
                 // order индивидуальный заказ
                 {
                     elem: 'section',
-                    mix: [
-                        { block: 'order' },
-                    ],
+                    mix: { block: 'order', js: true },
                     attrs: { id: 'order-scroll' },
                     content: {
                         elem: 'container',
@@ -959,7 +957,7 @@ module.exports = {
                                                                             {
                                                                                 block: 'filling', elem: 'input',
                                                                                 tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-1', 'data-filling': 'Шоколадный ганаш-1' }
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-1', 'value': 'Шоколадный ганаш-1' }
                                                                             },
                                                                             // image
                                                                             {
@@ -1059,7 +1057,7 @@ module.exports = {
                                                                             {
                                                                                 block: 'filling', elem: 'input',
                                                                                 tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-2', 'data-filling': 'Шоколадный ганаш-2' }
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-2', 'value': 'Шоколадный ганаш-2' }
                                                                             },
                                                                             // image
                                                                             {
@@ -1159,7 +1157,7 @@ module.exports = {
                                                                             {
                                                                                 block: 'filling', elem: 'input',
                                                                                 tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-3', 'data-filling': 'Шоколадный ганаш-3' }
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-3', 'value': 'Шоколадный ганаш-3' }
                                                                             },
                                                                             // image
                                                                             {
@@ -1259,7 +1257,7 @@ module.exports = {
                                                                             {
                                                                                 block: 'filling', elem: 'input',
                                                                                 tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-4', 'data-filling': 'Шоколадный ганаш-4' }
+                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-4', 'value': 'Шоколадный ганаш-4' }
                                                                             },
                                                                             // image
                                                                             {
@@ -1434,7 +1432,7 @@ module.exports = {
                                                                         {
                                                                             block: 'size', elem: 'input',
                                                                             tag: 'input',
-                                                                            attrs: { type: 'radio', name: 'size', id: 'small', 'data-size': '1кг' }
+                                                                            attrs: { type: 'radio', name: 'size', id: 'small', 'value': '1кг' }
                                                                         },
                                                                         {
                                                                             elem: 'image',
@@ -1505,7 +1503,7 @@ module.exports = {
                                                                         {
                                                                             block: 'size', elem: 'input',
                                                                             tag: 'input',
-                                                                            attrs: { type: 'radio', name: 'size', id: 'medium', 'data-size': '2кг' }
+                                                                            attrs: { type: 'radio', name: 'size', id: 'medium', 'value': '2кг' }
                                                                         },
                                                                         {
                                                                             elem: 'image',
@@ -1576,7 +1574,7 @@ module.exports = {
                                                                         {
                                                                             block: 'size', elem: 'input',
                                                                             tag: 'input',
-                                                                            attrs: { type: 'radio', name: 'size', id: 'large', 'data-size': '5кг' }
+                                                                            attrs: { type: 'radio', name: 'size', id: 'large', 'value': '5кг' }
                                                                         },
                                                                         {
                                                                             elem: 'image',
@@ -1650,7 +1648,7 @@ module.exports = {
                                                                         {
                                                                             block: 'size', elem: 'input',
                                                                             tag: 'input',
-                                                                            attrs: { type: 'radio', name: 'size', id: 'extralarge', 'data-size': '8кг' }
+                                                                            attrs: { type: 'radio', name: 'size', id: 'extralarge', 'value': '8кг' }
                                                                         },
                                                                         {
                                                                             elem: 'image',
@@ -1728,7 +1726,7 @@ module.exports = {
                                     elem: 'content',
                                     mix: [
                                         { block: 'theme', mods: { 'color-bg': 'normal' } },
-                                        { block: 'order', elem: 'card', elemMods: { bg: 'image' } }
+                                        { block: 'order', elem: 'card', elemMods: { bg: 'image' } },
                                     ],
                                     content: [
                                         // оглавление
@@ -1763,6 +1761,11 @@ module.exports = {
                                                         {
                                                             elem: 'inner',
                                                             elemMods: { 's-m-display': 'block', 's-m-direction': 'row' },
+                                                            mix: {
+                                                                block: 'decorForm',
+                                                                js: true,
+                                                            },
+                                                            attrs: { name: 'decorForm'},
                                                             content: [
                                                                 // элемент карусели
                                                                 {
@@ -1785,7 +1788,8 @@ module.exports = {
                                                                                     {
                                                                                         block: 'decor', elem: 'input',
                                                                                         tag: 'input',
-                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-1', 'data-decor': 'Ягодное ассорти' }
+                                                                                        js: true,
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-1', 'value': 'Ягодное ассорти-1' }
                                                                                     },
                                                                                     //image
                                                                                     {
@@ -1866,8 +1870,9 @@ module.exports = {
                                                                                     },
                                                                                     {
                                                                                         block: 'decor', elem: 'input',
+                                                                                        js: true,
                                                                                         tag: 'input',
-                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-2', 'data-decor': 'Ягодное ассорти' }
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-2', 'value': 'Маршмеллоу-1' }
                                                                                     },
                                                                                     //image
                                                                                     {
@@ -1954,8 +1959,9 @@ module.exports = {
                                                                                     },
                                                                                     {
                                                                                         block: 'decor', elem: 'input',
+                                                                                        js: true,
                                                                                         tag: 'input',
-                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-3', 'data-decor': 'Ягодное ассорти' }
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-3', 'value': 'Маршмеллоу-2' }
                                                                                     },
                                                                                     //image
                                                                                     {
@@ -2037,7 +2043,8 @@ module.exports = {
                                                                                     {
                                                                                         block: 'decor', elem: 'input',
                                                                                         tag: 'input',
-                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-4', 'data-decor': 'Ягодное ассорти' }
+                                                                                        js: true,
+                                                                                        attrs: { type: 'radio', name: 'decor', id: 'decor-4', 'value': 'Ягодное ассорти-2' }
                                                                                     },
                                                                                     //image
                                                                                     {
@@ -2057,7 +2064,7 @@ module.exports = {
                                                                                                 {
                                                                                                     block: 'image',
                                                                                                     url: '../../img/decor/decor_item2-mobile.jpg',
-                                                                                                    alt: 'торт ягодное ассорти'
+                                                                                                    alt: 'Ягодное ассорти-2'
                                                                                                 },
                                                                                             ]
                                                                                         }
@@ -2175,7 +2182,9 @@ module.exports = {
                                                             elem: 'control',
                                                             content: {
                                                                 block: 'input',
-                                                                mods: { theme: 'islands', size: 'l', width: 'available' }
+                                                                mods: { theme: 'islands', size: 'l', width: 'available' },
+                                                                id: 'fillingInput',
+                                                                placeholder: 'выберите начинку'
                                                             }
                                                         }
                                                     ]
@@ -2200,7 +2209,9 @@ module.exports = {
                                                             elem: 'control',
                                                             content: {
                                                                 block: 'input',
-                                                                mods: { theme: 'islands', size: 'l', width: 'available' }
+                                                                mods: { theme: 'islands', size: 'l', width: 'available' },
+                                                                id: 'sizeInput',
+                                                                placeholder: 'выберите размер'
                                                             }
                                                         }
                                                     ]
@@ -2225,7 +2236,9 @@ module.exports = {
                                                             elem: 'control',
                                                             content: {
                                                                 block: 'input',
-                                                                mods: { theme: 'islands', size: 'l', width: 'available' }
+                                                                mods: { theme: 'islands', size: 'l', width: 'available' },
+                                                                id: 'decorInput',
+                                                                placeholder: 'выберите оформление'
                                                             }
                                                         }
                                                     ]
