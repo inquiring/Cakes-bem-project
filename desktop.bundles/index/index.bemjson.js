@@ -948,17 +948,6 @@ module.exports = {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
                                                                         mix: { block: 'filling', elem: 'content' },
                                                                         content: [
-                                                                            // переключатель
-                                                                            {
-                                                                                block: 'filling', elem: 'label',
-                                                                                tag: 'label',
-                                                                                attrs: { for: 'filling-1' }
-                                                                            },
-                                                                            {
-                                                                                block: 'filling', elem: 'input',
-                                                                                tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-1', 'value': 'Шоколадный ганаш-1' }
-                                                                            },
                                                                             // image
                                                                             {
                                                                                 elem: 'image',
@@ -990,7 +979,6 @@ module.exports = {
                                                                                     elem: 'info',
                                                                                     content: [
                                                                                         {
-
                                                                                             block: 'text',
                                                                                             tag: 'h3',
                                                                                             mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
@@ -1017,16 +1005,16 @@ module.exports = {
                                                                                                     content: '1000 руб/кг'
                                                                                                 },
                                                                                                 {
-                                                                                                    block: 'button',
+                                                                                                    block: 'radio',
                                                                                                     mods: {
                                                                                                         theme: 'cake',
-                                                                                                        'xs-align': 'center',
                                                                                                         size: 'm',
-                                                                                                        width: 'xs',
-                                                                                                        togglable: 'check'
+                                                                                                        type: 'button'
                                                                                                     },
+                                                                                                    name: 'radio-islands',
+                                                                                                    val: 'Шоколадный ганаш-1',
                                                                                                     text: 'выбрать'
-                                                                                                }
+                                                                                                },
                                                                                             ]
                                                                                         },
                                                                                     ]
@@ -1048,17 +1036,6 @@ module.exports = {
                                                                     content: {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
                                                                         content: [
-                                                                            // переключатель
-                                                                            {
-                                                                                block: 'filling', elem: 'label',
-                                                                                tag: 'label',
-                                                                                attrs: { for: 'filling-2' }
-                                                                            },
-                                                                            {
-                                                                                block: 'filling', elem: 'input',
-                                                                                tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-2', 'value': 'Шоколадный ганаш-2' }
-                                                                            },
                                                                             // image
                                                                             {
                                                                                 elem: 'image',
@@ -1090,7 +1067,6 @@ module.exports = {
                                                                                     elem: 'info',
                                                                                     content: [
                                                                                         {
-
                                                                                             block: 'text',
                                                                                             tag: 'h3',
                                                                                             mods: { align: 'left', size: 'xs-16-s-18-m-20', view: 'primary', },
@@ -1111,22 +1087,20 @@ module.exports = {
                                                                                                     block: 'text',
                                                                                                     tag: 'p',
                                                                                                     mods: { size: 'xs-18-s-20-m-22', view: 'primary', weight: 'bold' },
-                                                                                                    mix: [
-                                                                                                        { block: 'theme', mods: { font: 'playfairDisplay' }},
-                                                                                                    ],
+                                                                                                    mix: { block: 'theme', mods: { font: 'playfairDisplay' }},
                                                                                                     content: '1000 руб/кг'
                                                                                                 },
                                                                                                 {
-                                                                                                    block: 'button',
+                                                                                                    block: 'radio',
                                                                                                     mods: {
                                                                                                         theme: 'cake',
-                                                                                                        'xs-align': 'center',
                                                                                                         size: 'm',
-                                                                                                        width: 'xs',
-                                                                                                        togglable: 'check'
+                                                                                                        type: 'button'
                                                                                                     },
+                                                                                                    name: 'radio-islands',
+                                                                                                    val: 'Шоколадный ганаш-2',
                                                                                                     text: 'выбрать'
-                                                                                                }
+                                                                                                },
                                                                                             ]
                                                                                         },
                                                                                     ]
@@ -1137,7 +1111,7 @@ module.exports = {
                                                                 },
                                                             ]
                                                         },
-                                                       // элемент карусели
+                                                        // элемент карусели
                                                         {
                                                             elem: 'item',
                                                             content: [
@@ -1148,17 +1122,6 @@ module.exports = {
                                                                     content: {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
                                                                         content: [
-                                                                            // переключатель
-                                                                            {
-                                                                                block: 'filling', elem: 'label',
-                                                                                tag: 'label',
-                                                                                attrs: { for: 'filling-3' }
-                                                                            },
-                                                                            {
-                                                                                block: 'filling', elem: 'input',
-                                                                                tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-3', 'value': 'Шоколадный ганаш-3' }
-                                                                            },
                                                                             // image
                                                                             {
                                                                                 elem: 'image',
@@ -1217,16 +1180,16 @@ module.exports = {
                                                                                                     content: '1000 руб/кг'
                                                                                                 },
                                                                                                 {
-                                                                                                    block: 'button',
+                                                                                                    block: 'radio',
                                                                                                     mods: {
                                                                                                         theme: 'cake',
-                                                                                                        'xs-align': 'center',
                                                                                                         size: 'm',
-                                                                                                        width: 'xs',
-                                                                                                        togglable: 'check'
+                                                                                                        type: 'button'
                                                                                                     },
+                                                                                                    name: 'radio-islands',
+                                                                                                    val: 'Шоколадный ганаш-3',
                                                                                                     text: 'выбрать'
-                                                                                                }
+                                                                                                },
                                                                                             ]
                                                                                         },
                                                                                     ]
@@ -1237,7 +1200,7 @@ module.exports = {
                                                                 },
                                                             ]
                                                         },
-                                                       // элемент карусели
+                                                        // элемент карусели
                                                         {
                                                             elem: 'item',
                                                             content: [
@@ -1248,17 +1211,6 @@ module.exports = {
                                                                     content: {
                                                                         elem: 'content', elemMods: { distribute: 'center' },
                                                                         content: [
-                                                                            // переключатель
-                                                                            {
-                                                                                block: 'filling', elem: 'label',
-                                                                                tag: 'label',
-                                                                                attrs: { for: 'filling-4' }
-                                                                            },
-                                                                            {
-                                                                                block: 'filling', elem: 'input',
-                                                                                tag: 'input',
-                                                                                attrs: { type: 'radio', name: 'filling', id: 'filling-4', 'value': 'Шоколадный ганаш-4' }
-                                                                            },
                                                                             // image
                                                                             {
                                                                                 elem: 'image',
@@ -1317,16 +1269,16 @@ module.exports = {
                                                                                                     content: '1000 руб/кг'
                                                                                                 },
                                                                                                 {
-                                                                                                    block: 'button',
+                                                                                                    block: 'radio',
                                                                                                     mods: {
                                                                                                         theme: 'cake',
-                                                                                                        'xs-align': 'center',
                                                                                                         size: 'm',
-                                                                                                        width: 'xs',
-                                                                                                        togglable: 'check'
+                                                                                                        type: 'button'
                                                                                                     },
+                                                                                                    name: 'radio-islands',
+                                                                                                    val: 'Шоколадный ганаш-4',
                                                                                                     text: 'выбрать'
-                                                                                                }
+                                                                                                },
                                                                                             ]
                                                                                         },
                                                                                     ]
@@ -1338,6 +1290,7 @@ module.exports = {
                                                             ]
                                                         },
                                                     ]
+
                                                 },
                                                 {
                                                     elem: 'control',

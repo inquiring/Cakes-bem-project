@@ -4,37 +4,23 @@ provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-                function onclickFilingCard(e) {
-                    var fillingInput = document.getElementById("fillingInput");
-                    var fillingChoice = e.target.value;
-                    fillingInput.placeholder = fillingChoice;
+                // var fillingInput = document.getElementById("fillingInput");
+                // var labelArray = document.querySelectorAll(".filling__block .radio");
+                // // console.log(labelArray);
+                // var radioArray = document.querySelectorAll('name');
+                // console.log(radioArray);
+                // var form =  document.querySelectorAll('#order-scroll').attribute('name');
+                // console.log(form);
 
-                }
-                function onclickSizeCard(e) {
-                    var sizeInput = document.getElementById("sizeInput");
-                    var sizeChoice = e.target.value;
-                    sizeInput.placeholder = sizeChoice;
-                }
-                function onclickDecorCard(e) {
-                    var decorInput = document.getElementById("decorInput");
-                    var decorChoice = e.target.value;
-                    decorInput.placeholder = decorChoice;
-                }
+                // function onclick(e) {
+                //     console.log(fillingInput.placeholder);
+                //     console.log(e.target.value);
+                // }
+                // for (var i = 0; i < radioArray.length; i++) {
+                //     radioArray[i].addEventListener("click", onclick);
+                // }
+                console.log(this.params);
 
-                var fillingArray = document.querySelectorAll(".filling__input");
-                for (var i = 0; i < fillingArray.length; i++) {
-                    fillingArray[i].addEventListener("click", onclickFilingCard);
-                }
-                //
-                var sizeArray = document.querySelectorAll(".size__input");
-                for (var i = 0; i < sizeArray.length; i++) {
-                    sizeArray[i].addEventListener("click", onclickSizeCard);
-                }
-                //
-                var decorArray = document.querySelectorAll(".decor__input");
-                for (var i = 0; i < decorArray.length; i++) {
-                    decorArray[i].addEventListener("click", onclickDecorCard);
-                }
             }
         }
     }

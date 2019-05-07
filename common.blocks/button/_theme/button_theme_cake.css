@@ -18,6 +18,8 @@
     white-space: nowrap;
     height: 51px;
     text-transform: uppercase;
+
+    width: 180px;
 }
 
 .button_theme_cake::-moz-focus-inner {
@@ -76,7 +78,7 @@
 }
 
 .button_theme_cake.button_checked:before {
-    background: #ffeba0;
+    background: var(--color-link);
 }
 
 .button_theme_cake.button_checked.button_pressed {

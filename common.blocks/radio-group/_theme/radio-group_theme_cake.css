@@ -11,6 +11,6 @@
 }
 .radio-group_theme_cake .radio_type_button:last-of-type .button_togglable_radio {
     border-right-width: 1px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+    border-top-right-radius: 26px;
+    border-bottom-right-radius: 26px;
 }
