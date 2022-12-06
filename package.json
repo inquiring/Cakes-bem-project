@@ -54,7 +54,7 @@
     "postcss-reporter": "^6.0.1",
     "postcss-simple-vars": "^5.0.2",
     "postcss-url": "^8.0.0",
-    "qs": ">=1.0.0",
+    "qs": ">=6.9.7",
     "rebem-css": "^0.2.0",
     "through2-filter": "^3.0.0",
     "tunnel-agent": ">=0.6.0",
